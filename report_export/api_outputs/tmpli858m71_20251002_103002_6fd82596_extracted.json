@@ -1,0 +1,58 @@
+{
+    "metadata": {
+        "company_name": "Short Cicuit Company",
+        "project_name": "Lighting study for nesstra factory with HighBay light Technical Engineer",
+        "engineer": "Eng.Mostafa Emad",
+        "email": "mostafaattalla122@gmail.com",
+        "report_title": "tmpli858m71_20251002_103002_6fd82596.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": 36,
+        "fixture_type": "HighBay 100 watt",
+        "mounting_height_m": null,
+        "average_lux": 449.0,
+        "uniformity": 0.41,
+        "total_power_w": 3600.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "quantity": 36,
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 100.0,
+            "luminous_flux_lm": 14500.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 1",
+            "arrangement": "A1",
+            "layout": []
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": 449.0,
+            "min_lux": 185.0,
+            "max_lux": 633.0,
+            "uniformity": 0.41,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": 481.0,
+            "min_lux": 237.0,
+            "max_lux": 636.0,
+            "uniformity": 0.49,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}
