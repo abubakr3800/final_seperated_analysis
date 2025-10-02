@@ -1,0 +1,122 @@
+want a fixed, comprehensive JSON standards dataset extracted from all tables in prEN 12464-1, using consistent variable names so that later you can compare any project report (like the one you showed) against the standards.
+
+Plan
+
+Define a fixed schema (stable variable names for every standard entry).
+That schema should cover all possible columns (even if some are missing in some tables).
+Example:
+
+{
+  "ref_no": "",
+  "category": "",
+  "task_or_activity": "",
+  "Em_r_lx": null,
+  "Em_u_lx": null,
+  "Uo": null,
+  "Ra": null,
+  "RUGL": null,
+  "Ez_lx": null,
+  "Em_wall_lx": null,
+  "Em_ceiling_lx": null,
+  "specific_requirements": ""
+}
+
+
+✅ Always present.
+✅ Missing data = null.
+✅ Consistent variable names → ready for comparison.
+
+Extract all tables in Clause 6 (Tables 6.1 – 6.54)
+
+Use pdfplumber or camelot.
+
+Parse every row → map into schema.
+
+Save in one master JSON file (standards.json).
+
+Optionally, split into multiple (table_6_1.json, …).
+
+Standardize variable names to match reports
+
+Your reports have average_lux, uniformity, Ra, utilisation_profile etc.
+
+The standard JSON will have Em_r_lx, Uo, Ra, RUGL etc.
+
+We can later build a comparison mapping layer that checks report values vs standards.
+
+Example of Extracted JSON (from Table 6.1, Corridors etc.)
+{
+  "ref_no": "6.1.1",
+  "category": "Traffic zones inside buildings",
+  "task_or_activity": "Corridors and circulation areas",
+  "Em_r_lx": 100,
+  "Em_u_lx": 150,
+  "Uo": 0.40,
+  "Ra": 40,
+  "RUGL": 28,
+  "Ez_lx": 50,
+  "Em_wall_lx": 50,
+  "Em_ceiling_lx": 30,
+  "specific_requirements": "Illuminance at floor level. Ra and RUGL similar to adjacent areas. 150 lx if there are vehicles on the route. The lighting of exits and entrances shall provide a transition zone to avoid sudden changes in illuminance between inside and outside by day or night. Care should be taken to avoid glare to drivers and pedestrians"
+}
+
+
+Now you can compare your report scene:
+
+"utilisation_profile": "Traffic zones inside buildings - Corridors and circulation areas"
+
+
+against the standards object.
+
+Python Extraction Template
+import os, json
+import pdfplumber
+
+output = []
+
+def clean(cell):
+    return cell.strip().replace("\n", " ") if cell else None
+
+schema_keys = [
+    "ref_no","category","task_or_activity","Em_r_lx","Em_u_lx",
+    "Uo","Ra","RUGL","Ez_lx","Em_wall_lx","Em_ceiling_lx","specific_requirements"
+]
+
+pdf_path = "prEN 12464-1.pdf"
+
+with pdfplumber.open(pdf_path) as pdf:
+    category = None
+    for page in pdf.pages:
+        text = page.extract_text() or ""
+        # detect category from heading "Table 6.x — ..."
+        for line in text.splitlines():
+            if line.startswith("Table 6."):
+                category = line.split("—")[-1].strip()
+
+        tables = page.extract_tables()
+        for table in tables:
+            headers = table[0]
+            for row in table[1:]:
+                record = dict(zip(schema_keys, [None]*len(schema_keys)))
+                record["category"] = category
+                record["ref_no"] = clean(row[0])
+                record["task_or_activity"] = clean(row[1])
+                record["Em_r_lx"] = clean(row[2])
+                record["Em_u_lx"] = clean(row[3])
+                record["Uo"] = clean(row[4])
+                record["Ra"] = clean(row[5])
+                record["RUGL"] = clean(row[6])
+                record["Ez_lx"] = clean(row[7])
+                record["Em_wall_lx"] = clean(row[8])
+                record["Em_ceiling_lx"] = clean(row[9])
+                record["specific_requirements"] = clean(row[10]) if len(row) > 10 else None
+                output.append(record)
+
+# save as one master JSON
+with open("standards.json", "w", encoding="utf-8") as f:
+    json.dump(output, f, ensure_ascii=False, indent=2)
+
+
+⚡ With this approach:
+
+You’ll have a complete structured JSON version of all EN 12464-1 standards.

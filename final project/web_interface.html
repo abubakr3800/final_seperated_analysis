@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighting Compliance Checker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            padding: 40px;
+        }
+
+        .upload-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 2px dashed #dee2e6;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .upload-section:hover {
+            border-color: #667eea;
+            background: #f0f2ff;
+        }
+
+        .upload-section.dragover {
+            border-color: #667eea;
+            background: #e8f0fe;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .upload-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .upload-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .upload-btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .file-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .results-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .compliance-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #28a745;
+        }
+
+        .compliance-card.fail {
+            border-left-color: #dc3545;
+        }
+
+        .compliance-card.partial {
+            border-left-color: #ffc107;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        .status-pass {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-fail {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .status-partial {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .room-details {
+            margin-top: 20px;
+        }
+
+        .check-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            margin: 8px 0;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #dee2e6;
+        }
+
+        .check-info {
+            flex: 1;
+        }
+
+        .check-detail-text {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 4px;
+        }
+
+        .check-item:last-child {
+            border-bottom: none;
+        }
+
+        .check-name {
+            font-weight: 600;
+            color: #495057;
+            font-size: 14px;
+        }
+
+        .check-value {
+            font-family: 'Courier New', monospace;
+            background: #ffffff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+            font-size: 13px;
+        }
+
+        .check-compliant {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .check-non-compliant {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .check-info {
+            color: #17a2b8;
+            font-weight: bold;
+        }
+
+        .check-details {
+            margin-top: 15px;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .room-details {
+            margin-top: 25px;
+        }
+
+        .room-details h4 {
+            color: #495057;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .compliance-card {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .compliance-card.pass {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border-left: 5px solid #28a745;
+        }
+
+        .compliance-card.fail {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            border-left: 5px solid #dc3545;
+        }
+
+        .compliance-card.unknown {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 5px solid #ffc107;
+        }
+
+        /* Room Diagram Styles */
+        .room-diagram {
+            margin: 15px 0;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+        }
+
+        .room-visual {
+            width: 200px;
+            height: 120px;
+            border: 3px solid #495057;
+            border-radius: 8px;
+            margin: 10px auto;
+            position: relative;
+            background: linear-gradient(45deg, #f8f9fa 25%, transparent 25%), 
+                        linear-gradient(-45deg, #f8f9fa 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #f8f9fa 75%), 
+                        linear-gradient(-45deg, transparent 75%, #f8f9fa 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+
+        .room-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(73, 80, 87, 0.9);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .room-dimensions {
+            text-align: center;
+            font-size: 11px;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        /* Comparison Table Styles */
+        .comparison-table {
+            margin: 15px 0;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th {
+            background: #495057;
+            color: white;
+            padding: 12px 8px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 10px 8px;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 12px;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .comparison-table tr:hover {
+            background: #e9ecef;
+        }
+
+        .value-cell {
+            font-weight: bold;
+        }
+
+        .value-pass {
+            color: #28a745;
+        }
+
+        .value-fail {
+            color: #dc3545;
+        }
+
+        .value-na {
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .api-status {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .status-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .status-online {
+            background: #28a745;
+        }
+
+        .status-offline {
+            background: #dc3545;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        .extracted-data-section {
+            margin-bottom: 30px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .info-item {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .lighting-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .lighting-item {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+        }
+
+        .lighting-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .lighting-label {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        .luminaire-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #28a745;
+        }
+
+        .luminaire-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .detail-item {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.9em;
+        }
+
+        .room-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #17a2b8;
+        }
+
+        .room-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Lighting Compliance Checker</h1>
+            <p>Upload your PDF lighting report to check compliance against standards</p>
+        </div>
+
+        <div class="main-content">
+            <!-- API Status Section -->
+            <div class="api-status">
+                <div class="status-item">
+                    <h3>Report API</h3>
+                    <p><span class="status-indicator status-offline" id="report-status"></span><span id="report-text">Checking...</span></p>
+                </div>
+                <div class="status-item">
+                    <h3>Compliance API</h3>
+                    <p><span class="status-indicator status-offline" id="compliance-status"></span><span id="compliance-text">Checking...</span></p>
+                </div>
+                <div class="status-item">
+                    <h3>Standards</h3>
+                    <p><span class="status-indicator status-offline" id="standards-status"></span><span id="standards-text">Checking...</span></p>
+                </div>
+            </div>
+
+            <!-- Upload Section -->
+            <div class="upload-section" id="upload-section">
+                <h2>📄 Upload PDF Report</h2>
+                <p>Drag and drop your PDF file here or click to browse</p>
+                <input type="file" id="file-input" class="file-input" accept=".pdf">
+                <button class="upload-btn" onclick="document.getElementById('file-input').click()">
+                    Choose PDF File
+                </button>
+                <div class="file-info" id="file-info"></div>
+            </div>
+
+            <!-- Loading Section -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Processing your report... This may take a few moments.</p>
+            </div>
+
+            <!-- Error/Success Messages -->
+            <div class="error-message" id="error-message"></div>
+            <div class="success-message" id="success-message"></div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="results-section">
+                <h2>📊 Compliance Results</h2>
+                <div id="results-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000';
+        const REPORT_API_BASE = 'http://localhost:5000';
+
+        // Check API status on page load
+        window.addEventListener('load', checkApiStatus);
+
+        // File upload handling
+        const fileInput = document.getElementById('file-input');
+        const uploadSection = document.getElementById('upload-section');
+        const fileInfo = document.getElementById('file-info');
+        const loading = document.getElementById('loading');
+        const resultsSection = document.getElementById('results-section');
+        const errorMessage = document.getElementById('error-message');
+        const successMessage = document.getElementById('success-message');
+
+        fileInput.addEventListener('change', handleFileSelect);
+
+        // Drag and drop handling
+        uploadSection.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadSection.classList.add('dragover');
+        });
+
+        uploadSection.addEventListener('dragleave', () => {
+            uploadSection.classList.remove('dragover');
+        });
+
+        uploadSection.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadSection.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        function handleFileSelect(e) {
+            const file = e.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        }
+
+        function handleFile(file) {
+            if (!file.type.includes('pdf')) {
+                showError('Please select a PDF file.');
+                return;
+            }
+
+            fileInfo.innerHTML = `
+                <strong>Selected File:</strong> ${file.name}<br>
+                <strong>Size:</strong> ${(file.size / 1024 / 1024).toFixed(2)} MB<br>
+                <strong>Type:</strong> ${file.type}
+            `;
+            fileInfo.style.display = 'block';
+
+            // Show upload button
+            const uploadBtn = document.createElement('button');
+            uploadBtn.className = 'upload-btn';
+            uploadBtn.textContent = 'Check Compliance';
+            uploadBtn.onclick = () => uploadFile(file);
+            fileInfo.appendChild(uploadBtn);
+        }
+
+        async function uploadFile(file) {
+            const formData = new FormData();
+            formData.append('file', file);
+
+            showLoading();
+            hideMessages();
+            hideResults();
+
+            try {
+                const response = await fetch(`${API_BASE}/check-compliance-detailed`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showResults(result);
+                    showSuccess('Report processed successfully!');
+                } else {
+                    showError(result.detail || 'Failed to process report');
+                }
+            } catch (error) {
+                showError('Network error: ' + error.message);
+            } finally {
+                hideLoading();
+            }
+        }
+
+        function showResults(data) {
+            const complianceResult = data.compliance_result;
+            const resultsContent = document.getElementById('results-content');
+            
+            let html = '';
+            
+            // Show extracted report data first
+            if (data.extracted_report_data) {
+                html += showExtractedData(data.extracted_report_data);
+            }
+            
+            // Then show compliance results
+            const overallStatus = complianceResult.overall_compliance || 'UNKNOWN';
+            html += `
+                <div class="compliance-card ${overallStatus.toLowerCase()}">
+                    <h3>
+                        Overall Compliance: 
+                        <span class="status-badge status-${overallStatus.toLowerCase()}">
+                            ${overallStatus}
+                        </span>
+                    </h3>
+            `;
+
+            // Summary statistics
+            if (complianceResult.summary) {
+                const summary = complianceResult.summary;
+                html += `
+                    <div class="summary-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">${summary.total_rooms || 0}</div>
+                            <div class="stat-label">Total Rooms</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">${summary.passed || 0}</div>
+                            <div class="stat-label">Passed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">${summary.failed || 0}</div>
+                            <div class="stat-label">Failed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">${(summary.pass_rate || 0).toFixed(1)}%</div>
+                            <div class="stat-label">Pass Rate</div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                // Fallback when no summary is available
+                const checks = complianceResult.checks || [];
+                html += `
+                    <div class="summary-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">${checks.length}</div>
+                            <div class="stat-label">Total Rooms</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">${checks.filter(c => c.status === 'PASS').length}</div>
+                            <div class="stat-label">Passed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">${checks.filter(c => c.status === 'FAIL').length}</div>
+                            <div class="stat-label">Failed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">${checks.length > 0 ? (checks.filter(c => c.status === 'PASS').length / checks.length * 100).toFixed(1) : 0}%</div>
+                            <div class="stat-label">Pass Rate</div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Add comparison table at the top
+            if (complianceResult.checks && complianceResult.checks.length > 0) {
+                html += createComparisonTable(complianceResult.checks);
+            }
+
+            // Room details
+            if (complianceResult.checks && complianceResult.checks.length > 0) {
+                html += '<div class="room-details">';
+                complianceResult.checks.forEach((check, index) => {
+                    html += `
+                        <div class="compliance-card ${check.status.toLowerCase()}">
+                            <h4>
+                                ${check.room} - 
+                                <span class="status-badge status-${check.status.toLowerCase()}">
+                                    ${check.status}
+                                </span>
+                            </h4>
+                            <p><strong>Utilisation Profile:</strong> ${check.utilisation_profile}</p>
+                    `;
+
+                    if (check.standard) {
+                        html += `
+                            <p><strong>Standard:</strong> ${check.standard.ref_no} - ${check.standard.task_or_activity}</p>
+                        `;
+                    }
+
+                    // Add room diagram if we have room data
+                    if (data.extracted_report_data && data.extracted_report_data.rooms && data.extracted_report_data.rooms[index]) {
+                        html += createRoomDiagram(data.extracted_report_data.rooms[index], index);
+                    }
+
+                    if (check.checks) {
+                        html += '<div class="check-details">';
+                        html += '<h6>📋 Detailed Compliance Checks:</h6>';
+                        Object.entries(check.checks).forEach(([key, checkData]) => {
+                            const compliant = checkData.compliant;
+                            const margin = checkData.margin || 0;
+                            const marginText = margin > 0 ? `+${margin.toFixed(1)}` : `${margin.toFixed(1)}`;
+                            
+                            // Special handling for Ra (informational only)
+                            let statusDisplay = '';
+                            let statusClass = '';
+                            
+                            if (key.toLowerCase() === 'ra') {
+                                // Ra/CRI is informational only
+                                if (checkData.found) {
+                                    statusDisplay = compliant ? '✅ PASS' : '❌ FAIL';
+                                    statusClass = compliant ? 'check-compliant' : 'check-non-compliant';
+                                } else {
+                                    statusDisplay = 'ℹ️ INFO';
+                                    statusClass = 'check-info';
+                                }
+                            } else if (key.toLowerCase() === 'uniformity') {
+                                // Uniformity affects pass/fail
+                                if (checkData.found) {
+                                    statusDisplay = compliant ? '✅ PASS' : '❌ FAIL';
+                                    statusClass = compliant ? 'check-compliant' : 'check-non-compliant';
+                                } else {
+                                    statusDisplay = '❌ NOT FOUND';
+                                    statusClass = 'check-non-compliant';
+                                }
+                            } else {
+                                // Other checks (like lux) affect pass/fail
+                                statusDisplay = compliant ? '✅ PASS' : '❌ FAIL';
+                                statusClass = compliant ? 'check-compliant' : 'check-non-compliant';
+                            }
+                            
+                            html += `
+                                <div class="check-item">
+                                    <div class="check-info">
+                                        <span class="check-name">${key.toUpperCase() === 'RA' ? 'RA/CRI' : key.toUpperCase()}</span>
+                                        <div class="check-detail-text">
+                                            Required: <strong>${checkData.required || 'N/A'}</strong> | 
+                                            Actual: <strong>${checkData.actual || 'N/A'}</strong> | 
+                                            ${checkData.found !== undefined ? `Found: <strong>${checkData.found ? 'Yes' : 'No'}</strong> | ` : ''}
+                                            ${checkData.note ? `Note: <strong>${checkData.note}</strong>` : `Margin: <strong>${marginText}</strong>`}
+                                        </div>
+                                    </div>
+                                    <span class="check-value">
+                                        <span class="${statusClass}">
+                                            ${statusDisplay}
+                                        </span>
+                                    </span>
+                                </div>
+                            `;
+                        });
+                        html += '</div>';
+                    }
+
+                    html += '</div>';
+                });
+                html += '</div>';
+            }
+
+            html += '</div>';
+            resultsContent.innerHTML = html;
+            resultsSection.style.display = 'block';
+        }
+
+        async function checkApiStatus() {
+            // Check Compliance API
+            try {
+                const response = await fetch(`${API_BASE}/health`);
+                if (response.ok) {
+                    updateStatus('compliance', true, 'Online');
+                } else {
+                    updateStatus('compliance', false, 'Error');
+                }
+            } catch {
+                updateStatus('compliance', false, 'Offline');
+            }
+
+            // Check Report API via proxy (CORS-friendly)
+            try {
+                const response = await fetch(`${API_BASE}/proxy/report-health`);
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.status === 'healthy') {
+                        updateStatus('report', true, 'Online');
+                    } else {
+                        updateStatus('report', false, 'Error');
+                    }
+                } else {
+                    updateStatus('report', false, 'Error');
+                }
+            } catch (error) {
+                updateStatus('report', false, 'Offline');
+            }
+
+            // Check Standards
+            try {
+                const response = await fetch(`${API_BASE}/standards-info`);
+                if (response.ok) {
+                    const data = await response.json();
+                    updateStatus('standards', true, `${data.total_standards} standards loaded`);
+                } else {
+                    updateStatus('standards', false, 'Error');
+                }
+            } catch {
+                updateStatus('standards', false, 'Offline');
+            }
+        }
+
+        function updateStatus(type, online, text) {
+            const indicator = document.getElementById(`${type}-status`);
+            const textElement = document.getElementById(`${type}-text`);
+            
+            indicator.className = `status-indicator ${online ? 'status-online' : 'status-offline'}`;
+            textElement.textContent = text;
+        }
+
+        function showLoading() {
+            loading.style.display = 'block';
+        }
+
+        function hideLoading() {
+            loading.style.display = 'none';
+        }
+
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+        }
+
+        function showSuccess(message) {
+            successMessage.textContent = message;
+            successMessage.style.display = 'block';
+        }
+
+        function hideMessages() {
+            errorMessage.style.display = 'none';
+            successMessage.style.display = 'none';
+        }
+
+        function hideResults() {
+            resultsSection.style.display = 'none';
+        }
+
+        function showExtractedData(extractedData) {
+            let html = `
+                <div class="extracted-data-section">
+                    <h2>📋 Extracted Report Data</h2>
+            `;
+            
+            // Show metadata
+            if (extractedData.metadata) {
+                const meta = extractedData.metadata;
+                html += `
+                    <div class="compliance-card">
+                        <h3>📄 Project Information</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <strong>Project:</strong> ${meta.project_name || 'N/A'}
+                            </div>
+                            <div class="info-item">
+                                <strong>Company:</strong> ${meta.company_name || 'N/A'}
+                            </div>
+                            <div class="info-item">
+                                <strong>Engineer:</strong> ${meta.engineer || 'N/A'}
+                            </div>
+                            <div class="info-item">
+                                <strong>Email:</strong> ${meta.email || 'N/A'}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Show lighting setup
+            if (extractedData.lighting_setup) {
+                const lighting = extractedData.lighting_setup;
+                html += `
+                    <div class="compliance-card">
+                        <h3>💡 Lighting Setup</h3>
+                        <div class="lighting-grid">
+                            <div class="lighting-item">
+                                <div class="lighting-value">${lighting.average_lux || 'N/A'}</div>
+                                <div class="lighting-label">Average Lux</div>
+                            </div>
+                            <div class="lighting-item">
+                                <div class="lighting-value">${lighting.uniformity || 'N/A'}</div>
+                                <div class="lighting-label">Uniformity</div>
+                            </div>
+                            <div class="lighting-item">
+                                <div class="lighting-value">${lighting.number_of_fixtures || 'N/A'}</div>
+                                <div class="lighting-label">Fixtures</div>
+                            </div>
+                            <div class="lighting-item">
+                                <div class="lighting-value">${lighting.total_power_w || 'N/A'}W</div>
+                                <div class="lighting-label">Total Power</div>
+                            </div>
+                            <div class="lighting-item">
+                                <div class="lighting-value">${lighting.fixture_type || 'N/A'}</div>
+                                <div class="lighting-label">Fixture Type</div>
+                            </div>
+                            <div class="lighting-item">
+                                <div class="lighting-value">${lighting.luminous_efficacy_lm_per_w || 'N/A'} lm/W</div>
+                                <div class="lighting-label">Efficacy</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Show luminaires
+            if (extractedData.luminaires && extractedData.luminaires.length > 0) {
+                html += `
+                    <div class="compliance-card">
+                        <h3>🔦 Luminaires</h3>
+                `;
+                extractedData.luminaires.forEach((luminaire, index) => {
+                    html += `
+                        <div class="luminaire-item">
+                            <h4>Luminaire ${index + 1}</h4>
+                            <div class="luminaire-details">
+                                <div class="detail-item">
+                                    <strong>Manufacturer:</strong> ${luminaire.manufacturer || 'N/A'}
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Article No:</strong> ${luminaire.article_no || 'N/A'}
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Power:</strong> ${luminaire.power_w || 'N/A'}W
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Luminous Flux:</strong> ${luminaire.luminous_flux_lm || 'N/A'} lm
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Efficacy:</strong> ${luminaire.efficacy_lm_per_w || 'N/A'} lm/W
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Quantity:</strong> ${luminaire.quantity || 'N/A'}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                html += `</div>`;
+            }
+            
+            // Show rooms
+            if (extractedData.rooms && extractedData.rooms.length > 0) {
+                html += `
+                    <div class="compliance-card">
+                        <h3>🏠 Rooms (${extractedData.rooms.length} found)</h3>
+                `;
+                extractedData.rooms.forEach((room, index) => {
+                    html += `
+                        <div class="room-item">
+                            <h4>Room ${index + 1}: ${room.name || 'Unnamed Room'}</h4>
+                            <div class="room-details">
+                                <div class="detail-item">
+                                    <strong>Arrangement:</strong> ${room.arrangement || 'N/A'}
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Layout Points:</strong> ${room.layout ? room.layout.length : 0} points
+                                </div>
+                                ${room.area ? `<div class="detail-item"><strong>Area:</strong> ${room.area}</div>` : ''}
+                                ${room.utilisation_profile ? `<div class="detail-item"><strong>Utilisation Profile:</strong> ${room.utilisation_profile}</div>` : ''}
+                            </div>
+                        </div>
+                    `;
+                });
+                html += `</div>`;
+            }
+            
+            html += `</div>`;
+            return html;
+        }
+
+        function createRoomDiagram(room, index) {
+            // Extract dimensions if available
+            const dimensions = room.dimensions || {};
+            const width = dimensions.x_m || dimensions.width || 'N/A';
+            const height = dimensions.y_m || dimensions.height || 'N/A';
+            const area = room.area || 'N/A';
+            
+            return `
+                <div class="room-diagram">
+                    <h6>📐 Room ${index + 1} Layout</h6>
+                    <div class="room-visual">
+                        <div class="room-label">${room.name || `Room ${index + 1}`}</div>
+                    </div>
+                    <div class="room-dimensions">
+                        ${width !== 'N/A' && height !== 'N/A' ? 
+                            `Dimensions: ${width}m × ${height}m` : 
+                            'Dimensions: Not specified'
+                        }<br>
+                        ${area !== 'N/A' ? `Area: ${area} m²` : 'Area: Not specified'}
+                    </div>
+                </div>
+            `;
+        }
+
+        function createComparisonTable(checks) {
+            if (!checks || checks.length === 0) return '';
+            
+            let html = '<div class="comparison-table">';
+            html += '<h6>📊 Standards Comparison Table</h6>';
+            html += '<table>';
+            html += '<thead>';
+            html += '<tr>';
+            html += '<th>Room</th>';
+            html += '<th>Standard</th>';
+            html += '<th>LUX<br><small>Required / Actual</small></th>';
+            html += '<th>Uniformity<br><small>Required / Actual</small></th>';
+            html += '<th>Ra/CRI<br><small>Required / Actual</small></th>';
+            html += '<th>Status</th>';
+            html += '</tr>';
+            html += '</thead>';
+            html += '<tbody>';
+            
+            checks.forEach(check => {
+                const standard = check.standard || {};
+                const checkDetails = check.checks || {};
+                
+                // Get values for each metric
+                const luxData = checkDetails.lux || {};
+                const uniformityData = checkDetails.uniformity || {};
+                const raData = checkDetails.ra || {};
+                
+                html += '<tr>';
+                html += `<td><strong>${check.room || 'Unknown'}</strong></td>`;
+                html += `<td>${standard.ref_no || 'N/A'}</td>`;
+                
+                // LUX column - Simple Required / Actual format
+                if (luxData.required && luxData.actual) {
+                    const luxClass = luxData.compliant ? 'value-pass' : 'value-fail';
+                    html += `<td class="value-cell ${luxClass}">${luxData.required} / ${luxData.actual}</td>`;
+                } else {
+                    html += '<td class="value-na">N/A</td>';
+                }
+                
+                // Uniformity column - Simple Required / Actual format
+                if (uniformityData.required) {
+                    if (uniformityData.actual !== null && uniformityData.actual !== undefined) {
+                        const uniformityClass = uniformityData.compliant ? 'value-pass' : 'value-fail';
+                        html += `<td class="value-cell ${uniformityClass}">${uniformityData.required} / ${uniformityData.actual}</td>`;
+                    } else {
+                        html += `<td class="value-na">${uniformityData.required} / Not Found</td>`;
+                    }
+                } else {
+                    html += '<td class="value-na">N/A</td>';
+                }
+                
+                // Ra column - Informational only
+                if (raData.required) {
+                    if (raData.found && raData.actual !== null) {
+                        const raClass = raData.compliant ? 'value-pass' : 'value-fail';
+                        html += `<td class="value-cell ${raClass}" title="${raData.note}">${raData.required} / ${raData.actual}</td>`;
+                    } else {
+                        html += `<td class="value-na" title="${raData.note}">${raData.required} / Not Found</td>`;
+                    }
+                } else {
+                    html += '<td class="value-na">N/A</td>';
+                }
+                
+                // Status column
+                const statusClass = check.status === 'PASS' ? 'value-pass' : 
+                                  check.status === 'FAIL' ? 'value-fail' : 'value-na';
+                html += `<td class="value-cell ${statusClass}">${check.status || 'UNKNOWN'}</td>`;
+                
+                html += '</tr>';
+            });
+            
+            html += '</tbody>';
+            html += '</table>';
+            html += '</div>';
+            
+            return html;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+    "metadata": {
+        "company_name": "Short Circuit Company",
+        "project_name": "Lighting Study with street 100W at height 10 m Design Team leader",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "tmpxzg_qrtg_20251001_001640_4356a8f5.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 100.0,
+        "luminous_efficacy_lm_per_w": null
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "Philips",
+            "article_no": "Unknown",
+            "power_w": 100.0,
+            "luminous_flux_lm": 16966.0,
+            "efficacy_lm_per_w": 0.0
+        }
+    ],
+    "rooms": [],
+    "scenes": [
+        {
+            "scene_name": "horizontal illuminance",
+            "average_lux": 15.0,
+            "min_lux": 8.09,
+            "max_lux": 25.4,
+            "uniformity": 0.54,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "horizontal illuminance",
+            "average_lux": 15.9,
+            "min_lux": 7.63,
+            "max_lux": 31.5,
+            "uniformity": 0.48,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "horizontal illuminance",
+            "average_lux": 15.9,
+            "min_lux": 7.63,
+            "max_lux": 31.5,
+            "uniformity": 0.48,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+# Minimal requirements for PDF Report Extractor
+# =============================================
+
+# Essential PDF processing
+pdfplumber
+PyMuPDF
+
+# OCR (optional - only needed for scanned PDFs)
+pdf2image
+pytesseract
+Pillow
+
+# API (optional - only needed for web interface)
+Flask
+requests

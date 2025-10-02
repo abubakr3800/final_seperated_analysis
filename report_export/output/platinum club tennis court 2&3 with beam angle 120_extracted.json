@@ -1,0 +1,134 @@
+{
+    "metadata": {
+        "company_name": "Short Cicuit Company",
+        "project_name": "Lighting study for two tennis courts with flood light Technical Engineer",
+        "engineer": "Eng.Mostafa Emad",
+        "email": "mostafaattalla122@gmail.com",
+        "report_title": "platinum club tennis court 2&3 with beam angle 120.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": 345.0,
+        "uniformity": 0.73,
+        "total_power_w": 400.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "Article",
+            "article_no": "Unknown",
+            "power_w": 400.0,
+            "luminous_flux_lm": 58000.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": [
+                {
+                    "x_m": 40.643,
+                    "y_m": 23.818,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 40.643,
+                    "y_m": 23.818,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 74.362,
+                    "y_m": 23.787,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 74.362,
+                    "y_m": 23.787,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 40.383,
+                    "y_m": 23.474,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 40.383,
+                    "y_m": 23.474,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 74.664,
+                    "y_m": 23.453,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 74.664,
+                    "y_m": 23.453,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 40.094,
+                    "y_m": 23.127,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 40.094,
+                    "y_m": 23.127,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 74.959,
+                    "y_m": 23.12,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 74.959,
+                    "y_m": 23.12,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 75.175,
+                    "y_m": 22.788,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 75.175,
+                    "y_m": 22.788,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 39.853,
+                    "y_m": 22.772,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 39.853,
+                    "y_m": 22.772,
+                    "z_m": 11.5
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.73,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.73,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

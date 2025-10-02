@@ -1,0 +1,511 @@
+{
+    "batch_summary": {
+        "total_files": 100,
+        "successful": 100,
+        "failed": 0,
+        "input_folder": "..\\dataset\\Reports",
+        "output_folder": "output"
+    },
+    "results": [
+        {
+            "file": "Al amal factory _Report.pdf",
+            "status": "success",
+            "output": "output\\Al amal factory _Report_extracted.json"
+        },
+        {
+            "file": "Al Rajhi Specialized Cablles_Report.pdf",
+            "status": "success",
+            "output": "output\\Al Rajhi Specialized Cablles_Report_extracted.json"
+        },
+        {
+            "file": "Appliance Factory 1_Report.pdf",
+            "status": "success",
+            "output": "output\\Appliance Factory 1_Report_extracted.json"
+        },
+        {
+            "file": "Appliance Factory 2_Report.pdf",
+            "status": "success",
+            "output": "output\\Appliance Factory 2_Report_extracted.json"
+        },
+        {
+            "file": "Arab contactor club Football court _Report.pdf",
+            "status": "success",
+            "output": "output\\Arab contactor club Football court _Report_extracted.json"
+        },
+        {
+            "file": "Arab Contractors football court _Report.pdf",
+            "status": "success",
+            "output": "output\\Arab Contractors football court _Report_extracted.json"
+        },
+        {
+            "file": "Arab tech  production line_Report.pdf",
+            "status": "success",
+            "output": "output\\Arab tech  production line_Report_extracted.json"
+        },
+        {
+            "file": "Aramex option1 _Report.pdf",
+            "status": "success",
+            "output": "output\\Aramex option1 _Report_extracted.json"
+        },
+        {
+            "file": "Aramex option3 _Report.pdf",
+            "status": "success",
+            "output": "output\\Aramex option3 _Report_extracted.json"
+        },
+        {
+            "file": "Beni Suef 1 _Report.pdf",
+            "status": "success",
+            "output": "output\\Beni Suef 1 _Report_extracted.json"
+        },
+        {
+            "file": "Beni Suef 2_Report.pdf",
+            "status": "success",
+            "output": "output\\Beni Suef 2_Report_extracted.json"
+        },
+        {
+            "file": "Beni Suef option 1_Report.pdf",
+            "status": "success",
+            "output": "output\\Beni Suef option 1_Report_extracted.json"
+        },
+        {
+            "file": "Beni Suef option 2_Report.pdf",
+            "status": "success",
+            "output": "output\\Beni Suef option 2_Report_extracted.json"
+        },
+        {
+            "file": "BHC final.. _Report.pdf",
+            "status": "success",
+            "output": "output\\BHC final.. _Report_extracted.json"
+        },
+        {
+            "file": "City Club basketcourt_Report (1).pdf",
+            "status": "success",
+            "output": "output\\City Club basketcourt_Report (1)_extracted.json"
+        },
+        {
+            "file": "City Club basketcourt_Report.pdf",
+            "status": "success",
+            "output": "output\\City Club basketcourt_Report_extracted.json"
+        },
+        {
+            "file": "City club Damanhour Football court 2 ._Report.pdf",
+            "status": "success",
+            "output": "output\\City club Damanhour Football court 2 ._Report_extracted.json"
+        },
+        {
+            "file": "City club Damnhour Football court 2 ._Report.pdf",
+            "status": "success",
+            "output": "output\\City club Damnhour Football court 2 ._Report_extracted.json"
+        },
+        {
+            "file": "City club Damnhour Football court _Report.. (1).pdf",
+            "status": "success",
+            "output": "output\\City club Damnhour Football court _Report.. (1)_extracted.json"
+        },
+        {
+            "file": "City Club Damnhour Football court _Report...pdf",
+            "status": "success",
+            "output": "output\\City Club Damnhour Football court _Report.._extracted.json"
+        },
+        {
+            "file": "City Club Football _Report (1).pdf",
+            "status": "success",
+            "output": "output\\City Club Football _Report (1)_extracted.json"
+        },
+        {
+            "file": "City Club Football _Report (2).pdf",
+            "status": "success",
+            "output": "output\\City Club Football _Report (2)_extracted.json"
+        },
+        {
+            "file": "City Club Football _Report.pdf",
+            "status": "success",
+            "output": "output\\City Club Football _Report_extracted.json"
+        },
+        {
+            "file": "City club Tennis Court damnhour  _Report.pdf",
+            "status": "success",
+            "output": "output\\City club Tennis Court damnhour  _Report_extracted.json"
+        },
+        {
+            "file": "City club Tennis Court _Report.pdf",
+            "status": "success",
+            "output": "output\\City club Tennis Court _Report_extracted.json"
+        },
+        {
+            "file": "Cleopatra Mall_Report.pdf",
+            "status": "success",
+            "output": "output\\Cleopatra Mall_Report_extracted.json"
+        },
+        {
+            "file": "Delta Factory  final_Report.pdf",
+            "status": "success",
+            "output": "output\\Delta Factory  final_Report_extracted.json"
+        },
+        {
+            "file": "Delta factory_Report.pdf",
+            "status": "success",
+            "output": "output\\Delta factory_Report_extracted.json"
+        },
+        {
+            "file": "Egypt Kem_Report.pdf",
+            "status": "success",
+            "output": "output\\Egypt Kem_Report_extracted.json"
+        },
+        {
+            "file": "El Gezawy Factory First Floor _Report.pdf",
+            "status": "success",
+            "output": "output\\El Gezawy Factory First Floor _Report_extracted.json"
+        },
+        {
+            "file": "El Gezawy Factory Thrid Floor _Report.pdf",
+            "status": "success",
+            "output": "output\\El Gezawy Factory Thrid Floor _Report_extracted.json"
+        },
+        {
+            "file": "El gezawy _Report.pdf",
+            "status": "success",
+            "output": "output\\El gezawy _Report_extracted.json"
+        },
+        {
+            "file": "El gezawy_second floor _Report.pdf",
+            "status": "success",
+            "output": "output\\El gezawy_second floor _Report_extracted.json"
+        },
+        {
+            "file": "El Hedaya Sports _Report.pdf",
+            "status": "success",
+            "output": "output\\El Hedaya Sports _Report_extracted.json"
+        },
+        {
+            "file": "El Monaged Factory_Report (1).pdf",
+            "status": "success",
+            "output": "output\\El Monaged Factory_Report (1)_extracted.json"
+        },
+        {
+            "file": "El Monaged Factory_Report.pdf",
+            "status": "success",
+            "output": "output\\El Monaged Factory_Report_extracted.json"
+        },
+        {
+            "file": "El Nasr Factory FL_Report.pdf",
+            "status": "success",
+            "output": "output\\El Nasr Factory FL_Report_extracted.json"
+        },
+        {
+            "file": "El Nasr Factory hb_Report.pdf",
+            "status": "success",
+            "output": "output\\El Nasr Factory hb_Report_extracted.json"
+        },
+        {
+            "file": "El Senosy 12m _Report.pdf",
+            "status": "success",
+            "output": "output\\El Senosy 12m _Report_extracted.json"
+        },
+        {
+            "file": "El Senosy 16 m_Report.pdf",
+            "status": "success",
+            "output": "output\\El Senosy 16 m_Report_extracted.json"
+        },
+        {
+            "file": "El Senosy 600 w(200lm)_Report.pdf",
+            "status": "success",
+            "output": "output\\El Senosy 600 w(200lm)_Report_extracted.json"
+        },
+        {
+            "file": "El- Mohands _Report.pdf",
+            "status": "success",
+            "output": "output\\El- Mohands _Report_extracted.json"
+        },
+        {
+            "file": "El-Misrieen factory _Report.pdf",
+            "status": "success",
+            "output": "output\\El-Misrieen factory _Report_extracted.json"
+        },
+        {
+            "file": "ElSabeel Tennis Court Project_Report (1).pdf",
+            "status": "success",
+            "output": "output\\ElSabeel Tennis Court Project_Report (1)_extracted.json"
+        },
+        {
+            "file": "ElSabeel Tennis Court Project_Report.pdf",
+            "status": "success",
+            "output": "output\\ElSabeel Tennis Court Project_Report_extracted.json"
+        },
+        {
+            "file": "Enco Steel Report.pdf",
+            "status": "success",
+            "output": "output\\Enco Steel Report_extracted.json"
+        },
+        {
+            "file": "Estivan Factory _Report (1).pdf",
+            "status": "success",
+            "output": "output\\Estivan Factory _Report (1)_extracted.json"
+        },
+        {
+            "file": "Estivan Factory _Report.pdf",
+            "status": "success",
+            "output": "output\\Estivan Factory _Report_extracted.json"
+        },
+        {
+            "file": "Evedal_Report.pdf",
+            "status": "success",
+            "output": "output\\Evedal_Report_extracted.json"
+        },
+        {
+            "file": "Fresh factory option 2 _Report.pdf",
+            "status": "success",
+            "output": "output\\Fresh factory option 2 _Report_extracted.json"
+        },
+        {
+            "file": "Fresh factory _Report.pdf",
+            "status": "success",
+            "output": "output\\Fresh factory _Report_extracted.json"
+        },
+        {
+            "file": "Global factory _Report.pdf",
+            "status": "success",
+            "output": "output\\Global factory _Report_extracted.json"
+        },
+        {
+            "file": "Gloria Factory _Report.pdf",
+            "status": "success",
+            "output": "output\\Gloria Factory _Report_extracted.json"
+        },
+        {
+            "file": "Gresco _Report.pdf",
+            "status": "success",
+            "output": "output\\Gresco _Report_extracted.json"
+        },
+        {
+            "file": "hand ball court Gezira Club option2_Report.pdf",
+            "status": "success",
+            "output": "output\\hand ball court Gezira Club option2_Report_extracted.json"
+        },
+        {
+            "file": "Hand ball court Gezira Club_Report.pdf",
+            "status": "success",
+            "output": "output\\Hand ball court Gezira Club_Report_extracted.json"
+        },
+        {
+            "file": "ICO_corridor_Report.pdf",
+            "status": "success",
+            "output": "output\\ICO_corridor_Report_extracted.json"
+        },
+        {
+            "file": "Inco Steel Report.pdf",
+            "status": "success",
+            "output": "output\\Inco Steel Report_extracted.json"
+        },
+        {
+            "file": "Iraq Project 100%_Report.pdf",
+            "status": "success",
+            "output": "output\\Iraq Project 100%_Report_extracted.json"
+        },
+        {
+            "file": "Iraq Project 30% _Report.pdf",
+            "status": "success",
+            "output": "output\\Iraq Project 30% _Report_extracted.json"
+        },
+        {
+            "file": "Iraq Project 30%_Report.pdf",
+            "status": "success",
+            "output": "output\\Iraq Project 30%_Report_extracted.json"
+        },
+        {
+            "file": "Iraq Project 60%_Report (1).pdf",
+            "status": "success",
+            "output": "output\\Iraq Project 60%_Report (1)_extracted.json"
+        },
+        {
+            "file": "Iraq Project 60%_Report.pdf",
+            "status": "success",
+            "output": "output\\Iraq Project 60%_Report_extracted.json"
+        },
+        {
+            "file": "Karta Misr _Report.pdf",
+            "status": "success",
+            "output": "output\\Karta Misr _Report_extracted.json"
+        },
+        {
+            "file": "Life sport 7Aside court _Report.pdf",
+            "status": "success",
+            "output": "output\\Life sport 7Aside court _Report_extracted.json"
+        },
+        {
+            "file": "life sport basketball courts_Report.pdf",
+            "status": "success",
+            "output": "output\\life sport basketball courts_Report_extracted.json"
+        },
+        {
+            "file": "Megapack_Report.pdf",
+            "status": "success",
+            "output": "output\\Megapack_Report_extracted.json"
+        },
+        {
+            "file": "Montana Factory 3Y_Report.pdf",
+            "status": "success",
+            "output": "output\\Montana Factory 3Y_Report_extracted.json"
+        },
+        {
+            "file": "Montana Factory 5Y_Report.pdf",
+            "status": "success",
+            "output": "output\\Montana Factory 5Y_Report_extracted.json"
+        },
+        {
+            "file": "Montana Factory _Report.pdf",
+            "status": "success",
+            "output": "output\\Montana Factory _Report_extracted.json"
+        },
+        {
+            "file": "Nascom_Report.pdf",
+            "status": "success",
+            "output": "output\\Nascom_Report_extracted.json"
+        },
+        {
+            "file": "NESSTRA Report With 100 watt.pdf",
+            "status": "success",
+            "output": "output\\NESSTRA Report With 100 watt_extracted.json"
+        },
+        {
+            "file": "NESSTRA Report With 150 watt.pdf",
+            "status": "success",
+            "output": "output\\NESSTRA Report With 150 watt_extracted.json"
+        },
+        {
+            "file": "Nextip ground floor _Report.pdf",
+            "status": "success",
+            "output": "output\\Nextip ground floor _Report_extracted.json"
+        },
+        {
+            "file": "Ola textile factory_Report (1).pdf",
+            "status": "success",
+            "output": "output\\Ola textile factory_Report (1)_extracted.json"
+        },
+        {
+            "file": "Ola textile factory_Report.pdf",
+            "status": "success",
+            "output": "output\\Ola textile factory_Report_extracted.json"
+        },
+        {
+            "file": "Otack football court option1 _Report.pdf",
+            "status": "success",
+            "output": "output\\Otack football court option1 _Report_extracted.json"
+        },
+        {
+            "file": "Otack football court option2_Report.pdf",
+            "status": "success",
+            "output": "output\\Otack football court option2_Report_extracted.json"
+        },
+        {
+            "file": "Pergolas Sk school_Report.pdf",
+            "status": "success",
+            "output": "output\\Pergolas Sk school_Report_extracted.json"
+        },
+        {
+            "file": "platinum club tennis court 1 with beam angle 120.pdf",
+            "status": "success",
+            "output": "output\\platinum club tennis court 1 with beam angle 120_extracted.json"
+        },
+        {
+            "file": "platinum club tennis court 1 with beam angle 30.pdf",
+            "status": "success",
+            "output": "output\\platinum club tennis court 1 with beam angle 30_extracted.json"
+        },
+        {
+            "file": "platinum club tennis court 2&3 with beam angle 120.pdf",
+            "status": "success",
+            "output": "output\\platinum club tennis court 2&3 with beam angle 120_extracted.json"
+        },
+        {
+            "file": "platinum club tennis court 2&3 with beam angle 30.pdf",
+            "status": "success",
+            "output": "output\\platinum club tennis court 2&3 with beam angle 30_extracted.json"
+        },
+        {
+            "file": "platinum club tennis court 4&5&6&7 with beam angle 120...pdf",
+            "status": "success",
+            "output": "output\\platinum club tennis court 4&5&6&7 with beam angle 120.._extracted.json"
+        },
+        {
+            "file": "platinum club tennis court 4&5&6&7 with beam angle 30.pdf",
+            "status": "success",
+            "output": "output\\platinum club tennis court 4&5&6&7 with beam angle 30_extracted.json"
+        },
+        {
+            "file": "Port Said 2 _Report.pdf",
+            "status": "success",
+            "output": "output\\Port Said 2 _Report_extracted.json"
+        },
+        {
+            "file": "Port Said Normal _Report.pdf",
+            "status": "success",
+            "output": "output\\Port Said Normal _Report_extracted.json"
+        },
+        {
+            "file": "Port Said _Report.pdf",
+            "status": "success",
+            "output": "output\\Port Said _Report_extracted.json"
+        },
+        {
+            "file": "RAVILLE  Project_Report 2.pdf",
+            "status": "success",
+            "output": "output\\RAVILLE  Project_Report 2_extracted.json"
+        },
+        {
+            "file": "RAVILLE  Project_Report.pdf",
+            "status": "success",
+            "output": "output\\RAVILLE  Project_Report_extracted.json"
+        },
+        {
+            "file": "Sham tex factory Report.pdf",
+            "status": "success",
+            "output": "output\\Sham tex factory Report_extracted.json"
+        },
+        {
+            "file": "Sola Project 100% _Report.pdf",
+            "status": "success",
+            "output": "output\\Sola Project 100% _Report_extracted.json"
+        },
+        {
+            "file": "Sola Project 40% _Report.pdf",
+            "status": "success",
+            "output": "output\\Sola Project 40% _Report_extracted.json"
+        },
+        {
+            "file": "Sola Project 60% _Report.pdf",
+            "status": "success",
+            "output": "output\\Sola Project 60% _Report_extracted.json"
+        },
+        {
+            "file": "Specialized for Electical Supplies 100%_Report (1).pdf",
+            "status": "success",
+            "output": "output\\Specialized for Electical Supplies 100%_Report (1)_extracted.json"
+        },
+        {
+            "file": "Specialized for Electical Supplies 100%_Report.pdf",
+            "status": "success",
+            "output": "output\\Specialized for Electical Supplies 100%_Report_extracted.json"
+        },
+        {
+            "file": "Specialized for Electical Supplies 60% _Report.pdf",
+            "status": "success",
+            "output": "output\\Specialized for Electical Supplies 60% _Report_extracted.json"
+        },
+        {
+            "file": "Specialized for Electical Supplies40%_Report.pdf",
+            "status": "success",
+            "output": "output\\Specialized for Electical Supplies40%_Report_extracted.json"
+        },
+        {
+            "file": "sun captial school_Report.pdf",
+            "status": "success",
+            "output": "output\\sun captial school_Report_extracted.json"
+        },
+        {
+            "file": "Talaat Harb club Football court _Report.pdf",
+            "status": "success",
+            "output": "output\\Talaat Harb club Football court _Report_extracted.json"
+        }
+    ]
+}

@@ -1,0 +1,169 @@
+{
+    "metadata": {
+        "company_name": "Short Cicuit Company",
+        "project_name": "Lighting study for tennis court with flood light Technical Engineer",
+        "engineer": "Eng.Mostafa Emad",
+        "email": "mostafaattalla122@gmail.com",
+        "report_title": "platinum club tennis court 1 with beam angle 120.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": 421.0,
+        "uniformity": 0.67,
+        "total_power_w": 400.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "Article",
+            "article_no": "Unknown",
+            "power_w": 400.0,
+            "luminous_flux_lm": 58000.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": [
+                {
+                    "x_m": 3.46,
+                    "y_m": 29.992,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 14.558,
+                    "y_m": 29.864,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 3.776,
+                    "y_m": 29.647,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 14.835,
+                    "y_m": 29.615,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 3.793,
+                    "y_m": 29.595,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 14.892,
+                    "y_m": 29.5,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 4.111,
+                    "y_m": 29.311,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 4.098,
+                    "y_m": 29.274,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 15.175,
+                    "y_m": 29.261,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 15.182,
+                    "y_m": 29.231,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 4.417,
+                    "y_m": 28.957,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 15.455,
+                    "y_m": 28.925,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 4.493,
+                    "y_m": 4.53,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 4.119,
+                    "y_m": 4.855,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 4.148,
+                    "y_m": 4.872,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 15.098,
+                    "y_m": 4.911,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 15.039,
+                    "y_m": 4.933,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 3.829,
+                    "y_m": 5.168,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 14.793,
+                    "y_m": 5.195,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 3.844,
+                    "y_m": 5.204,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 14.741,
+                    "y_m": 5.296,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 14.476,
+                    "y_m": 5.51,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 3.533,
+                    "y_m": 5.516,
+                    "z_m": 12.0
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.67,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.67,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

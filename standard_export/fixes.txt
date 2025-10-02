@@ -1,0 +1,64 @@
+Use Camelot/Tabula instead of pdfplumber
+
+pip install camelot-py[cv]
+
+
+Example:
+
+import camelot
+
+tables = camelot.read_pdf("prEN 12464-1.pdf", pages="all", flavor="stream")
+print(len(tables))  # number of tables found
+tables[0].to_csv("table_1.csv")  # check structure
+
+
+camelot (flavor="stream") is much better with structured numeric tables.
+
+Post-processing cleanup
+
+Detect concatenated numbers with regex and split:
+
+import re
+def split_numbers(val):
+    if not val: return None
+    m = re.findall(r"\d+", val)
+    return [int(x) for x in m] if len(m) > 1 else val
+
+
+Merge continuation rows: if a row has no ref_no but has task_or_activity, append to the previous row.
+
+Stricter schema alignment
+
+Only accept rows with a valid ref_no pattern (^\d+(\.\d+)*$).
+
+Skip rows that are headers (task, lx, activity area, …).
+
+For multi-ref rows like 6.2.3 6.2.4, split into two records.
+
+Validation layer
+
+After parsing, check ranges:
+
+Ra must be ≤100.
+
+Uo must be ≤1.0.
+
+Em_r_lx should be within 20–2000.
+
+If a value is out of range → mark it for review instead of keeping 8080.
+
+✅ Improved Flow
+
+Use Camelot to get more reliable tables.
+
+Apply row cleaning:
+
+Drop header junk.
+
+Merge multi-line rows.
+
+Split concatenated numbers.
+
+Apply numeric sanity checks.
+
+Save in your fixed schema.

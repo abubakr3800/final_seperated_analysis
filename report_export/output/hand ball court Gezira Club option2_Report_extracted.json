@@ -1,0 +1,154 @@
+{
+    "metadata": {
+        "company_name": "Short Cicuit Company",
+        "project_name": "Lighting study for hand ball court with flood light Technical Engineer",
+        "engineer": "Eng.Mostafa Emad",
+        "email": null,
+        "report_title": "hand ball court Gezira Club option2_Report.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": 323.0,
+        "uniformity": 0.54,
+        "total_power_w": 8000.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "Article",
+            "article_no": "Unknown",
+            "power_w": 8000.0,
+            "luminous_flux_lm": 145.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": [
+                {
+                    "x_m": 1.612,
+                    "y_m": 30.458,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 21.611,
+                    "y_m": 30.444,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 1.612,
+                    "y_m": 30.38,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 21.611,
+                    "y_m": 30.337,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 1.612,
+                    "y_m": 30.01,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 21.611,
+                    "y_m": 29.967,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 1.612,
+                    "y_m": 29.64,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 21.611,
+                    "y_m": 29.597,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 1.612,
+                    "y_m": 29.533,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 21.611,
+                    "y_m": 29.519,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 21.61,
+                    "y_m": 10.479,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 1.612,
+                    "y_m": 10.465,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 1.612,
+                    "y_m": 10.387,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 21.61,
+                    "y_m": 10.372,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 1.612,
+                    "y_m": 10.017,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 21.61,
+                    "y_m": 10.002,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 1.612,
+                    "y_m": 9.647,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 21.61,
+                    "y_m": 9.632,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 21.61,
+                    "y_m": 9.554,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 1.612,
+                    "y_m": 9.54,
+                    "z_m": 12.0
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.54,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.54,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

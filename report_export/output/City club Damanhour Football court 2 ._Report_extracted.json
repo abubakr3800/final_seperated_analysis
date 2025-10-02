@@ -1,0 +1,174 @@
+{
+    "metadata": {
+        "company_name": null,
+        "project_name": "Lighting study for football court with flood light at 16 m Technical Engineer",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "City club Damanhour Football court 2 ._Report.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": 0.53,
+        "total_power_w": 1500.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "Philips",
+            "article_no": "Unknown",
+            "power_w": 1500.0,
+            "luminous_flux_lm": 217500.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": [
+                {
+                    "x_m": 15.0,
+                    "y_m": 2.33,
+                    "z_m": 87.632
+                },
+                {
+                    "x_m": 2.33,
+                    "y_m": 88.465,
+                    "z_m": 15.0
+                },
+                {
+                    "x_m": 2.33,
+                    "y_m": 89.299,
+                    "z_m": 15.0
+                },
+                {
+                    "x_m": 16.0,
+                    "y_m": 2.33,
+                    "z_m": 87.632
+                },
+                {
+                    "x_m": 2.33,
+                    "y_m": 88.465,
+                    "z_m": 16.0
+                },
+                {
+                    "x_m": 2.33,
+                    "y_m": 89.299,
+                    "z_m": 16.0
+                },
+                {
+                    "x_m": 16.0,
+                    "y_m": 2.33,
+                    "z_m": 33.882
+                },
+                {
+                    "x_m": 2.33,
+                    "y_m": 34.715,
+                    "z_m": 16.0
+                },
+                {
+                    "x_m": 2.33,
+                    "y_m": 35.549,
+                    "z_m": 16.0
+                },
+                {
+                    "x_m": 15.0,
+                    "y_m": 2.33,
+                    "z_m": 33.882
+                },
+                {
+                    "x_m": 2.33,
+                    "y_m": 34.715,
+                    "z_m": 15.0
+                },
+                {
+                    "x_m": 2.33,
+                    "y_m": 35.549,
+                    "z_m": 15.0
+                },
+                {
+                    "x_m": 16.0,
+                    "y_m": 82.778,
+                    "z_m": 89.298
+                },
+                {
+                    "x_m": 82.778,
+                    "y_m": 88.465,
+                    "z_m": 16.0
+                },
+                {
+                    "x_m": 82.778,
+                    "y_m": 87.632,
+                    "z_m": 16.0
+                },
+                {
+                    "x_m": 82.778,
+                    "y_m": 35.548,
+                    "z_m": 16.0
+                },
+                {
+                    "x_m": 82.778,
+                    "y_m": 34.715,
+                    "z_m": 16.0
+                },
+                {
+                    "x_m": 82.778,
+                    "y_m": 33.882,
+                    "z_m": 16.0
+                },
+                {
+                    "x_m": 15.0,
+                    "y_m": 82.778,
+                    "z_m": 89.298
+                },
+                {
+                    "x_m": 82.778,
+                    "y_m": 88.465,
+                    "z_m": 15.0
+                },
+                {
+                    "x_m": 82.778,
+                    "y_m": 87.632,
+                    "z_m": 15.0
+                },
+                {
+                    "x_m": 15.0,
+                    "y_m": 82.778,
+                    "z_m": 35.548
+                },
+                {
+                    "x_m": 82.778,
+                    "y_m": 34.715,
+                    "z_m": 15.0
+                },
+                {
+                    "x_m": 82.778,
+                    "y_m": 33.882,
+                    "z_m": 15.0
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.53,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.53,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

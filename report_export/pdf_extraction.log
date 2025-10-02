@@ -1,0 +1,12 @@
+2025-09-30 12:37:31,359 - INFO - Processing report: NESSTRA Report With 150 watt.pdf
+2025-09-30 12:37:31,359 - INFO - Starting text extraction from: NESSTRA Report With 150 watt.pdf
+2025-09-30 12:37:31,434 - INFO - Extracted text from page 1 using pdfplumber
+2025-09-30 12:37:31,527 - INFO - Extracted text from page 2 using pdfplumber
+2025-09-30 12:37:31,542 - INFO - Extracted text from page 3 using pdfplumber
+2025-09-30 12:37:31,646 - INFO - Extracted text from page 4 using pdfplumber
+2025-09-30 12:37:31,792 - INFO - Extracted text from page 5 using pdfplumber
+2025-09-30 12:37:31,840 - INFO - Extracted text from page 6 using pdfplumber
+2025-09-30 12:37:31,892 - INFO - Extracted text from page 7 using pdfplumber
+2025-09-30 12:37:31,893 - INFO - Successfully extracted text using _extract_with_pdfplumber
+2025-09-30 12:37:31,898 - INFO - Report processing completed successfully
+2025-09-30 12:37:31,900 - INFO - Report data saved to: report_extracted.json

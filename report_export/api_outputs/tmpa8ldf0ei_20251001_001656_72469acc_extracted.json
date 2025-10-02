@@ -1,0 +1,311 @@
+{
+    "metadata": {
+        "company_name": "Short circuit",
+        "project_name": "Lighting study of the factory using 57x Backlight 36w with 110 Technical office",
+        "engineer": "Eng. Salma Mostafa",
+        "email": "salma@shortcircuitcompany.co",
+        "report_title": "tmpa8ldf0ei_20251001_001656_72469acc.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 2052.0,
+        "luminous_efficacy_lm_per_w": 110.0
+    },
+    "luminaires": [
+        {
+            "quantity": 840,
+            "manufacturer": "OC",
+            "article_no": "WIA W62L62",
+            "power_w": 36.0,
+            "luminous_flux_lm": 3960.0,
+            "efficacy_lm_per_w": 110.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 2 · Storey 1 · Room 3",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 2 · Storey 1 · Room 4",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 2 · Storey 1 · Room 5",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 2 · Storey 1 · Room 7",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 2 · Storey 1 · Room 8",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 2 · Storey 1 · Room 9",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 2 · Storey 1 · Room 10",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 2 · Storey 1 · Room 11",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 2 · Storey 1 · Room 12",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 2 · Storey 1 · Room 13",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 2 · Storey 1 · Room 23",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 3 · Storey 1 · Room 14",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 3 · Storey 1 · Room 15",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 3 · Storey 1 · Room 16",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 3 · Storey 1 · Room 17",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 3 · Storey 1 · Room 18",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 3 · Storey 1 · Room 19",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 3 · Storey 1 · Room 20",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 3 · Storey 1 · Room 21",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 3 · Storey 1 · Room 22",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 3 · Storey 1 · Room 24",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 3",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 4",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 5",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 7",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 8",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 9",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 10",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 11",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 12",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 351",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 13",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 23",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 14",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 15",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 16",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 17",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 18",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 19",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 20",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 21",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 22",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 24",
+            "arrangement": "A1",
+            "layout": []
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "Hand wash",
+            "average_lux": 258.0,
+            "min_lux": 234.0,
+            "max_lux": 277.0,
+            "uniformity": 0.91,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Hand wash",
+            "average_lux": 258.0,
+            "min_lux": 234.0,
+            "max_lux": 277.0,
+            "uniformity": 0.91,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Storing",
+            "average_lux": 181.0,
+            "min_lux": 116.0,
+            "max_lux": 230.0,
+            "uniformity": 0.64,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Storing",
+            "average_lux": 181.0,
+            "min_lux": 116.0,
+            "max_lux": 230.0,
+            "uniformity": 0.64,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "IT room",
+            "average_lux": 351.0,
+            "min_lux": 287.0,
+            "max_lux": 403.0,
+            "uniformity": 0.82,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "IT room",
+            "average_lux": 351.0,
+            "min_lux": 287.0,
+            "max_lux": 403.0,
+            "uniformity": 0.82,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Area",
+            "average_lux": 338.0,
+            "min_lux": 281.0,
+            "max_lux": 386.0,
+            "uniformity": 0.83,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Area",
+            "average_lux": 338.0,
+            "min_lux": 281.0,
+            "max_lux": 386.0,
+            "uniformity": 0.83,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

@@ -1,0 +1,120 @@
+🔑 Common Similarities (Lighting Reports vs Standards)
+
+From EN 12464-1, CIE docs, and real project reports, here are the key variable groups and their possible aliases:
+
+1. Illuminance
+
+Em_r_lx → Maintained illuminance (required)
+
+synonyms: E_m, Em, average lux, maintained lux, target lux
+
+Em_u_lx → Maintained illuminance (upper value, often recommended)
+
+synonyms: max lux, upper lux
+
+2. Uniformity
+
+Uo → Illuminance uniformity
+
+synonyms: uniformity, U0, min/avg, Emin/Eavg
+
+3. Glare
+
+RUGL → Unified Glare Rating (UGR) limit
+
+synonyms: UGR, RUGL, glare index
+
+4. Colour Rendering
+
+Ra → General colour rendering index
+
+synonyms: Ra, CRI, Color Rendering Index, R_a
+
+Sometimes reports list R9 (red rendering) separately
+
+synonyms: R9, CRI_R9
+
+5. Colour Temperature
+
+CCT → Correlated Colour Temperature
+
+synonyms: CCT, CT, colour temperature, K, Kelvin
+
+Sometimes described as ranges:
+
+warm white = < 3300 K
+
+neutral white = 3300–5300 K
+
+cool white = > 5300 K
+
+6. Luminance / Luminous Parameters
+
+Ez_lx → Illuminance of surrounding areas
+
+synonyms: E_z, background lux, surround illuminance
+
+luminous_flux → Light output in lumens
+
+synonyms: Φ, lm, luminous output, light flux
+
+power_w → Luminaire power
+
+synonyms: P, Wattage, lamp power
+
+7. Geometry
+
+mounting_height_m → Mounting height
+
+synonyms: height, suspension height, H_m
+
+8. Efficiency / Efficacy
+
+luminous_efficacy_lm_per_w → lm/W
+
+synonyms: efficacy, η, lm/W, luminous efficiency
+
+🎯 Suggested Normalization Dictionary
+
+In Python, we can prepare a mapping dict for your extractor:
+
+ALIASES = {
+    "Em_r_lx": ["em_r_lx", "em", "e_m", "average lux", "maintained lux", "target lux"],
+    "Em_u_lx": ["em_u_lx", "upper lux", "max lux"],
+    "Uo": ["uo", "u0", "uniformity", "emin/eavg", "min/avg"],
+    "RUGL": ["rugl", "ugr", "glare index"],
+    "Ra": ["ra", "cri", "color rendering index", "r_a"],
+    "R9": ["r9", "cri_r9"],
+    "CCT": ["cct", "ct", "colour temperature", "k", "kelvin"],
+    "Ez_lx": ["ez_lx", "background lux", "surround illuminance"],
+    "luminous_flux_lm": ["luminous flux", "flux", "lm", "φ"],
+    "power_w": ["power", "wattage", "lamp power", "p"],
+    "mounting_height_m": ["mounting height", "suspension height", "hm"],
+    "luminous_efficacy_lm_per_w": ["lm/w", "efficacy", "η", "luminous efficiency"]
+}
+
+
+During extraction/cleanup we can run a function like:
+
+def normalize_key(key: str) -> str:
+    key_lower = key.strip().lower()
+    for canonical, aliases in ALIASES.items():
+        if key_lower in [a.lower() for a in aliases]:
+            return canonical
+    return key  # fallback: keep original
+
+⚡ Next Step for You
+
+Switch to Camelot (flavor="stream") for table extraction.
+
+Add a row merge step: if a row has no ref_no but has text, append to the previous row.
+
+Add a number-split step: if you get 300200, split into [300,200].
+
+Apply sanity checks:
+
+Ra ≤ 100
+
+Uo ≤ 1
+
+Em_r_lx ≤ 20000 lux (typical upper limit)

@@ -1,0 +1,66 @@
+{
+    "metadata": {
+        "company_name": null,
+        "project_name": null,
+        "engineer": null,
+        "email": null,
+        "report_title": "Enco Steel Report.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": 362.0,
+        "uniformity": null,
+        "total_power_w": 16650.0,
+        "luminous_efficacy_lm_per_w": 144.9
+    },
+    "luminaires": [
+        {
+            "quantity": 107,
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 150.0,
+            "luminous_flux_lm": 21741.0,
+            "efficacy_lm_per_w": 144.9
+        },
+        {
+            "quantity": 4,
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 150.0,
+            "luminous_flux_lm": 21741.0,
+            "efficacy_lm_per_w": 144.9
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 1 · Story 1 · Room 1",
+            "arrangement": "A1",
+            "layout": []
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

@@ -1,0 +1,225 @@
+Recommended Pipeline for Mixed Reports
+
+Detect if the PDF is text-based or scanned
+
+Try extracting text with pdfplumber or PyMuPDF.
+
+If the extracted text is empty/very small → fall back to OCR.
+
+For text-based PDFs
+
+Use pdfplumber or PyMuPDF to extract clean text.
+
+Apply regex or keyword-based parsing to get fields like:
+
+Company Name → e.g., "Short Cicuit Company"
+
+Project Name → e.g., "Lighting study for nesstra factory with HighBay light"
+
+For scanned PDFs
+
+Use pdf2image + pytesseract (OCR).
+
+Preprocess images (grayscale, high DPI ~300, noise removal).
+
+Apply same regex/keyword logic.
+
+Normalize and Export
+
+Clean extracted text (remove line breaks, fix OCR errors).
+
+Store results in JSON/CSV for easy comparison by your AI model.
+
+🔹 Example Hybrid Extractor
+import pdfplumber
+from pdf2image import convert_from_path
+import pytesseract
+import re
+import os
+
+def extract_text(pdf_path):
+    text = ""
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            if page.extract_text():
+                text += page.extract_text() + "\n"
+    return text.strip()
+
+def ocr_pdf(pdf_path):
+    text = ""
+    pages = convert_from_path(pdf_path, dpi=300)
+    for page in pages:
+        text += pytesseract.image_to_string(page) + "\n"
+    return text.strip()
+
+def extract_fields(text):
+    fields = {"company_name": None, "project_name": None}
+
+    company_match = re.search(r"(Company|Short\s*Cicuit|Short\s*Circuit)\s*Name?:?\s*(.+)", text, re.IGNORECASE)
+    project_match = re.search(r"(Project\s*Name|Lighting study)\s*[:\-]?\s*(.+)", text, re.IGNORECASE)
+
+    if company_match:
+        fields["company_name"] = company_match.group(2).strip()
+    if project_match:
+        fields["project_name"] = project_match.group(2).strip()
+
+    return fields
+
+def process_report(pdf_path):
+    text = extract_text(pdf_path)
+
+    # If no text extracted → assume scanned
+    if not text or len(text) < 50:
+        text = ocr_pdf(pdf_path)
+
+    fields = extract_fields(text)
+    return {"raw_text": text, **fields}
+
+# Example usage
+report_data = process_report("NESSTRA Report With 150 watt.pdf")
+print(report_data)
+
+🔹 Why this works
+
+Text-based reports → fast, accurate extraction.
+
+Scanned reports → OCR fallback ensures no data loss.
+
+Regex/keywords → flexible way to grab company/project even if formats differ slightly.
+
+JSON Schema for Extracted Reports
+{
+  "metadata": {
+    "company_name": "Short Cicuit Company",
+    "project_name": "Lighting study for nesstra factory with HighBay light",
+    "engineer": "Eng. Mostafa Emad",
+    "email": "mostafaattalla122@gmail.com",
+    "report_title": "NESSTRA Report With 150 watt"
+  },
+  "lighting_setup": {
+    "number_of_fixtures": 36,
+    "fixture_type": "HighBay 150 watt",
+    "mounting_height_m": 7.0,
+    "average_lux": 673,
+    "uniformity": 0.41,
+    "total_power_w": 5400.0,
+    "luminous_efficacy_lm_per_w": 145.0
+  },
+  "luminaires": [
+    {
+      "manufacturer": "Philips",
+      "article_no": "BY698P LED265CW G2 WB",
+      "power_w": 150.0,
+      "luminous_flux_lm": 21750,
+      "efficacy_lm_per_w": 145.0,
+      "quantity": 36
+    }
+  ],
+  "rooms": [
+    {
+      "name": "Building 1 · Storey 1 · Room 1",
+      "arrangement": "A1",
+      "layout": [
+        {"x_m": 4.000, "y_m": 36.002, "z_m": 7.000},
+        {"x_m": 8.000, "y_m": 36.002, "z_m": 7.000}
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "scene_name": "the factory",
+      "average_lux": 673,
+      "min_lux": 277,
+      "max_lux": 949,
+      "uniformity": 0.41,
+      "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+    },
+    {
+      "scene_name": "working place",
+      "average_lux": 721,
+      "min_lux": 356,
+      "max_lux": 954,
+      "uniformity": 0.49,
+      "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+    }
+  ]
+}
+
+🔹 Why this schema?
+
+metadata → project context (who, what, where).
+
+lighting_setup → overall system summary.
+
+luminaires → detailed product specs (you can expand if multiple types exist).
+
+rooms → per-room layouts (coordinates, arrangement).
+
+scenes → performance results (lux levels, uniformity, profiles).
+
+🔹 Python Export Example
+
+After extracting and parsing fields:
+
+import json
+
+report_data = {
+    "metadata": {
+        "company_name": "Short Cicuit Company",
+        "project_name": "Lighting study for nesstra factory with HighBay light",
+        "engineer": "Eng. Mostafa Emad",
+        "email": "mostafaattalla122@gmail.com",
+        "report_title": "NESSTRA Report With 150 watt"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": 36,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": 7.0,
+        "average_lux": 673,
+        "uniformity": 0.41,
+        "total_power_w": 5400.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 150.0,
+            "luminous_flux_lm": 21750,
+            "efficacy_lm_per_w": 145.0,
+            "quantity": 36
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": [
+                {"x_m": 4.000, "y_m": 36.002, "z_m": 7.000},
+                {"x_m": 8.000, "y_m": 36.002, "z_m": 7.000}
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": 673,
+            "min_lux": 277,
+            "max_lux": 949,
+            "uniformity": 0.41,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": 721,
+            "min_lux": 356,
+            "max_lux": 954,
+            "uniformity": 0.49,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}
+
+# Save JSON
+with open("report_extracted.json", "w", encoding="utf-8") as f:
+    json.dump(report_data, f, indent=4, ensure_ascii=False)

@@ -1,0 +1,52 @@
+attached together.
+Here’s the high-level integration plan:
+
+Step 1: Run both extractors separately.
+
+Project report → JSON (project_data.json)
+
+Standards → JSON (standards.json)
+
+Step 2: Build a comparison module.
+
+Parse project_data.json and identify the utilisation_profile (e.g., Traffic zones inside buildings - Corridors).
+
+Look up the matching entry in standards.json (category + task_or_activity).
+
+Compare values:
+
+average_lux vs. Em_r_lx / Em_u_lx
+
+uniformity vs. Uo
+
+Ra if available
+
+Generate a compliance result (e.g., "PASS" / "FAIL" with margin).
+
+Step 3: (Optional) Provide an API or batch processor.
+
+Extend the PDF Report Extractor API to load standards.json once and then return compliance results for any uploaded report.
+
+Or, build a script like compare.py:
+
+import json
+
+# Load files
+with open("project_data.json") as f:
+    project = json.load(f)
+with open("standards.json") as f:
+    standards = json.load(f)
+
+# Simple matching function
+def find_standard(utilisation_profile):
+    for std in standards:
+        if utilisation_profile.lower() in std["task_or_activity"].lower():
+            return std
+    return None
+
+standard = find_standard(project["rooms"][0]["utilisation_profile"])
+if standard:
+    print("Standard:", standard)
+    print("Project Lux:", project["lighting_setup"]["average_lux"])
+    print("Required Lux:", standard["Em_r_lx"])
+    print("Compliance:", project["lighting_setup"]["average_lux"] >= standard["Em_r_lx"])

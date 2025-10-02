@@ -1,0 +1,16 @@
+{
+    "batch_summary": {
+        "total_files": 1,
+        "successful": 1,
+        "failed": 0,
+        "input_folder": ".",
+        "output_folder": "test_output"
+    },
+    "results": [
+        {
+            "file": "NESSTRA Report With 150 watt.pdf",
+            "status": "success",
+            "output": "test_output\\NESSTRA Report With 150 watt_extracted.json"
+        }
+    ]
+}

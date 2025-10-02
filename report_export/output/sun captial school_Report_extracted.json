@@ -1,0 +1,194 @@
+{
+    "metadata": {
+        "company_name": null,
+        "project_name": "lighting study of sun captial school with flood 200W (110 lm /W) Eng. Noura Anwar",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "sun captial school_Report.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 200.0,
+        "luminous_efficacy_lm_per_w": 110.0
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "Philips",
+            "article_no": "Unknown",
+            "power_w": 200.0,
+            "luminous_flux_lm": 110.0,
+            "efficacy_lm_per_w": 110.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": [
+                {
+                    "x_m": 12.0,
+                    "y_m": 20.926,
+                    "z_m": 37.076
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 24.8,
+                    "z_m": 34.0
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 29.397,
+                    "z_m": 28.27
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 74.758,
+                    "z_m": 82.759
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 79.621,
+                    "z_m": 78.646
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 82.863,
+                    "z_m": 74.936
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 84.468,
+                    "z_m": 33.962
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 81.568,
+                    "z_m": 30.065
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 78.064,
+                    "z_m": 26.532
+                },
+                {
+                    "x_m": 74.197,
+                    "y_m": 23.577,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 87.668,
+                    "z_m": 54.408
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 86.991,
+                    "z_m": 50.174
+                },
+                {
+                    "x_m": 11.9,
+                    "y_m": 86.417,
+                    "z_m": 44.6
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 85.809,
+                    "z_m": 64.296
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 85.278,
+                    "z_m": 68.756
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 85.263,
+                    "z_m": 37.989
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 35.042,
+                    "z_m": 23.6
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 71.633,
+                    "z_m": 23.625
+                },
+                {
+                    "x_m": 70.772,
+                    "y_m": 87.238,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 71.927,
+                    "y_m": 85.668,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 84.84,
+                    "y_m": 70.777,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 23.327,
+                    "y_m": 36.561,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 42.137,
+                    "y_m": 24.659,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 37.641,
+                    "y_m": 23.692,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 63.525,
+                    "y_m": 23.35,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 45.868,
+                    "y_m": 23.331,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 51.355,
+                    "y_m": 22.722,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 57.913,
+                    "y_m": 22.708,
+                    "z_m": 12.0
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "metadata": {
+        "company_name": "short circuit company",
+        "project_name": "Lighting study for El Monaged Factory with High Bay and Weather Desighn Team Leader",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "El_Monaged_Factory_Report_20251001_111959_316f64aa.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 21636.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "quantity": 72,
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 200.0,
+            "luminous_flux_lm": 29000.0,
+            "efficacy_lm_per_w": 145.0
+        },
+        {
+            "quantity": 24,
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 150.0,
+            "luminous_flux_lm": 21750.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 1 · Storey 1 · Room 3",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 1 · Storey 1 · Room 5",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 3",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 5",
+            "arrangement": "A1",
+            "layout": []
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "Caculation for Production Line",
+            "average_lux": 377.0,
+            "min_lux": 216.0,
+            "max_lux": 451.0,
+            "uniformity": 0.57,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Caculation for Production Line",
+            "average_lux": 377.0,
+            "min_lux": 216.0,
+            "max_lux": 451.0,
+            "uniformity": 0.57,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "entry",
+            "average_lux": 124.0,
+            "min_lux": 70.1,
+            "max_lux": 174.0,
+            "uniformity": 0.57,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "entry",
+            "average_lux": 124.0,
+            "min_lux": 70.1,
+            "max_lux": 174.0,
+            "uniformity": 0.57,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

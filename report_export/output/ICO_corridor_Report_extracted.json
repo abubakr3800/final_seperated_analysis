@@ -1,0 +1,230 @@
+{
+    "metadata": {
+        "company_name": null,
+        "project_name": null,
+        "engineer": "Eng. Salma Mostafa",
+        "email": null,
+        "report_title": "ICO_corridor_Report.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 7.0,
+        "luminous_efficacy_lm_per_w": null
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "RIDI",
+            "article_no": "Unknown",
+            "power_w": 7.0,
+            "luminous_flux_lm": 700.0,
+            "efficacy_lm_per_w": 0.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "X",
+            "layout": [
+                {
+                    "x_m": 2.4,
+                    "y_m": 24.265,
+                    "z_m": 1.0
+                },
+                {
+                    "x_m": 22.794,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 1.471,
+                    "y_m": 21.324,
+                    "z_m": 1.0
+                },
+                {
+                    "x_m": 19.853,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 18.382,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 16.912,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 15.441,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 13.971,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 12.5,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 11.029,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 9.559,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 8.088,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 6.618,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 5.147,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 3.676,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 2.206,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 0.735,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                }
+            ]
+        },
+        {
+            "name": "Room 1",
+            "arrangement": "X",
+            "layout": [
+                {
+                    "x_m": 2.4,
+                    "y_m": 24.265,
+                    "z_m": 1.0
+                },
+                {
+                    "x_m": 22.794,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 1.471,
+                    "y_m": 21.324,
+                    "z_m": 1.0
+                },
+                {
+                    "x_m": 19.853,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 18.382,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 16.912,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 15.441,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 13.971,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 12.5,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 11.029,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 9.559,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 8.088,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 6.618,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 5.147,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 3.676,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 2.206,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                },
+                {
+                    "x_m": 0.735,
+                    "y_m": 1.0,
+                    "z_m": 2.4
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

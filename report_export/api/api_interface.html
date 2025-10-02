@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Report Extraction API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .upload-section {
+            border: 2px dashed #ddd;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .upload-section:hover {
+            border-color: #007bff;
+            background-color: #f8f9fa;
+        }
+        input[type="file"] {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 400px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            font-family: monospace;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        .loading {
+            text-align: center;
+            color: #007bff;
+        }
+        .info {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Report Extraction API</h1>
+        
+        <div class="info">
+            <strong>Instructions:</strong><br>
+            1. Select a PDF file using the file input below<br>
+            2. Click "Extract Data" to process the file<br>
+            3. View the extracted JSON data in the result area<br>
+            4. Use the download link to save the extracted data
+        </div>
+        
+        <div class="upload-section">
+            <h3>Upload PDF File</h3>
+            <input type="file" id="pdfFile" accept=".pdf" />
+            <br>
+            <button onclick="extractPDF()" id="extractBtn">Extract Data</button>
+            <button onclick="clearResults()">Clear Results</button>
+        </div>
+        
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+
+    <script>
+        async function extractPDF() {
+            const fileInput = document.getElementById('pdfFile');
+            const resultDiv = document.getElementById('result');
+            const extractBtn = document.getElementById('extractBtn');
+            
+            if (!fileInput.files[0]) {
+                showResult('Please select a PDF file first.', 'error');
+                return;
+            }
+            
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+            
+            extractBtn.disabled = true;
+            extractBtn.textContent = 'Processing...';
+            showResult('Processing PDF file...', 'loading');
+            
+            try {
+                const response = await fetch('/extract', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    const summary = `
+Extraction Successful!
+
+File ID: ${data.file_id}
+Original Filename: ${data.original_filename}
+Download URL: ${data.download_url}
+
+Extracted Data Summary:
+- Company: ${data.extracted_data.metadata.company_name || 'N/A'}
+- Project: ${data.extracted_data.metadata.project_name || 'N/A'}
+- Engineer: ${data.extracted_data.metadata.engineer || 'N/A'}
+- Email: ${data.extracted_data.metadata.email || 'N/A'}
+- Luminaires: ${data.extracted_data.luminaires.length}
+- Rooms: ${data.extracted_data.rooms.length}
+- Scenes: ${data.extracted_data.scenes.length}
+
+Full JSON Data:
+${JSON.stringify(data.extracted_data, null, 2)}
+                    `;
+                    showResult(summary, 'success');
+                } else {
+                    showResult(`Error: ${data.message || data.error}`, 'error');
+                }
+            } catch (error) {
+                showResult(`Network Error: ${error.message}`, 'error');
+            } finally {
+                extractBtn.disabled = false;
+                extractBtn.textContent = 'Extract Data';
+            }
+        }
+        
+        function showResult(message, type) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = message;
+            resultDiv.className = `result ${type}`;
+            resultDiv.style.display = 'block';
+        }
+        
+        function clearResults() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'none';
+            document.getElementById('pdfFile').value = '';
+        }
+    </script>
+</body>
+</html>

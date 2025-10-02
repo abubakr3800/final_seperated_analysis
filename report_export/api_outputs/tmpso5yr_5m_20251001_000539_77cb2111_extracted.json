@@ -1,0 +1,108 @@
+{
+    "metadata": {
+        "company_name": "Short Circuit Company",
+        "project_name": null,
+        "engineer": "Eng. Salma Mostafa",
+        "email": null,
+        "report_title": "tmpso5yr_5m_20251001_000539_77cb2111.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 7.0,
+        "luminous_efficacy_lm_per_w": null
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "RIDI",
+            "article_no": "Unknown",
+            "power_w": 7.0,
+            "luminous_flux_lm": 700.0,
+            "efficacy_lm_per_w": 0.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 1",
+            "arrangement": "A1",
+            "layout": []
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

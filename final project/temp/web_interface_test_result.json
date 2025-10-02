@@ -1,0 +1,489 @@
+{
+  "file_info": {
+    "filename": "NESSTRA Report With 150 watt.pdf",
+    "size": 438530,
+    "upload_time": "2025-09-30T17:52:05.981677"
+  },
+  "extracted_report_data": {
+    "lighting_setup": {
+      "average_lux": 673.0,
+      "fixture_type": "HighBay 150 watt",
+      "luminous_efficacy_lm_per_w": 145.0,
+      "mounting_height_m": null,
+      "number_of_fixtures": 36,
+      "total_power_w": 5400.0,
+      "uniformity": 0.41
+    },
+    "luminaires": [
+      {
+        "article_no": "BY698P LED265CW G2 WB",
+        "efficacy_lm_per_w": 145.0,
+        "luminous_flux_lm": 21750.0,
+        "manufacturer": "Philips",
+        "power_w": 150.0,
+        "quantity": 36
+      }
+    ],
+    "metadata": {
+      "company_name": "Short Cicuit Company",
+      "email": "mostafaattalla122@gmail.com",
+      "engineer": "Eng.Mostafa Emad",
+      "project_name": "Lighting study for nesstra factory with HighBay light Technical Engineer",
+      "report_title": "tmp9w0hwhd__20250930_175203_81966335.pdf"
+    },
+    "rooms": [
+      {
+        "arrangement": "X",
+        "layout": [
+          {
+            "x_m": 7.0,
+            "y_m": 4.0,
+            "z_m": 36.002
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 36.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 36.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 36.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 32.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 32.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 32.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 32.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 28.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 28.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 28.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 28.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 24.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 24.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 24.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 24.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 20.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 20.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 20.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 20.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 16.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 16.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 16.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 16.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 12.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 12.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 12.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 12.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 8.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 8.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 8.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 8.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 4.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 4.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 4.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 4.002,
+            "z_m": 7.0
+          }
+        ],
+        "name": "Building 1 · Storey 1 · Room 1"
+      },
+      {
+        "arrangement": "X",
+        "layout": [
+          {
+            "x_m": 7.0,
+            "y_m": 4.0,
+            "z_m": 36.002
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 36.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 36.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 36.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 32.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 32.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 32.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 32.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 28.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 28.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 28.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 28.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 24.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 24.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 24.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 24.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 20.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 20.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 20.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 20.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 16.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 16.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 16.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 16.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 12.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 12.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 12.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 12.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 8.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 8.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 8.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 8.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 4.0,
+            "y_m": 4.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 8.0,
+            "y_m": 4.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 12.0,
+            "y_m": 4.002,
+            "z_m": 7.0
+          },
+          {
+            "x_m": 16.0,
+            "y_m": 4.002,
+            "z_m": 7.0
+          }
+        ],
+        "name": "Room 1"
+      }
+    ],
+    "scenes": [
+      {
+        "average_lux": 673.0,
+        "max_lux": 949.0,
+        "min_lux": 277.0,
+        "scene_name": "the factory",
+        "uniformity": 0.41,
+        "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+      },
+      {
+        "average_lux": 721.0,
+        "max_lux": 954.0,
+        "min_lux": 356.0,
+        "scene_name": "working place",
+        "uniformity": 0.49,
+        "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+      }
+    ]
+  },
+  "compliance_result": {
+    "overall_compliance": "FAIL",
+    "checks": [
+      {
+        "room": "Building 1 · Storey 1 · Room 1",
+        "utilisation_profile": "",
+        "standard": {
+          "ref_no": "6.2.1",
+          "category": "Table 32",
+          "task_or_activity": "Canteens and break areas"
+        },
+        "checks": {
+          "lux": {
+            "required": 200.0,
+            "actual": 673.0,
+            "compliant": true,
+            "margin": 473.0
+          },
+          "ra": {
+            "required": 80.0,
+            "actual": 0,
+            "compliant": false,
+            "margin": 80.0
+          }
+        },
+        "status": "FAIL"
+      },
+      {
+        "room": "Room 1",
+        "utilisation_profile": "",
+        "standard": {
+          "ref_no": "6.2.1",
+          "category": "Table 32",
+          "task_or_activity": "Canteens and break areas"
+        },
+        "checks": {
+          "lux": {
+            "required": 200.0,
+            "actual": 721.0,
+            "compliant": true,
+            "margin": 521.0
+          },
+          "ra": {
+            "required": 80.0,
+            "actual": 0,
+            "compliant": false,
+            "margin": 80.0
+          }
+        },
+        "status": "FAIL"
+      }
+    ],
+    "summary": {
+      "total_rooms": 2,
+      "passed": 0,
+      "failed": 2,
+      "no_standard_found": 0,
+      "pass_rate": 0.0
+    },
+    "timestamp": "2025-09-30T17:52:05.974164"
+  },
+  "timestamp": "2025-09-30T17:52:05.981697"
+}

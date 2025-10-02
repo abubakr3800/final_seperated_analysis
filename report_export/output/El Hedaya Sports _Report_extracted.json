@@ -1,0 +1,264 @@
+{
+    "metadata": {
+        "company_name": null,
+        "project_name": "Lighting study for Football court Technical Engineer",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "El Hedaya Sports _Report.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 400.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "Philips",
+            "article_no": "Unknown",
+            "power_w": 400.0,
+            "luminous_flux_lm": 58000.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": [
+                {
+                    "x_m": 12.0,
+                    "y_m": 44.839,
+                    "z_m": 45.42
+                },
+                {
+                    "x_m": 45.339,
+                    "y_m": 45.42,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 45.839,
+                    "y_m": 45.42,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 88.698,
+                    "z_m": 45.704
+                },
+                {
+                    "x_m": 89.131,
+                    "y_m": 45.454,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 89.564,
+                    "y_m": 45.204,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 1.294,
+                    "z_m": 45.204
+                },
+                {
+                    "x_m": 1.727,
+                    "y_m": 45.454,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 2.16,
+                    "y_m": 45.704,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 11.25,
+                    "y_m": 44.839,
+                    "z_m": 45.42
+                },
+                {
+                    "x_m": 45.339,
+                    "y_m": 45.42,
+                    "z_m": 11.25
+                },
+                {
+                    "x_m": 45.839,
+                    "y_m": 45.42,
+                    "z_m": 11.25
+                },
+                {
+                    "x_m": 11.25,
+                    "y_m": 88.698,
+                    "z_m": 45.704
+                },
+                {
+                    "x_m": 89.131,
+                    "y_m": 45.454,
+                    "z_m": 11.25
+                },
+                {
+                    "x_m": 89.564,
+                    "y_m": 45.204,
+                    "z_m": 11.25
+                },
+                {
+                    "x_m": 11.25,
+                    "y_m": 1.294,
+                    "z_m": 45.204
+                },
+                {
+                    "x_m": 1.727,
+                    "y_m": 45.454,
+                    "z_m": 11.25
+                },
+                {
+                    "x_m": 2.16,
+                    "y_m": 45.704,
+                    "z_m": 11.25
+                },
+                {
+                    "x_m": 10.5,
+                    "y_m": 44.964,
+                    "z_m": 45.42
+                },
+                {
+                    "x_m": 45.714,
+                    "y_m": 45.42,
+                    "z_m": 10.5
+                },
+                {
+                    "x_m": 10.5,
+                    "y_m": 1.402,
+                    "z_m": 45.267
+                },
+                {
+                    "x_m": 2.052,
+                    "y_m": 45.642,
+                    "z_m": 10.5
+                },
+                {
+                    "x_m": 10.5,
+                    "y_m": 88.806,
+                    "z_m": 45.642
+                },
+                {
+                    "x_m": 89.455,
+                    "y_m": 45.267,
+                    "z_m": 10.5
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 46.019,
+                    "z_m": 0.208
+                },
+                {
+                    "x_m": 45.519,
+                    "y_m": 0.208,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 45.019,
+                    "y_m": 0.208,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 12.0,
+                    "y_m": 89.564,
+                    "z_m": 0.424
+                },
+                {
+                    "x_m": 89.131,
+                    "y_m": 0.174,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 1.727,
+                    "y_m": 0.174,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 1.294,
+                    "y_m": 0.424,
+                    "z_m": 12.0
+                },
+                {
+                    "x_m": 46.019,
+                    "y_m": 0.208,
+                    "z_m": 11.25
+                },
+                {
+                    "x_m": 45.519,
+                    "y_m": 0.208,
+                    "z_m": 11.25
+                },
+                {
+                    "x_m": 45.019,
+                    "y_m": 0.208,
+                    "z_m": 11.25
+                },
+                {
+                    "x_m": 11.25,
+                    "y_m": 89.564,
+                    "z_m": 0.424
+                },
+                {
+                    "x_m": 89.131,
+                    "y_m": 0.174,
+                    "z_m": 11.25
+                },
+                {
+                    "x_m": 1.727,
+                    "y_m": 0.174,
+                    "z_m": 11.25
+                },
+                {
+                    "x_m": 1.294,
+                    "y_m": 0.424,
+                    "z_m": 11.25
+                },
+                {
+                    "x_m": 10.5,
+                    "y_m": 45.894,
+                    "z_m": 0.208
+                },
+                {
+                    "x_m": 45.144,
+                    "y_m": 0.208,
+                    "z_m": 10.5
+                },
+                {
+                    "x_m": 10.5,
+                    "y_m": 89.455,
+                    "z_m": 0.361
+                },
+                {
+                    "x_m": 1.402,
+                    "y_m": 0.361,
+                    "z_m": 10.5
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "calculation of football court",
+            "average_lux": 308.0,
+            "min_lux": 153.0,
+            "max_lux": 718.0,
+            "uniformity": 0.5,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "calculation of football court",
+            "average_lux": 308.0,
+            "min_lux": 153.0,
+            "max_lux": 718.0,
+            "uniformity": 0.5,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

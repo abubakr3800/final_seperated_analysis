@@ -1,0 +1,250 @@
+{
+    "metadata": {
+        "company_name": null,
+        "project_name": null,
+        "engineer": "Eng. Salma Mostafa",
+        "email": "salma@shortcircuitcompany.co",
+        "report_title": "Montana Factory 5Y_Report.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": 501.0,
+        "uniformity": 0.71,
+        "total_power_w": 2.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "quantity": 19,
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 150.0,
+            "luminous_flux_lm": 21750.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 2 · Storey 1 · Room 1",
+            "arrangement": "X",
+            "layout": [
+                {
+                    "x_m": 6.0,
+                    "y_m": 2.895,
+                    "z_m": 33.719
+                },
+                {
+                    "x_m": 2.895,
+                    "y_m": 29.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 8.345,
+                    "y_m": 29.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 13.695,
+                    "y_m": 29.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 18.481,
+                    "y_m": 26.931,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 2.895,
+                    "y_m": 23.869,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 8.345,
+                    "y_m": 23.869,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 13.695,
+                    "y_m": 23.869,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 2.895,
+                    "y_m": 18.319,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 8.345,
+                    "y_m": 18.319,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 13.695,
+                    "y_m": 18.319,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 19.65,
+                    "y_m": 18.319,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 25.605,
+                    "y_m": 18.319,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 2.895,
+                    "y_m": 11.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 8.345,
+                    "y_m": 11.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 13.695,
+                    "y_m": 11.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 19.65,
+                    "y_m": 11.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 25.605,
+                    "y_m": 11.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 25.436,
+                    "y_m": 21.964,
+                    "z_m": 6.0
+                }
+            ]
+        },
+        {
+            "name": "Room 1",
+            "arrangement": "X",
+            "layout": [
+                {
+                    "x_m": 6.0,
+                    "y_m": 2.895,
+                    "z_m": 33.719
+                },
+                {
+                    "x_m": 2.895,
+                    "y_m": 29.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 8.345,
+                    "y_m": 29.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 13.695,
+                    "y_m": 29.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 18.481,
+                    "y_m": 26.931,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 2.895,
+                    "y_m": 23.869,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 8.345,
+                    "y_m": 23.869,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 13.695,
+                    "y_m": 23.869,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 2.895,
+                    "y_m": 18.319,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 8.345,
+                    "y_m": 18.319,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 13.695,
+                    "y_m": 18.319,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 19.65,
+                    "y_m": 18.319,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 25.605,
+                    "y_m": 18.319,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 2.895,
+                    "y_m": 11.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 8.345,
+                    "y_m": 11.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 13.695,
+                    "y_m": 11.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 19.65,
+                    "y_m": 11.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 25.605,
+                    "y_m": 11.719,
+                    "z_m": 6.0
+                },
+                {
+                    "x_m": 25.436,
+                    "y_m": 21.964,
+                    "z_m": 6.0
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": 501.0,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.71,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": 501.0,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.71,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

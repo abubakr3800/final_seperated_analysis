@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "company_name": "Short Cicuit Company",
+        "project_name": "Lighting study for tennis court with flood light Technical Engineer",
+        "engineer": "Eng.Mostafa Emad",
+        "email": "mostafaattalla122@gmail.com",
+        "report_title": "platinum club tennis court 1 with beam angle 30.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": 486.0,
+        "uniformity": 0.49,
+        "total_power_w": 900.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "quantity": 12,
+            "manufacturer": "LEDVANCE",
+            "article_no": "40580755 FLOODLIGHT MAX 900W LUMINAIRE HEAD 757 SYM",
+            "power_w": 400.0,
+            "luminous_flux_lm": 58000.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": [
+                {
+                    "x_m": 3.529,
+                    "y_m": 29.771,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 14.541,
+                    "y_m": 29.723,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 3.992,
+                    "y_m": 29.447,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 15.003,
+                    "y_m": 29.399,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 4.454,
+                    "y_m": 29.123,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 15.466,
+                    "y_m": 29.075,
+                    "z_m": 11.5
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.49,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.49,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

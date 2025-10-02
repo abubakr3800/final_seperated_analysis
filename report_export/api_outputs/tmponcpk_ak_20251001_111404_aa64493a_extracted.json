@@ -1,0 +1,58 @@
+{
+    "metadata": {
+        "company_name": "Short circuit",
+        "project_name": null,
+        "engineer": "Eng. Salma Mostafa",
+        "email": "salma@shortcircuitcompany.co",
+        "report_title": "tmponcpk_ak_20251001_111404_aa64493a.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": 349.0,
+        "uniformity": 0.94,
+        "total_power_w": 100.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "quantity": 6,
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 100.0,
+            "luminous_flux_lm": 14500.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 2 · Storey 1 · Room 6",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "Room 6",
+            "arrangement": "A1",
+            "layout": []
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": 349.0,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.94,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": 349.0,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": 0.94,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

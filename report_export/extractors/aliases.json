@@ -1,0 +1,39 @@
+{
+    "places": {
+      "Factory": ["factory", "the factory", "industrial hall", "manufacturing area", "workshop", "production hall"],
+      "Office": ["office", "workplace", "working place", "open office", "cubicle", "meeting room", "office 1", "office 2", "office 3", "office 4", "office 5", "office 6", "office 7", "office 8", "office 9"],
+      "Classroom": ["classroom", "school room", "lecture hall", "study room", "training room"],
+      "Corridor": ["corridor", "corridor 1", "corridor 2", "hallway", "passage", "hall", "walkway"],
+      "Warehouse": ["warehouse", "storage hall", "stock room", "storage area", "storing"],
+      "Hospital Operating Room": ["operating room", "surgery room", "or", "hospital operating theatre", "surgical area"],
+      "Hospital Ward": ["ward", "hospital room", "patient room", "inpatient room"],
+      "Laboratory": ["laboratory", "lab", "lab 1", "lab 2", "lab 3", "lab 4", "science room", "research room"],
+      "Library": ["library", "reading room", "study hall"],
+      "Retail": ["shop", "store", "retail", "supermarket", "showroom"],
+      "Parking": ["parking", "car park", "garage", "parking lot"],
+      "Sports Hall": ["sports hall", "gym", "indoor court", "arena"],
+      "Sanitary Area": ["hand wash", "wash area", "sink area"],
+      "Toilet": ["wc", "wc1", "wc2", "toilet", "restroom", "bathroom"],
+      "IT Room": ["it room", "server room", "computer room"]
+    },
+    "parameters": {
+      "average_lux": ["lux", "ē", "avg lux", "average lux", "avr.lux", "illuminance", "illumination level", "lighting level"],
+      "min_lux": ["emin", "e_min", "minimum lux", "minimum illuminance"],
+      "max_lux": ["emax", "e_max", "maximum lux", "maximum illuminance"],
+      "uniformity": ["uniformity", "uo", "uo (g1)", "uniformity ratio", "emin/eavg", "e_min/e_avg", "illuminance uniformity", "light uniformity"],
+      "glare_ugr": ["ugr", "glare", "unified glare rating", "glare rating", "ugr value"],
+      "glare_related": ["g1", "g2", "index", "glare calc index"],
+      "color_rendering_ra": ["ra", "cri", "color rendering", "colour rendering index", "rendering index", "color rendering ra"],
+      "power_w": ["watt", "w", "p", "power", "lamp power", "luminaire wattage", "fixture power"],
+      "power_total_w": ["ptotal", "total power", "system wattage"],
+      "luminous_flux_lm": ["lm", "luminous flux", "lumens", "total lumens", "light output", "φluminaire"],
+      "luminous_flux_total": ["φtotal", "total luminous flux"],
+      "luminous_efficacy_lm_per_w": ["lm/w", "efficacy", "luminous efficacy", "light efficiency", "system efficacy"],
+      "mounting_height_m": ["mounting height", "height of fixtures", "installation height", "h", "mounting h"],
+      "work_plane_height": ["calculation height", "work plane height", "height (calc)", "perpendicular illuminance height"],
+      "quantity": ["pcs", "pieces", "units", "number of fixtures", "no. of luminaires", "qty", "quantity"],
+      "article_no": ["article no", "product code", "model number", "catalogue no", "article number"],
+      "manufacturer": ["manufacturer", "brand", "maker", "company"]
+    }
+  }
+  

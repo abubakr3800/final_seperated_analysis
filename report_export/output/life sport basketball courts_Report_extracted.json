@@ -1,0 +1,212 @@
+{
+    "metadata": {
+        "company_name": null,
+        "project_name": "Lighting study of basketball courts Eng. Noura Anwar",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "life sport basketball courts_Report.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 250.0,
+        "luminous_efficacy_lm_per_w": 130.0
+    },
+    "luminaires": [
+        {
+            "quantity": 30,
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 250.0,
+            "luminous_flux_lm": 32500.0,
+            "efficacy_lm_per_w": 130.0
+        },
+        {
+            "quantity": 30,
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 250.0,
+            "luminous_flux_lm": 32500.0,
+            "efficacy_lm_per_w": 130.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": [
+                {
+                    "x_m": 5.0,
+                    "y_m": 5.15,
+                    "z_m": 28.4
+                },
+                {
+                    "x_m": 12.85,
+                    "y_m": 28.4,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 5.15,
+                    "y_m": 22.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 12.85,
+                    "y_m": 22.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 5.15,
+                    "y_m": 16.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 12.85,
+                    "y_m": 16.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 5.15,
+                    "y_m": 10.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 12.85,
+                    "y_m": 10.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 5.15,
+                    "y_m": 4.6,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 12.85,
+                    "y_m": 4.6,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 23.15,
+                    "y_m": 28.4,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 30.85,
+                    "y_m": 28.4,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 23.15,
+                    "y_m": 22.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 30.85,
+                    "y_m": 22.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 23.15,
+                    "y_m": 16.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 30.85,
+                    "y_m": 16.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 23.15,
+                    "y_m": 10.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 30.85,
+                    "y_m": 10.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 23.15,
+                    "y_m": 4.6,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 30.85,
+                    "y_m": 4.6,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 5.0,
+                    "y_m": 49.4,
+                    "z_m": 28.4
+                },
+                {
+                    "x_m": 57.1,
+                    "y_m": 28.4,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 49.4,
+                    "y_m": 22.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 57.1,
+                    "y_m": 22.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 49.4,
+                    "y_m": 16.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 57.1,
+                    "y_m": 16.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 49.4,
+                    "y_m": 10.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 57.1,
+                    "y_m": 10.5,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 49.4,
+                    "y_m": 4.6,
+                    "z_m": 5.0
+                },
+                {
+                    "x_m": 57.1,
+                    "y_m": 4.6,
+                    "z_m": 5.0
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

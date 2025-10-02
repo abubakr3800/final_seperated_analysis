@@ -1,0 +1,47 @@
+{
+    "metadata": {
+        "company_name": "Short Circuit Company",
+        "project_name": "Lighting study for football court with flood light 600w (145 lm/w ) Technical Engineer",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "tmpagos6ili_20251001_124707_b1a0cac3.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": 72,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 600.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "Philips",
+            "article_no": "Unknown",
+            "power_w": 600.0,
+            "luminous_flux_lm": 145.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [],
+    "scenes": [
+        {
+            "scene_name": "Calculation for football court",
+            "average_lux": 353.0,
+            "min_lux": 153.0,
+            "max_lux": 1484.0,
+            "uniformity": 0.43,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation for football court",
+            "average_lux": 353.0,
+            "min_lux": 153.0,
+            "max_lux": 1484.0,
+            "uniformity": 0.43,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

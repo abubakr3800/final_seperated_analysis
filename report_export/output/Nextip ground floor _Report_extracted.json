@@ -1,0 +1,202 @@
+{
+    "metadata": {
+        "company_name": null,
+        "project_name": "Lighting study for ground floor Technical Engineer",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "Nextip ground floor _Report.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 36.0,
+        "luminous_efficacy_lm_per_w": 100.0
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "Unknown",
+            "article_no": "Unknown",
+            "power_w": 36.0,
+            "luminous_flux_lm": 100.0,
+            "efficacy_lm_per_w": 100.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "room\n4",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 343",
+            "arrangement": "A1",
+            "layout": []
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "Calculation of open workstation",
+            "average_lux": 355.0,
+            "min_lux": 176.0,
+            "max_lux": 431.0,
+            "uniformity": 0.5,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of office",
+            "average_lux": 357.0,
+            "min_lux": 249.0,
+            "max_lux": 451.0,
+            "uniformity": 0.7,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of Reception",
+            "average_lux": 237.0,
+            "min_lux": 146.0,
+            "max_lux": 311.0,
+            "uniformity": 0.62,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of meeting room",
+            "average_lux": 343.0,
+            "min_lux": 203.0,
+            "max_lux": 474.0,
+            "uniformity": 0.59,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of Kitchen",
+            "average_lux": 264.0,
+            "min_lux": 230.0,
+            "max_lux": 303.0,
+            "uniformity": 0.87,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of one to one meeting",
+            "average_lux": 218.0,
+            "min_lux": 168.0,
+            "max_lux": 256.0,
+            "uniformity": 0.77,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of female toilets",
+            "average_lux": 155.0,
+            "min_lux": 117.0,
+            "max_lux": 191.0,
+            "uniformity": 0.75,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of Men toilets",
+            "average_lux": 168.0,
+            "min_lux": 119.0,
+            "max_lux": 208.0,
+            "uniformity": 0.71,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of coffee corner",
+            "average_lux": 238.0,
+            "min_lux": 167.0,
+            "max_lux": 279.0,
+            "uniformity": 0.7,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of lobby",
+            "average_lux": 270.0,
+            "min_lux": 130.0,
+            "max_lux": 403.0,
+            "uniformity": 0.48,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of open workstation",
+            "average_lux": 355.0,
+            "min_lux": 176.0,
+            "max_lux": 431.0,
+            "uniformity": 0.5,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of office",
+            "average_lux": 357.0,
+            "min_lux": 249.0,
+            "max_lux": 451.0,
+            "uniformity": 0.7,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of Reception",
+            "average_lux": 237.0,
+            "min_lux": 146.0,
+            "max_lux": 311.0,
+            "uniformity": 0.62,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of meeting room",
+            "average_lux": 343.0,
+            "min_lux": 203.0,
+            "max_lux": 474.0,
+            "uniformity": 0.59,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of Kitchen",
+            "average_lux": 264.0,
+            "min_lux": 230.0,
+            "max_lux": 303.0,
+            "uniformity": 0.87,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of one to one meeting",
+            "average_lux": 218.0,
+            "min_lux": 168.0,
+            "max_lux": 256.0,
+            "uniformity": 0.77,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of female toilets",
+            "average_lux": 155.0,
+            "min_lux": 117.0,
+            "max_lux": 191.0,
+            "uniformity": 0.75,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of Men toilets",
+            "average_lux": 168.0,
+            "min_lux": 119.0,
+            "max_lux": 208.0,
+            "uniformity": 0.71,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of coffee corner",
+            "average_lux": 238.0,
+            "min_lux": 167.0,
+            "max_lux": 279.0,
+            "uniformity": 0.7,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of lobby",
+            "average_lux": 270.0,
+            "min_lux": 130.0,
+            "max_lux": 403.0,
+            "uniformity": 0.48,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

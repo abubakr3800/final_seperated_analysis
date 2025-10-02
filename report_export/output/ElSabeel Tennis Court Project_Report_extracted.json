@@ -1,0 +1,94 @@
+{
+    "metadata": {
+        "company_name": null,
+        "project_name": "Lighting study with flood 200W Technical Engineer",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "ElSabeel Tennis Court Project_Report.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 200.0,
+        "luminous_efficacy_lm_per_w": 145.0
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "Philips",
+            "article_no": "Unknown",
+            "power_w": 200.0,
+            "luminous_flux_lm": 145.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": [
+                {
+                    "x_m": 9.0,
+                    "y_m": 17.007,
+                    "z_m": 28.669
+                },
+                {
+                    "x_m": 16.407,
+                    "y_m": 28.669,
+                    "z_m": 9.0
+                },
+                {
+                    "x_m": 9.0,
+                    "y_m": 6.946,
+                    "z_m": 28.668
+                },
+                {
+                    "x_m": 6.346,
+                    "y_m": 28.668,
+                    "z_m": 9.0
+                },
+                {
+                    "x_m": 8.0,
+                    "y_m": 6.946,
+                    "z_m": 28.668
+                },
+                {
+                    "x_m": 6.346,
+                    "y_m": 28.668,
+                    "z_m": 8.0
+                },
+                {
+                    "x_m": 8.0,
+                    "y_m": 17.007,
+                    "z_m": 28.669
+                },
+                {
+                    "x_m": 16.407,
+                    "y_m": 28.669,
+                    "z_m": 8.0
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "Calculation of overall courts",
+            "average_lux": 342.0,
+            "min_lux": 183.0,
+            "max_lux": 632.0,
+            "uniformity": 0.54,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "Calculation of overall courts",
+            "average_lux": 342.0,
+            "min_lux": 183.0,
+            "max_lux": 632.0,
+            "uniformity": 0.54,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

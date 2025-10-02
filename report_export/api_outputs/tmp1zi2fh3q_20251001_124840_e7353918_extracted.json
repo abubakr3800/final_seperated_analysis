@@ -1,0 +1,47 @@
+{
+    "metadata": {
+        "company_name": null,
+        "project_name": null,
+        "engineer": null,
+        "email": null,
+        "report_title": "tmp1zi2fh3q_20251001_124840_e7353918.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 40.0,
+        "luminous_efficacy_lm_per_w": null
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "Unknown",
+            "article_no": "Unknown",
+            "power_w": 40.0,
+            "luminous_flux_lm": 3206.0,
+            "efficacy_lm_per_w": 0.0
+        }
+    ],
+    "rooms": [],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

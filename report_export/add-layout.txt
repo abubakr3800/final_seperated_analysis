@@ -1,0 +1,151 @@
+extend the parser to also capture room layouts (the X/Y/Z coordinates and arrangement) so the JSON will be fully populated.
+
+🔹 Extended Parser with Room Layout Extraction
+import pdfplumber
+from pdf2image import convert_from_path
+import pytesseract
+import re
+import json
+
+# 1. Extract text from text-based PDFs
+def extract_text(pdf_path):
+    text = ""
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            if page.extract_text():
+                text += page.extract_text() + "\n"
+    return text.strip()
+
+# 2. OCR fallback for scanned PDFs
+def ocr_pdf(pdf_path):
+    text = ""
+    pages = convert_from_path(pdf_path, dpi=300)
+    for page in pages:
+        text += pytesseract.image_to_string(page) + "\n"
+    return text.strip()
+
+# 3. Parse structured fields
+def parse_report(text, filename="report.pdf"):
+    data = {
+        "metadata": {
+            "company_name": None,
+            "project_name": None,
+            "engineer": None,
+            "email": None,
+            "report_title": filename
+        },
+        "lighting_setup": {},
+        "luminaires": [],
+        "rooms": [],
+        "scenes": []
+    }
+
+    # --- Metadata ---
+    company_match = re.search(r"(Short\s*Cicuit\s*Company|Company\s*Name.*)", text, re.IGNORECASE)
+    project_match = re.search(r"(Project\s*Name.*|Lighting study.*)", text, re.IGNORECASE)
+    engineer_match = re.search(r"Eng\.\s*[A-Za-z ]+", text)
+    email_match = re.search(r"[\w\.-]+@[\w\.-]+", text)
+
+    if company_match:
+        data["metadata"]["company_name"] = company_match.group(1).strip()
+    if project_match:
+        data["metadata"]["project_name"] = project_match.group(1).strip()
+    if engineer_match:
+        data["metadata"]["engineer"] = engineer_match.group(0).strip()
+    if email_match:
+        data["metadata"]["email"] = email_match.group(0).strip()
+
+    # --- Lighting Setup ---
+    num_fix = re.search(r"(\d+)\s*x\s*HighBay\s*(\d+)\s*watt", text, re.IGNORECASE)
+    avg_lux = re.search(r"Avr\.?lux\s*([\d.]+)", text, re.IGNORECASE)
+    uniformity = re.search(r"Uniformity\s*([\d.]+)", text, re.IGNORECASE)
+    total_power = re.search(r"([\d.]+)\s*W", text)
+    efficacy = re.search(r"([\d.]+)\s*lm/W", text)
+
+    data["lighting_setup"] = {
+        "number_of_fixtures": int(num_fix.group(1)) if num_fix else None,
+        "fixture_type": f"HighBay {num_fix.group(2)} watt" if num_fix else None,
+        "average_lux": float(avg_lux.group(1)) if avg_lux else None,
+        "uniformity": float(uniformity.group(1)) if uniformity else None,
+        "total_power_w": float(total_power.group(1)) if total_power else None,
+        "luminous_efficacy_lm_per_w": float(efficacy.group(1)) if efficacy else None,
+    }
+
+    # --- Luminaires ---
+    luminaire_matches = re.findall(
+        r"(\d+)\s+([A-Za-z]+)\s+([A-Za-z0-9\- ]+)\s+(\d+\.?\d*)\s*W\s+(\d+\.?\d*)\s*lm\s+(\d+\.?\d*)\s*lm/W", 
+        text
+    )
+    for match in luminaire_matches:
+        data["luminaires"].append({
+            "quantity": int(match[0]),
+            "manufacturer": match[1],
+            "article_no": match[2].strip(),
+            "power_w": float(match[3]),
+            "luminous_flux_lm": float(match[4]),
+            "efficacy_lm_per_w": float(match[5])
+        })
+
+    # --- Room Layouts (X/Y/Z coordinates & arrangement) ---
+    room_matches = re.findall(r"(Building.*?Room.*?)(Arrangement.*)?", text)
+    coord_matches = re.findall(r"(\d+\.?\d*)\s*m\s+(\d+\.?\d*)\s*m\s+(\d+\.?\d*)\s*m", text)
+
+    if room_matches:
+        for rm in room_matches:
+            room_name = rm[0].strip()
+            arrangement = rm[1].strip() if rm[1] else None
+            layout = []
+            for coords in coord_matches:
+                layout.append({
+                    "x_m": float(coords[0]),
+                    "y_m": float(coords[1]),
+                    "z_m": float(coords[2])
+                })
+            data["rooms"].append({
+                "name": room_name,
+                "arrangement": arrangement,
+                "layout": layout
+            })
+
+    # --- Scenes ---
+    scene_matches = re.findall(
+        r"([A-Za-z ]+)\s+([\d.]+)\s*lx\s+([\d.]+)\s*lx\s+([\d.]+)\s*lx\s+([\d.]+)",
+        text
+    )
+    for sm in scene_matches:
+        data["scenes"].append({
+            "scene_name": sm[0].strip(),
+            "average_lux": float(sm[1]),
+            "min_lux": float(sm[2]),
+            "max_lux": float(sm[3]),
+            "uniformity": float(sm[4])
+        })
+
+    return data
+
+# 4. Full pipeline
+def process_report(pdf_path):
+    text = extract_text(pdf_path)
+    if not text or len(text) < 50:
+        text = ocr_pdf(pdf_path)
+    parsed = parse_report(text, filename=pdf_path)
+    return parsed
+
+# Example usage
+report_data = process_report("NESSTRA Report With 150 watt.pdf")
+
+# Save to JSON
+with open("report_extracted.json", "w", encoding="utf-8") as f:
+    json.dump(report_data, f, indent=4, ensure_ascii=False)
+
+print("Extraction complete! Data saved to report_extracted.json")
+
+🔹 Improvements in This Version
+
+Room layout added → captures room name (Building 1 · Storey 1 · Room 1), arrangement (A1), and list of X/Y/Z coordinates.
+
+Works for multiple rooms if they exist.
+
+Still handles text + scanned PDFs.
+
+Keeps output consistent with the JSON schema.
