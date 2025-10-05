@@ -1,0 +1,47 @@
+{
+    "metadata": {
+        "company_name": "short circuit company",
+        "project_name": "Lighting study with Flood light 500W (120lm/W) Technical Engineer",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "tmpqtaaznb8_20251005_102919_9474487b.pdf"
+    },
+    "lighting_setup": {
+        "number_of_fixtures": null,
+        "fixture_type": "HighBay 150 watt",
+        "mounting_height_m": null,
+        "average_lux": null,
+        "uniformity": null,
+        "total_power_w": 500.0,
+        "luminous_efficacy_lm_per_w": 120.0
+    },
+    "luminaires": [
+        {
+            "quantity": 1,
+            "manufacturer": "Philips",
+            "article_no": "Unknown",
+            "power_w": 500.0,
+            "luminous_flux_lm": 120.0,
+            "efficacy_lm_per_w": 120.0
+        }
+    ],
+    "rooms": [],
+    "scenes": [
+        {
+            "scene_name": "the factory",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        },
+        {
+            "scene_name": "working place",
+            "average_lux": null,
+            "min_lux": null,
+            "max_lux": null,
+            "uniformity": null,
+            "utilisation_profile": "Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)"
+        }
+    ]
+}

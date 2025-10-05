@@ -1,0 +1,19 @@
+{
+    "metadata": {
+        "company_name": null,
+        "project_name": null,
+        "engineer": null,
+        "email": null,
+        "report_title": "Gezira Club option2_Report.pdf"
+    },
+    "lighting_setup": {},
+    "luminaires": [],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": []
+        }
+    ],
+    "scenes": []
+}

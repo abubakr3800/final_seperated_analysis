@@ -1,0 +1,129 @@
+{
+    "metadata": {
+        "company_name": "short circuit company",
+        "project_name": "Lighting study with flood 200W Technical Engineer",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "tmplf61jzgw_20251005_143802_f3531ade.pdf"
+    },
+    "lighting_setup": {
+        "glare_related": 45.0,
+        "power_w": 145.0,
+        "luminous_flux_lm": 3200.0,
+        "fitting": 1.0,
+        "luminous_efficacy_lm_per_w": 45.0
+    },
+    "luminaires": [
+        {
+            "glare_related": 45.0,
+            "power_w": 145.0,
+            "luminous_flux_lm": 3200.0,
+            "fitting": 1.0,
+            "luminous_efficacy_lm_per_w": 45.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": [
+                {
+                    "x_m": 9.0,
+                    "y_m": 17.007,
+                    "z_m": 28.669
+                },
+                {
+                    "x_m": 16.407,
+                    "y_m": 28.669,
+                    "z_m": 9.0
+                },
+                {
+                    "x_m": 9.0,
+                    "y_m": 6.946,
+                    "z_m": 28.668
+                },
+                {
+                    "x_m": 6.346,
+                    "y_m": 28.668,
+                    "z_m": 9.0
+                },
+                {
+                    "x_m": 8.0,
+                    "y_m": 6.946,
+                    "z_m": 28.668
+                },
+                {
+                    "x_m": 6.346,
+                    "y_m": 28.668,
+                    "z_m": 8.0
+                },
+                {
+                    "x_m": 8.0,
+                    "y_m": 17.007,
+                    "z_m": 28.669
+                },
+                {
+                    "x_m": 16.407,
+                    "y_m": 28.669,
+                    "z_m": 8.0
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "Calculation of overall courts",
+            "average_lux": 342.0,
+            "min_lux": 183.0,
+            "max_lux": 632.0,
+            "uniformity": 0.54,
+            "g1": 0.29,
+            "index": "CG1"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 350.0,
+            "min_lux": 183.0,
+            "max_lux": 645.0,
+            "uniformity": 0.52,
+            "g1": 0.28,
+            "index": "CG2"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 348.0,
+            "min_lux": 176.0,
+            "max_lux": 577.0,
+            "uniformity": 0.51,
+            "g1": 0.31,
+            "index": "CG3"
+        },
+        {
+            "scene_name": "Calculation of overall courts",
+            "average_lux": 342.0,
+            "min_lux": 183.0,
+            "max_lux": 632.0,
+            "uniformity": 0.54,
+            "g1": 0.29,
+            "index": "CG1"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 350.0,
+            "min_lux": 183.0,
+            "max_lux": 645.0,
+            "uniformity": 0.52,
+            "g1": 0.28,
+            "index": "CG2"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 348.0,
+            "min_lux": 176.0,
+            "max_lux": 577.0,
+            "uniformity": 0.51,
+            "g1": 0.31,
+            "index": "CG3"
+        }
+    ]
+}

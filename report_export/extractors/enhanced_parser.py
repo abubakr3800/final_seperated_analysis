@@ -4,6 +4,20 @@ Enhanced PDF Parser - Based on added.txt specifications
 
 This script implements the generalized parser code from added.txt
 with improved field extraction and better regex patterns.
+
+This parser provides a simplified approach to PDF extraction with
+enhanced regex patterns for better field recognition. It's designed
+as an alternative to the more complex extractors for simpler use cases.
+
+Features:
+- Text-based PDF extraction using pdfplumber
+- OCR fallback for scanned PDFs
+- Enhanced regex patterns for field extraction
+- Comprehensive metadata, lighting setup, and scene extraction
+- Simplified pipeline function
+
+Author: PDF Report Extractor Team
+Version: 1.0
 """
 
 import pdfplumber
@@ -17,13 +31,16 @@ from typing import Dict, List, Optional, Any
 
 def extract_text(pdf_path: str) -> str:
     """
-    Extract text from a text-based PDF using pdfplumber
+    Extract text from a text-based PDF using pdfplumber.
+    
+    This is the primary text extraction method for text-based PDFs.
+    It's fast and accurate for most PDF types that contain selectable text.
     
     Args:
-        pdf_path: Path to the PDF file
+        pdf_path (str): Path to the PDF file to extract text from
         
     Returns:
-        Extracted text as string
+        str: Extracted text content, or empty string if extraction fails
     """
     text = ""
     try:
@@ -38,13 +55,17 @@ def extract_text(pdf_path: str) -> str:
 
 def ocr_pdf(pdf_path: str) -> str:
     """
-    OCR fallback for scanned PDFs using pdf2image + pytesseract
+    OCR fallback for scanned PDFs using pdf2image + pytesseract.
+    
+    This method is used when text-based extraction fails, typically
+    for scanned PDFs or image-based documents. It converts PDF pages
+    to images and uses Tesseract OCR to extract text.
     
     Args:
-        pdf_path: Path to the PDF file
+        pdf_path (str): Path to the PDF file to extract text from
         
     Returns:
-        OCR extracted text as string
+        str: OCR extracted text content, or empty string if extraction fails
     """
     text = ""
     try:
@@ -58,14 +79,24 @@ def ocr_pdf(pdf_path: str) -> str:
 
 def parse_report(text: str, filename: str = "report.pdf") -> Dict[str, Any]:
     """
-    Parse fields into structured schema based on added.txt specifications
+    Parse report with enhanced field extraction based on added.txt specifications.
+    
+    This is the main parsing function that extracts structured data from
+    the raw PDF text. It uses enhanced regex patterns to identify and
+    extract various fields including metadata, lighting setup, luminaires,
+    and scenes.
     
     Args:
-        text: Raw extracted text from PDF
-        filename: Name of the PDF file
+        text (str): Raw text extracted from the PDF
+        filename (str): Name of the PDF file (used for report title)
         
     Returns:
-        Structured data dictionary
+        Dict[str, Any]: Structured data containing:
+            - metadata: Company, project, engineer, email info
+            - lighting_setup: Overall lighting system configuration
+            - luminaires: Detailed fixture specifications
+            - rooms: Room layouts (basic)
+            - scenes: Performance metrics and utilization profiles
     """
     data = {
         "metadata": {
@@ -194,38 +225,33 @@ def parse_report(text: str, filename: str = "report.pdf") -> Dict[str, Any]:
         })
 
     # --- Enhanced Rooms Extraction ---
-    # Look for room information and avoid duplicates
+    # Look for room information
     room_patterns = [
         r"Building\s*\d+\s*·\s*Storey\s*\d+\s*·\s*Room\s*\d+",
         r"Room\s*\d+",
         r"Building\s*\d+\s*Storey\s*\d+\s*Room\s*\d+"
     ]
     
-    found_rooms = set()  # Track unique room names
-    
     for pattern in room_patterns:
         room_matches = re.findall(pattern, text, re.IGNORECASE)
         for room_name in room_matches:
-            if room_name not in found_rooms:  # Only add if not already found
-                found_rooms.add(room_name)
-                
-                # Look for coordinates
-                coord_pattern = r"(\d+\.?\d*)\s*,\s*(\d+\.?\d*)\s*,\s*(\d+\.?\d*)"
-                coords = re.findall(coord_pattern, text)
-                
-                layout = []
-                for coord in coords:
-                    layout.append({
-                        "x_m": float(coord[0]),
-                        "y_m": float(coord[1]),
-                        "z_m": float(coord[2])
-                    })
-                
-                data["rooms"].append({
-                    "name": room_name,
-                    "arrangement": "A1",  # Default arrangement
-                    "layout": layout
+            # Look for coordinates
+            coord_pattern = r"(\d+\.?\d*)\s*,\s*(\d+\.?\d*)\s*,\s*(\d+\.?\d*)"
+            coords = re.findall(coord_pattern, text)
+            
+            layout = []
+            for coord in coords:
+                layout.append({
+                    "x_m": float(coord[0]),
+                    "y_m": float(coord[1]),
+                    "z_m": float(coord[2])
                 })
+            
+            data["rooms"].append({
+                "name": room_name,
+                "arrangement": "A1",  # Default arrangement
+                "layout": layout
+            })
 
     # --- Enhanced Scenes Extraction ---
     # Primary pattern from added.txt
@@ -273,13 +299,18 @@ def parse_report(text: str, filename: str = "report.pdf") -> Dict[str, Any]:
 
 def process_report(pdf_path: str) -> Dict[str, Any]:
     """
-    Full pipeline for processing PDF reports based on added.txt
+    Main processing function with hybrid extraction based on added.txt.
+    
+    This function orchestrates the complete PDF processing workflow:
+    1. Attempts text-based extraction first
+    2. Falls back to OCR if text extraction is insufficient
+    3. Parses the extracted text into structured data
     
     Args:
-        pdf_path: Path to the PDF file
+        pdf_path (str): Path to the PDF file to process
         
     Returns:
-        Parsed report data
+        Dict[str, Any]: Complete structured data extracted from the PDF
     """
     print(f"Processing report: {pdf_path}")
     
@@ -300,7 +331,17 @@ def process_report(pdf_path: str) -> Dict[str, Any]:
 
 
 def main():
-    """Main function to demonstrate usage"""
+    """
+    Main function for command-line usage of the Enhanced Parser.
+    
+    This function handles command-line arguments and orchestrates the PDF processing
+    workflow. It can accept a PDF file path as an argument or use a default file.
+    
+    Usage:
+        python enhanced_parser.py [pdf_file_path]
+        
+    If no file path is provided, it will use the default PDF file.
+    """
     import sys
     
     # Get PDF path from command line argument or use default

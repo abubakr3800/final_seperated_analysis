@@ -4,6 +4,15 @@ Layout Enhanced PDF Extractor
 
 Enhanced version that properly extracts room layouts with X/Y/Z coordinates
 and arrangement information as specified in add-layout.txt
+
+This is the RECOMMENDED extractor for most use cases as it provides:
+- Advanced room layout extraction with spatial coordinates
+- Multiple text extraction methods with fallback
+- Comprehensive field detection
+- Best overall accuracy and reliability
+
+Author: PDF Report Extractor Team
+Version: 1.0
 """
 
 import pdfplumber
@@ -16,16 +25,47 @@ from typing import Dict, List, Optional, Any
 
 
 class LayoutEnhancedExtractor:
-    """Enhanced extractor with improved room layout extraction"""
+    """
+    Enhanced PDF extractor with improved room layout extraction capabilities.
+    
+    This extractor is designed to handle complex lighting analysis reports and
+    extract comprehensive data including spatial room layouts with X/Y/Z coordinates.
+    
+    Features:
+    - Hybrid text extraction (pdfplumber + PyMuPDF + OCR fallback)
+    - Advanced room layout extraction with multiple coordinate formats
+    - Comprehensive metadata extraction
+    - Robust error handling and logging
+    - Support for various PDF formats (text-based and scanned)
+    """
     
     def __init__(self):
+        """
+        Initialize the Layout Enhanced Extractor.
+        
+        Sets up the text extraction methods in order of preference:
+        1. pdfplumber (fastest for text-based PDFs)
+        2. PyMuPDF (alternative text extraction)
+        3. OCR fallback (for scanned PDFs)
+        """
         self.text_extractors = [
             self._extract_with_pdfplumber,
             self._extract_with_pymupdf
         ]
     
     def _extract_with_pdfplumber(self, pdf_path: str) -> str:
-        """Extract text using pdfplumber"""
+        """
+        Extract text from PDF using pdfplumber library.
+        
+        This is the primary text extraction method as it's fast and accurate
+        for text-based PDFs. It preserves formatting and handles most PDF types well.
+        
+        Args:
+            pdf_path (str): Path to the PDF file to extract text from
+            
+        Returns:
+            str: Extracted text content, or empty string if extraction fails
+        """
         text = ""
         try:
             with pdfplumber.open(pdf_path) as pdf:
@@ -37,7 +77,19 @@ class LayoutEnhancedExtractor:
         return text.strip()
     
     def _extract_with_pymupdf(self, pdf_path: str) -> str:
-        """Extract text using PyMuPDF"""
+        """
+        Extract text from PDF using PyMuPDF (fitz) library.
+        
+        This is an alternative text extraction method that can handle
+        some PDF types that pdfplumber might struggle with. It's used
+        as a fallback when pdfplumber fails.
+        
+        Args:
+            pdf_path (str): Path to the PDF file to extract text from
+            
+        Returns:
+            str: Extracted text content, or empty string if extraction fails
+        """
         text = ""
         try:
             import fitz
@@ -51,7 +103,19 @@ class LayoutEnhancedExtractor:
         return text.strip()
     
     def _ocr_pdf(self, pdf_path: str) -> str:
-        """OCR fallback for scanned PDFs"""
+        """
+        Extract text from PDF using OCR (Optical Character Recognition).
+        
+        This method is used as a fallback when text-based extraction fails.
+        It converts PDF pages to images and uses Tesseract OCR to extract text.
+        This is slower but can handle scanned PDFs and image-based documents.
+        
+        Args:
+            pdf_path (str): Path to the PDF file to extract text from
+            
+        Returns:
+            str: OCR extracted text content, or empty string if extraction fails
+        """
         text = ""
         try:
             pages = convert_from_path(pdf_path, dpi=300)
@@ -62,7 +126,20 @@ class LayoutEnhancedExtractor:
         return text.strip()
     
     def extract_text(self, pdf_path: str) -> str:
-        """Extract text with fallback chain"""
+        """
+        Extract text from PDF using a fallback chain of methods.
+        
+        This method tries multiple extraction approaches in order of preference:
+        1. pdfplumber (fastest, best for text-based PDFs)
+        2. PyMuPDF (alternative text extraction)
+        3. OCR (slowest, but works with scanned PDFs)
+        
+        Args:
+            pdf_path (str): Path to the PDF file to extract text from
+            
+        Returns:
+            str: Extracted text content from the most successful method
+        """
         # Try text-based extraction first
         for extractor in self.text_extractors:
             text = extractor(pdf_path)
@@ -73,7 +150,24 @@ class LayoutEnhancedExtractor:
         return self._ocr_pdf(pdf_path)
     
     def parse_report(self, text: str, filename: str = "report.pdf") -> Dict[str, Any]:
-        """Parse report with enhanced room layout extraction"""
+        """
+        Parse extracted text and extract structured data from the PDF report.
+        
+        This is the main parsing function that coordinates all extraction methods
+        to build a comprehensive data structure from the raw text.
+        
+        Args:
+            text (str): Raw text extracted from the PDF
+            filename (str): Name of the PDF file (used for report title)
+            
+        Returns:
+            Dict[str, Any]: Structured data containing:
+                - metadata: Company, project, engineer, email info
+                - lighting_setup: Overall lighting system configuration
+                - luminaires: Detailed fixture specifications
+                - rooms: Room layouts with spatial coordinates
+                - scenes: Performance metrics and utilization profiles
+        """
         data = {
             "metadata": {
                 "company_name": None,
@@ -88,7 +182,7 @@ class LayoutEnhancedExtractor:
             "scenes": []
         }
 
-        # Extract all sections
+        # Extract all sections using specialized methods
         self._extract_metadata(text, data)
         self._extract_lighting_setup(text, data)
         self._extract_luminaires(text, data)
@@ -98,45 +192,74 @@ class LayoutEnhancedExtractor:
         return data
     
     def _extract_metadata(self, text: str, data: Dict[str, Any]):
-        """Extract metadata fields"""
-        # Company name - improved patterns
+        """
+        Extract metadata fields from the PDF text.
+        
+        This method searches for and extracts basic information about the report
+        including company name, project name, engineer name, and email address.
+        It uses multiple regex patterns to handle different formatting styles.
+        
+        Args:
+            text (str): Raw text extracted from the PDF
+            data (Dict[str, Any]): Data dictionary to populate with extracted metadata
+        """
+        # Company name extraction with multiple pattern matching
+        # Pattern 1: Matches "Short Cicuit Company" or "Company Name" followed by any text
+        # Pattern 2: Matches "Company Name:" or "Company Name-" followed by the actual name
+        # Pattern 3: Exact match for "Short Cicuit Company" (common company in reports)
         company_patterns = [
-            r"(Short\s*Cicuit\s*Company|Company\s*Name.*)",
-            r"Company\s*Name[:\-]?\s*(.+)",
-            r"Short\s*Cicuit\s*Company"
+            r"(Short\s*Cicuit\s*Company|Company\s*Name.*)",  # Flexible company name matching
+            r"Company\s*Name[:\-]?\s*(.+)",                  # Structured company name field
+            r"Short\s*Cicuit\s*Company"                      # Exact match for known company
         ]
         
         for pattern in company_patterns:
-            match = re.search(pattern, text, re.IGNORECASE)
+            match = re.search(pattern, text, re.IGNORECASE)  # Case-insensitive matching
             if match:
-                data["metadata"]["company_name"] = match.group(1).strip()
-                break
+                data["metadata"]["company_name"] = match.group(1).strip()  # Clean whitespace
+                break  # Use first successful match
 
-        # Project name - improved patterns
+        # Project name extraction with multiple pattern matching
+        # Pattern 1: Matches "Project Name" or "Lighting study" followed by any text
+        # Pattern 2: Structured project name field with colon or dash separator
+        # Pattern 3: Matches "Lighting study for" followed by project description
         project_patterns = [
-            r"(Project\s*Name.*|Lighting study.*)",
-            r"Project\s*Name[:\-]?\s*(.+)",
-            r"Lighting\s*study\s*for\s*(.+)"
+            r"(Project\s*Name.*|Lighting study.*)",  # Multi-line project name
+            r"Project\s*Name[:\-]?\s*(.+)",          # Structured project name field
+            r"Lighting\s*study\s*for\s*(.+)"         # Descriptive project name format
         ]
         
         for pattern in project_patterns:
-            match = re.search(pattern, text, re.IGNORECASE)
+            match = re.search(pattern, text, re.IGNORECASE)  # Case-insensitive matching
             if match:
-                data["metadata"]["project_name"] = match.group(1).strip()
-                break
+                data["metadata"]["project_name"] = match.group(1).strip()  # Clean whitespace
+                break  # Use first successful match
 
-        # Engineer
+        # Engineer name extraction
+        # Matches "Eng." followed by engineer's name (common format in reports)
         engineer_match = re.search(r"Eng\.\s*[A-Za-z ]+", text)
         if engineer_match:
-            data["metadata"]["engineer"] = engineer_match.group(0).strip()
+            data["metadata"]["engineer"] = engineer_match.group(0).strip()  # Clean whitespace
 
-        # Email
+        # Email address extraction
+        # Matches standard email format: username@domain.com
+        # Uses word characters, dots, and hyphens for username and domain
         email_match = re.search(r"[\w\.-]+@[\w\.-]+", text)
         if email_match:
-            data["metadata"]["email"] = email_match.group(0).strip()
+            data["metadata"]["email"] = email_match.group(0).strip()  # Clean whitespace
     
     def _extract_lighting_setup(self, text: str, data: Dict[str, Any]):
-        """Extract lighting setup information"""
+        """
+        Extract lighting setup information from the PDF text.
+        
+        This method searches for and extracts overall lighting system configuration
+        including number of fixtures, fixture type, mounting height, average lux,
+        uniformity, total power, and luminous efficacy.
+        
+        Args:
+            text (str): Raw text extracted from the PDF
+            data (Dict[str, Any]): Data dictionary to populate with lighting setup info
+        """
         # Number of fixtures and type
         num_fix = re.search(r"(\d+)\s*x\s*HighBay\s*(\d+)\s*watt", text, re.IGNORECASE)
         if not num_fix:
@@ -176,7 +299,17 @@ class LayoutEnhancedExtractor:
         }
     
     def _extract_luminaires(self, text: str, data: Dict[str, Any]):
-        """Extract luminaire information"""
+        """
+        Extract luminaire (lighting fixture) information from the PDF text.
+        
+        This method searches for and extracts detailed specifications of lighting
+        fixtures including manufacturer, article number, power consumption,
+        luminous flux, efficacy, and quantity.
+        
+        Args:
+            text (str): Raw text extracted from the PDF
+            data (Dict[str, Any]): Data dictionary to populate with luminaire info
+        """
         # Primary pattern from added.txt
         luminaire_matches = re.findall(
             r"(\d+)\s+([A-Za-z]+)\s+([A-Za-z0-9\- ]+)\s+(\d+\.?\d*)\s*W\s+(\d+\.?\d*)\s*lm\s+(\d+\.?\d*)\s*lm/W", 
@@ -214,8 +347,18 @@ class LayoutEnhancedExtractor:
     
     def _extract_rooms_enhanced(self, text: str, data: Dict[str, Any]):
         """
-        Enhanced room layout extraction with X/Y/Z coordinates and arrangement
-        Based on add-layout.txt specifications
+        Enhanced room layout extraction with X/Y/Z coordinates and arrangement.
+        
+        This is the most advanced room extraction method that searches for and extracts
+        comprehensive spatial information including room names, arrangements, and
+        detailed coordinate layouts. It supports multiple coordinate formats and
+        can handle various room naming conventions.
+        
+        Based on add-layout.txt specifications for maximum compatibility.
+        
+        Args:
+            text (str): Raw text extracted from the PDF
+            data (Dict[str, Any]): Data dictionary to populate with room layout info
         """
         # Enhanced room name patterns
         room_patterns = [
@@ -307,7 +450,17 @@ class LayoutEnhancedExtractor:
             })
     
     def _extract_scenes(self, text: str, data: Dict[str, Any]):
-        """Extract scene information"""
+        """
+        Extract scene information from the PDF text.
+        
+        This method searches for and extracts lighting scene data including
+        scene names, average lux levels, minimum/maximum lux values,
+        uniformity ratios, and utilization profiles.
+        
+        Args:
+            text (str): Raw text extracted from the PDF
+            data (Dict[str, Any]): Data dictionary to populate with scene info
+        """
         # Primary pattern from added.txt
         scene_matches = re.findall(
             r"([A-Za-z ]+)\s+([\d.]+)\s*lx\s+([\d.]+)\s*lx\s+([\d.]+)\s*lx\s+([\d.]+)",
@@ -347,21 +500,44 @@ class LayoutEnhancedExtractor:
                 })
     
     def process_report(self, pdf_path: str) -> Dict[str, Any]:
-        """Main processing function"""
+        """
+        Main processing function that handles the complete PDF extraction workflow.
+        
+        This is the primary method that orchestrates the entire extraction process:
+        1. Extracts text from the PDF using the best available method
+        2. Parses the text to extract structured data
+        3. Returns comprehensive report data
+        
+        Args:
+            pdf_path (str): Path to the PDF file to process
+            
+        Returns:
+            Dict[str, Any]: Complete structured data extracted from the PDF
+        """
         print(f"Processing: {pdf_path}")
         
-        # Extract text
+        # Extract text using the fallback chain
         text = self.extract_text(pdf_path)
         print(f"Extracted {len(text)} characters")
         
-        # Parse data
+        # Parse the extracted text into structured data
         data = self.parse_report(text, os.path.basename(pdf_path))
         
         return data
 
 
 def main():
-    """Main function"""
+    """
+    Main function for command-line usage of the Layout Enhanced Extractor.
+    
+    This function handles command-line arguments and orchestrates the PDF processing
+    workflow. It can accept a PDF file path as an argument or use a default file.
+    
+    Usage:
+        python layout_enhanced_extractor.py [pdf_file_path]
+        
+    If no file path is provided, it will use the default PDF file.
+    """
     import sys
     
     extractor = LayoutEnhancedExtractor()
@@ -373,21 +549,22 @@ def main():
         # pdf_path = "NESSTRA Report With 150 watt.pdf"  # Fixed file path (commented out)
         pdf_path = "NESSTRA Report With 150 watt.pdf"  # Default fallback
     
+    # Validate that the PDF file exists
     if not os.path.exists(pdf_path):
         print(f"Error: {pdf_path} not found")
         print("Usage: py layout_enhanced_extractor.py <pdf_file_path>")
         return
     
-    # Process report
+    # Process the PDF and extract structured data
     result = extractor.process_report(pdf_path)
     
-    # Save results
+    # Save extracted data to JSON file
     with open("layout_enhanced_output.json", "w", encoding="utf-8") as f:
         json.dump(result, f, indent=4, ensure_ascii=False)
     
     print("✓ Results saved to layout_enhanced_output.json")
     
-    # Print summary
+    # Display comprehensive extraction summary
     print("\n" + "="*50)
     print("LAYOUT ENHANCED EXTRACTION SUMMARY")
     print("="*50)
@@ -396,6 +573,7 @@ def main():
     print(f"Engineer: {result['metadata']['engineer']}")
     print(f"Email: {result['metadata']['email']}")
     
+    # Display lighting setup information
     if result['lighting_setup']:
         setup = result['lighting_setup']
         print(f"Fixtures: {setup.get('number_of_fixtures', 'N/A')}")
@@ -406,7 +584,7 @@ def main():
     print(f"Luminaires: {len(result['luminaires'])}")
     print(f"Rooms: {len(result['rooms'])}")
     
-    # Show room layout details
+    # Display detailed room layout information
     for i, room in enumerate(result['rooms'], 1):
         print(f"  Room {i}: {room['name']}")
         print(f"    Arrangement: {room['arrangement']}")

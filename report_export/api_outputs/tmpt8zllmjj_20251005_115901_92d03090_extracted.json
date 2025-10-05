@@ -1,0 +1,1137 @@
+{
+    "metadata": {
+        "company_name": "Short Circuit Company",
+        "project_name": "Lighting study for administration building Technical Engineer",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "tmpt8zllmjj_20251005_115901_92d03090.pdf"
+    },
+    "lighting_setup": {
+        "glare_related": 0.0,
+        "power_w": 100.0,
+        "luminous_flux_lm": 1922.0,
+        "luminous_efficacy_lm_per_w": 25.0
+    },
+    "luminaires": [
+        {
+            "glare_related": 0.0,
+            "power_w": 100.0,
+            "luminous_flux_lm": 1922.0,
+            "luminous_efficacy_lm_per_w": 25.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "building 1 · storey 1 · room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 2",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 3",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 4",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 5",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 6",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 7",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 8",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 9",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 10",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 11",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 12",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 13",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 14",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 15",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 16",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 17",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 18",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 19",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 20",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 21",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 22",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 23",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 24",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 25",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 26",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 27",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 28",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 29",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · storey 1 · room 59",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 2",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 3",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 4",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 5",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 6",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 7",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 8",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 9",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 10",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 11",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 12",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 13",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 14",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 15",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 16",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 17",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 18",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 19",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 20",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 21",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 22",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 23",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 24",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 25",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 26",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 27",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 28",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 29",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 59",
+            "arrangement": "A1",
+            "layout": []
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "Scene",
+            "average_lux": 337.0,
+            "min_lux": 152.0,
+            "max_lux": 541.0,
+            "uniformity": 0.45,
+            "g1": 0.28,
+            "index": "CG1"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 335.0,
+            "min_lux": 198.0,
+            "max_lux": 524.0,
+            "uniformity": 0.59,
+            "g1": 0.38,
+            "index": "CG2"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 330.0,
+            "min_lux": 208.0,
+            "max_lux": 475.0,
+            "uniformity": 0.63,
+            "g1": 0.44,
+            "index": "CG3"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 338.0,
+            "min_lux": 220.0,
+            "max_lux": 479.0,
+            "uniformity": 0.65,
+            "g1": 0.46,
+            "index": "CG4"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 329.0,
+            "min_lux": 209.0,
+            "max_lux": 481.0,
+            "uniformity": 0.64,
+            "g1": 0.43,
+            "index": "CG5"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 333.0,
+            "min_lux": 133.0,
+            "max_lux": 532.0,
+            "uniformity": 0.4,
+            "g1": 0.25,
+            "index": "CG6"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 418.0,
+            "min_lux": 276.0,
+            "max_lux": 582.0,
+            "uniformity": 0.66,
+            "g1": 0.47,
+            "index": "CG7"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 371.0,
+            "min_lux": 155.0,
+            "max_lux": 616.0,
+            "uniformity": 0.42,
+            "g1": 0.25,
+            "index": "CG8"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 371.0,
+            "min_lux": 154.0,
+            "max_lux": 616.0,
+            "uniformity": 0.42,
+            "g1": 0.25,
+            "index": "CG9"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 355.0,
+            "min_lux": 145.0,
+            "max_lux": 658.0,
+            "uniformity": 0.41,
+            "g1": 0.22,
+            "index": "CG10"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 344.0,
+            "min_lux": 216.0,
+            "max_lux": 618.0,
+            "uniformity": 0.63,
+            "g1": 0.35,
+            "index": "CG11"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 413.0,
+            "min_lux": 181.0,
+            "max_lux": 790.0,
+            "uniformity": 0.44,
+            "g1": 0.23,
+            "index": "CG12"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 332.0,
+            "min_lux": 210.0,
+            "max_lux": 464.0,
+            "uniformity": 0.63,
+            "g1": 0.45,
+            "index": "CG13"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 306.0,
+            "min_lux": 211.0,
+            "max_lux": 512.0,
+            "uniformity": 0.69,
+            "g1": 0.41,
+            "index": "CG14"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 327.0,
+            "min_lux": 172.0,
+            "max_lux": 525.0,
+            "uniformity": 0.53,
+            "g1": 0.33,
+            "index": "CG15"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 352.0,
+            "min_lux": 238.0,
+            "max_lux": 500.0,
+            "uniformity": 0.68,
+            "g1": 0.48,
+            "index": "CG16"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 279.0,
+            "min_lux": 130.0,
+            "max_lux": 376.0,
+            "uniformity": 0.47,
+            "g1": 0.35,
+            "index": "CG17"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 421.0,
+            "min_lux": 228.0,
+            "max_lux": 570.0,
+            "uniformity": 0.54,
+            "g1": 0.4,
+            "index": "CG18"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 398.0,
+            "min_lux": 184.0,
+            "max_lux": 569.0,
+            "uniformity": 0.46,
+            "g1": 0.32,
+            "index": "CG19"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 330.0,
+            "min_lux": 234.0,
+            "max_lux": 386.0,
+            "uniformity": 0.71,
+            "g1": 0.61,
+            "index": "CG20"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 332.0,
+            "min_lux": 232.0,
+            "max_lux": 388.0,
+            "uniformity": 0.7,
+            "g1": 0.6,
+            "index": "CG21"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 406.0,
+            "min_lux": 201.0,
+            "max_lux": 569.0,
+            "uniformity": 0.5,
+            "g1": 0.35,
+            "index": "CG22"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 358.0,
+            "min_lux": 161.0,
+            "max_lux": 511.0,
+            "uniformity": 0.45,
+            "g1": 0.32,
+            "index": "CG23"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 364.0,
+            "min_lux": 148.0,
+            "max_lux": 512.0,
+            "uniformity": 0.41,
+            "g1": 0.29,
+            "index": "CG24"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 344.0,
+            "min_lux": 141.0,
+            "max_lux": 492.0,
+            "uniformity": 0.41,
+            "g1": 0.29,
+            "index": "CG25"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 378.0,
+            "min_lux": 171.0,
+            "max_lux": 544.0,
+            "uniformity": 0.45,
+            "g1": 0.31,
+            "index": "CG26"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 326.0,
+            "min_lux": 147.0,
+            "max_lux": 509.0,
+            "uniformity": 0.45,
+            "g1": 0.29,
+            "index": "CG27"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 374.0,
+            "min_lux": 155.0,
+            "max_lux": 543.0,
+            "uniformity": 0.41,
+            "g1": 0.29,
+            "index": "CG28"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 367.0,
+            "min_lux": 298.0,
+            "max_lux": 406.0,
+            "uniformity": 0.81,
+            "g1": 0.73,
+            "index": "CG29"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 434.0,
+            "min_lux": 214.0,
+            "max_lux": 701.0,
+            "uniformity": 0.49,
+            "g1": 0.31,
+            "index": "CG30"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 337.0,
+            "min_lux": 152.0,
+            "max_lux": 541.0,
+            "uniformity": 0.45,
+            "g1": 0.28,
+            "index": "CG1"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 337.0,
+            "min_lux": 152.0,
+            "max_lux": 541.0,
+            "uniformity": 0.45,
+            "g1": 0.28,
+            "index": "CG1"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 338.0,
+            "min_lux": 220.0,
+            "max_lux": 479.0,
+            "uniformity": 0.65,
+            "g1": 0.46,
+            "index": "CG4"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 338.0,
+            "min_lux": 220.0,
+            "max_lux": 479.0,
+            "uniformity": 0.65,
+            "g1": 0.46,
+            "index": "CG4"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 434.0,
+            "min_lux": 214.0,
+            "max_lux": 701.0,
+            "uniformity": 0.49,
+            "g1": 0.31,
+            "index": "CG30"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 434.0,
+            "min_lux": 214.0,
+            "max_lux": 701.0,
+            "uniformity": 0.49,
+            "g1": 0.31,
+            "index": "CG30"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 335.0,
+            "min_lux": 198.0,
+            "max_lux": 524.0,
+            "uniformity": 0.59,
+            "g1": 0.38,
+            "index": "CG2"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 335.0,
+            "min_lux": 198.0,
+            "max_lux": 524.0,
+            "uniformity": 0.59,
+            "g1": 0.38,
+            "index": "CG2"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 330.0,
+            "min_lux": 208.0,
+            "max_lux": 475.0,
+            "uniformity": 0.63,
+            "g1": 0.44,
+            "index": "CG3"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 330.0,
+            "min_lux": 208.0,
+            "max_lux": 475.0,
+            "uniformity": 0.63,
+            "g1": 0.44,
+            "index": "CG3"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 418.0,
+            "min_lux": 276.0,
+            "max_lux": 582.0,
+            "uniformity": 0.66,
+            "g1": 0.47,
+            "index": "CG7"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 418.0,
+            "min_lux": 276.0,
+            "max_lux": 582.0,
+            "uniformity": 0.66,
+            "g1": 0.47,
+            "index": "CG7"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 371.0,
+            "min_lux": 155.0,
+            "max_lux": 616.0,
+            "uniformity": 0.42,
+            "g1": 0.25,
+            "index": "CG8"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 371.0,
+            "min_lux": 155.0,
+            "max_lux": 616.0,
+            "uniformity": 0.42,
+            "g1": 0.25,
+            "index": "CG8"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 333.0,
+            "min_lux": 133.0,
+            "max_lux": 532.0,
+            "uniformity": 0.4,
+            "g1": 0.25,
+            "index": "CG6"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 333.0,
+            "min_lux": 133.0,
+            "max_lux": 532.0,
+            "uniformity": 0.4,
+            "g1": 0.25,
+            "index": "CG6"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 329.0,
+            "min_lux": 209.0,
+            "max_lux": 481.0,
+            "uniformity": 0.64,
+            "g1": 0.43,
+            "index": "CG5"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 329.0,
+            "min_lux": 209.0,
+            "max_lux": 481.0,
+            "uniformity": 0.64,
+            "g1": 0.43,
+            "index": "CG5"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 355.0,
+            "min_lux": 145.0,
+            "max_lux": 658.0,
+            "uniformity": 0.41,
+            "g1": 0.22,
+            "index": "CG10"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 355.0,
+            "min_lux": 145.0,
+            "max_lux": 658.0,
+            "uniformity": 0.41,
+            "g1": 0.22,
+            "index": "CG10"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 344.0,
+            "min_lux": 216.0,
+            "max_lux": 618.0,
+            "uniformity": 0.63,
+            "g1": 0.35,
+            "index": "CG11"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 344.0,
+            "min_lux": 216.0,
+            "max_lux": 618.0,
+            "uniformity": 0.63,
+            "g1": 0.35,
+            "index": "CG11"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 413.0,
+            "min_lux": 181.0,
+            "max_lux": 790.0,
+            "uniformity": 0.44,
+            "g1": 0.23,
+            "index": "CG12"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 413.0,
+            "min_lux": 181.0,
+            "max_lux": 790.0,
+            "uniformity": 0.44,
+            "g1": 0.23,
+            "index": "CG12"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 332.0,
+            "min_lux": 210.0,
+            "max_lux": 464.0,
+            "uniformity": 0.63,
+            "g1": 0.45,
+            "index": "CG13"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 332.0,
+            "min_lux": 210.0,
+            "max_lux": 464.0,
+            "uniformity": 0.63,
+            "g1": 0.45,
+            "index": "CG13"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 306.0,
+            "min_lux": 211.0,
+            "max_lux": 512.0,
+            "uniformity": 0.69,
+            "g1": 0.41,
+            "index": "CG14"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 306.0,
+            "min_lux": 211.0,
+            "max_lux": 512.0,
+            "uniformity": 0.69,
+            "g1": 0.41,
+            "index": "CG14"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 327.0,
+            "min_lux": 172.0,
+            "max_lux": 525.0,
+            "uniformity": 0.53,
+            "g1": 0.33,
+            "index": "CG15"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 327.0,
+            "min_lux": 172.0,
+            "max_lux": 525.0,
+            "uniformity": 0.53,
+            "g1": 0.33,
+            "index": "CG15"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 352.0,
+            "min_lux": 238.0,
+            "max_lux": 500.0,
+            "uniformity": 0.68,
+            "g1": 0.48,
+            "index": "CG16"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 352.0,
+            "min_lux": 238.0,
+            "max_lux": 500.0,
+            "uniformity": 0.68,
+            "g1": 0.48,
+            "index": "CG16"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 279.0,
+            "min_lux": 130.0,
+            "max_lux": 376.0,
+            "uniformity": 0.47,
+            "g1": 0.35,
+            "index": "CG17"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 279.0,
+            "min_lux": 130.0,
+            "max_lux": 376.0,
+            "uniformity": 0.47,
+            "g1": 0.35,
+            "index": "CG17"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 421.0,
+            "min_lux": 228.0,
+            "max_lux": 570.0,
+            "uniformity": 0.54,
+            "g1": 0.4,
+            "index": "CG18"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 421.0,
+            "min_lux": 228.0,
+            "max_lux": 570.0,
+            "uniformity": 0.54,
+            "g1": 0.4,
+            "index": "CG18"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 398.0,
+            "min_lux": 184.0,
+            "max_lux": 569.0,
+            "uniformity": 0.46,
+            "g1": 0.32,
+            "index": "CG19"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 398.0,
+            "min_lux": 184.0,
+            "max_lux": 569.0,
+            "uniformity": 0.46,
+            "g1": 0.32,
+            "index": "CG19"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 330.0,
+            "min_lux": 234.0,
+            "max_lux": 386.0,
+            "uniformity": 0.71,
+            "g1": 0.61,
+            "index": "CG20"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 330.0,
+            "min_lux": 234.0,
+            "max_lux": 386.0,
+            "uniformity": 0.71,
+            "g1": 0.61,
+            "index": "CG20"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 332.0,
+            "min_lux": 232.0,
+            "max_lux": 388.0,
+            "uniformity": 0.7,
+            "g1": 0.6,
+            "index": "CG21"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 332.0,
+            "min_lux": 232.0,
+            "max_lux": 388.0,
+            "uniformity": 0.7,
+            "g1": 0.6,
+            "index": "CG21"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 406.0,
+            "min_lux": 201.0,
+            "max_lux": 569.0,
+            "uniformity": 0.5,
+            "g1": 0.35,
+            "index": "CG22"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 406.0,
+            "min_lux": 201.0,
+            "max_lux": 569.0,
+            "uniformity": 0.5,
+            "g1": 0.35,
+            "index": "CG22"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 358.0,
+            "min_lux": 161.0,
+            "max_lux": 511.0,
+            "uniformity": 0.45,
+            "g1": 0.32,
+            "index": "CG23"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 358.0,
+            "min_lux": 161.0,
+            "max_lux": 511.0,
+            "uniformity": 0.45,
+            "g1": 0.32,
+            "index": "CG23"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 364.0,
+            "min_lux": 148.0,
+            "max_lux": 512.0,
+            "uniformity": 0.41,
+            "g1": 0.29,
+            "index": "CG24"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 364.0,
+            "min_lux": 148.0,
+            "max_lux": 512.0,
+            "uniformity": 0.41,
+            "g1": 0.29,
+            "index": "CG24"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 344.0,
+            "min_lux": 141.0,
+            "max_lux": 492.0,
+            "uniformity": 0.41,
+            "g1": 0.29,
+            "index": "CG25"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 344.0,
+            "min_lux": 141.0,
+            "max_lux": 492.0,
+            "uniformity": 0.41,
+            "g1": 0.29,
+            "index": "CG25"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 378.0,
+            "min_lux": 171.0,
+            "max_lux": 544.0,
+            "uniformity": 0.45,
+            "g1": 0.31,
+            "index": "CG26"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 378.0,
+            "min_lux": 171.0,
+            "max_lux": 544.0,
+            "uniformity": 0.45,
+            "g1": 0.31,
+            "index": "CG26"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 326.0,
+            "min_lux": 147.0,
+            "max_lux": 509.0,
+            "uniformity": 0.45,
+            "g1": 0.29,
+            "index": "CG27"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 326.0,
+            "min_lux": 147.0,
+            "max_lux": 509.0,
+            "uniformity": 0.45,
+            "g1": 0.29,
+            "index": "CG27"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 374.0,
+            "min_lux": 155.0,
+            "max_lux": 543.0,
+            "uniformity": 0.41,
+            "g1": 0.29,
+            "index": "CG28"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 374.0,
+            "min_lux": 155.0,
+            "max_lux": 543.0,
+            "uniformity": 0.41,
+            "g1": 0.29,
+            "index": "CG28"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 367.0,
+            "min_lux": 298.0,
+            "max_lux": 406.0,
+            "uniformity": 0.81,
+            "g1": 0.73,
+            "index": "CG29"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 367.0,
+            "min_lux": 298.0,
+            "max_lux": 406.0,
+            "uniformity": 0.81,
+            "g1": 0.73,
+            "index": "CG29"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 371.0,
+            "min_lux": 154.0,
+            "max_lux": 616.0,
+            "uniformity": 0.42,
+            "g1": 0.25,
+            "index": "CG9"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 371.0,
+            "min_lux": 154.0,
+            "max_lux": 616.0,
+            "uniformity": 0.42,
+            "g1": 0.25,
+            "index": "CG9"
+        }
+    ]
+}

@@ -5,12 +5,20 @@ Advanced PDF Report Extractor
 A hybrid PDF extraction system that handles both text-based and scanned PDFs.
 Follows the recommended pipeline from guide.txt for mixed report processing.
 
+This is the original extractor that implements the core functionality described
+in guide.txt. It provides a solid foundation for PDF extraction with comprehensive
+error handling and logging.
+
 Features:
 - Text-based PDF extraction using pdfplumber and PyMuPDF
 - OCR fallback for scanned PDFs using pdf2image + pytesseract
 - Intelligent field extraction with regex patterns
 - Structured JSON output with comprehensive schema
 - Error handling and logging
+- Dataclass-based data structures for type safety
+
+Author: PDF Report Extractor Team
+Version: 1.0
 """
 
 import pdfplumber
@@ -39,7 +47,12 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class Luminaire:
-    """Represents a lighting fixture/luminaire"""
+    """
+    Represents a lighting fixture/luminaire with all relevant specifications.
+    
+    This dataclass provides a structured representation of lighting fixtures
+    with type safety and easy serialization to JSON.
+    """
     manufacturer: str
     article_no: str
     power_w: float
@@ -50,7 +63,12 @@ class Luminaire:
 
 @dataclass
 class RoomLayout:
-    """Represents room layout coordinates"""
+    """
+    Represents room layout coordinates in 3D space.
+    
+    This dataclass stores the X, Y, Z coordinates for lighting fixture
+    positions within a room layout.
+    """
     x_m: float
     y_m: float
     z_m: float
@@ -58,7 +76,12 @@ class RoomLayout:
 
 @dataclass
 class Room:
-    """Represents a room with its layout"""
+    """
+    Represents a room with its layout and arrangement information.
+    
+    This dataclass contains room identification, arrangement pattern,
+    and detailed coordinate layout for lighting fixtures.
+    """
     name: str
     arrangement: str
     layout: List[RoomLayout]
@@ -66,7 +89,12 @@ class Room:
 
 @dataclass
 class Scene:
-    """Represents a lighting scene with performance metrics"""
+    """
+    Represents a lighting scene with performance metrics.
+    
+    This dataclass stores lighting performance data including lux levels,
+    uniformity, and utilization profile for different lighting scenarios.
+    """
     scene_name: str
     average_lux: int
     min_lux: int
@@ -77,7 +105,12 @@ class Scene:
 
 @dataclass
 class LightingSetup:
-    """Overall lighting system configuration"""
+    """
+    Represents the overall lighting system configuration.
+    
+    This dataclass contains high-level information about the lighting
+    system including fixture count, type, mounting height, and performance metrics.
+    """
     number_of_fixtures: int
     fixture_type: str
     mounting_height_m: float
@@ -89,7 +122,12 @@ class LightingSetup:
 
 @dataclass
 class Metadata:
-    """Report metadata information"""
+    """
+    Represents basic metadata about the lighting report.
+    
+    This dataclass contains information about the company, project,
+    engineer, and report identification.
+    """
     company_name: Optional[str] = None
     project_name: Optional[str] = None
     engineer: Optional[str] = None
@@ -99,7 +137,12 @@ class Metadata:
 
 @dataclass
 class ReportData:
-    """Complete report data structure"""
+    """
+    Complete report data structure containing all extracted information.
+    
+    This is the main dataclass that contains all extracted information
+    from a PDF report, providing a comprehensive and structured representation.
+    """
     metadata: Metadata
     lighting_setup: Optional[LightingSetup] = None
     luminaires: List[Luminaire] = None
@@ -109,16 +152,48 @@ class ReportData:
 
 
 class PDFReportExtractor:
-    """Main class for extracting data from PDF reports"""
+    """
+    Main class for extracting data from PDF reports.
+    
+    This class implements a hybrid PDF extraction system that can handle
+    both text-based and scanned PDFs. It provides comprehensive extraction
+    capabilities with robust error handling and logging.
+    
+    Features:
+    - Multiple text extraction methods with fallback
+    - OCR support for scanned PDFs
+    - Comprehensive field extraction
+    - Structured data output with type safety
+    - Detailed logging and error handling
+    """
     
     def __init__(self):
+        """
+        Initialize the PDF Report Extractor.
+        
+        Sets up the text extraction methods in order of preference:
+        1. pdfplumber (fastest for text-based PDFs)
+        2. PyMuPDF (alternative text extraction)
+        3. OCR fallback (for scanned PDFs)
+        """
         self.text_extractors = [
             self._extract_with_pdfplumber,
             self._extract_with_pymupdf
         ]
         
     def _extract_with_pdfplumber(self, pdf_path: str) -> str:
-        """Extract text using pdfplumber"""
+        """
+        Extract text from PDF using pdfplumber library.
+        
+        This is the primary text extraction method as it's fast and accurate
+        for text-based PDFs. It preserves formatting and handles most PDF types well.
+        
+        Args:
+            pdf_path (str): Path to the PDF file to extract text from
+            
+        Returns:
+            str: Extracted text content, or empty string if extraction fails
+        """
         try:
             text = ""
             with pdfplumber.open(pdf_path) as pdf:
@@ -133,7 +208,19 @@ class PDFReportExtractor:
             return ""
     
     def _extract_with_pymupdf(self, pdf_path: str) -> str:
-        """Extract text using PyMuPDF"""
+        """
+        Extract text from PDF using PyMuPDF (fitz) library.
+        
+        This is an alternative text extraction method that can handle
+        some PDF types that pdfplumber might struggle with. It's used
+        as a fallback when pdfplumber fails.
+        
+        Args:
+            pdf_path (str): Path to the PDF file to extract text from
+            
+        Returns:
+            str: Extracted text content, or empty string if extraction fails
+        """
         try:
             text = ""
             doc = fitz.open(pdf_path)
@@ -150,7 +237,19 @@ class PDFReportExtractor:
             return ""
     
     def _ocr_pdf(self, pdf_path: str) -> str:
-        """Extract text using OCR (pdf2image + pytesseract)"""
+        """
+        Extract text from PDF using OCR (Optical Character Recognition).
+        
+        This method is used as a fallback when text-based extraction fails.
+        It converts PDF pages to images and uses Tesseract OCR to extract text.
+        This is slower but can handle scanned PDFs and image-based documents.
+        
+        Args:
+            pdf_path (str): Path to the PDF file to extract text from
+            
+        Returns:
+            str: OCR extracted text content, or empty string if extraction fails
+        """
         try:
             logger.info("Starting OCR extraction...")
             text = ""
@@ -172,7 +271,18 @@ class PDFReportExtractor:
             return ""
     
     def _clean_text(self, text: str) -> str:
-        """Clean and normalize extracted text"""
+        """
+        Clean and normalize extracted text for better processing.
+        
+        This method removes extra whitespace, normalizes line breaks,
+        and performs basic text cleanup to improve extraction accuracy.
+        
+        Args:
+            text (str): Raw extracted text to clean
+            
+        Returns:
+            str: Cleaned and normalized text
+        """
         if not text:
             return ""
         
@@ -398,7 +508,20 @@ class PDFReportExtractor:
         return scenes
     
     def extract_text(self, pdf_path: str) -> str:
-        """Extract text from PDF using multiple methods"""
+        """
+        Extract text from PDF using a fallback chain of methods.
+        
+        This method tries multiple extraction approaches in order of preference:
+        1. pdfplumber (fastest, best for text-based PDFs)
+        2. PyMuPDF (alternative text extraction)
+        3. OCR (slowest, but works with scanned PDFs)
+        
+        Args:
+            pdf_path (str): Path to the PDF file to extract text from
+            
+        Returns:
+            str: Extracted text content from the most successful method
+        """
         logger.info(f"Starting text extraction from: {pdf_path}")
         
         # Try text-based extraction first
@@ -419,10 +542,23 @@ class PDFReportExtractor:
         return ""
     
     def process_report(self, pdf_path: str) -> ReportData:
-        """Process a PDF report and extract all relevant data"""
+        """
+        Main processing function that handles the complete PDF extraction workflow.
+        
+        This is the primary method that orchestrates the entire extraction process:
+        1. Extracts text from the PDF using the best available method
+        2. Parses the text to extract structured data
+        3. Returns comprehensive report data with type safety
+        
+        Args:
+            pdf_path (str): Path to the PDF file to process
+            
+        Returns:
+            ReportData: Complete structured data extracted from the PDF
+        """
         logger.info(f"Processing report: {pdf_path}")
         
-        # Extract text
+        # Extract text using the fallback chain
         text = self.extract_text(pdf_path)
         if not text:
             logger.error("No text could be extracted from the PDF")
@@ -457,7 +593,16 @@ class PDFReportExtractor:
         return report_data
     
     def save_to_json(self, report_data: ReportData, output_path: str = "report_extracted.json"):
-        """Save extracted report data to JSON file"""
+        """
+        Save extracted report data to JSON file.
+        
+        This method converts the structured report data to JSON format
+        and saves it to the specified file path.
+        
+        Args:
+            report_data (ReportData): The extracted report data to save
+            output_path (str): Path where to save the JSON file
+        """
         try:
             # Convert dataclasses to dictionaries
             data_dict = asdict(report_data)
@@ -475,7 +620,17 @@ class PDFReportExtractor:
 
 
 def main():
-    """Main function to demonstrate usage"""
+    """
+    Main function for command-line usage of the PDF Report Extractor.
+    
+    This function handles command-line arguments and orchestrates the PDF processing
+    workflow. It can accept a PDF file path as an argument or use a default file.
+    
+    Usage:
+        python pdf_report_extractor.py [pdf_file_path]
+        
+    If no file path is provided, it will use the default PDF file.
+    """
     import sys
     
     # Initialize extractor

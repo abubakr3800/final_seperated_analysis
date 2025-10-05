@@ -26,14 +26,24 @@
       "color_rendering_ra": ["ra", "cri", "color rendering", "colour rendering index", "rendering index", "color rendering ra"],
       "power_w": ["watt", "w", "p", "power", "lamp power", "luminaire wattage", "fixture power"],
       "power_total_w": ["ptotal", "total power", "system wattage"],
-      "luminous_flux_lm": ["lm", "luminous flux", "lumens", "total lumens", "light output", "φluminaire"],
+      "luminous_flux_lm": [
+          "lm", "luminous flux", "lumens", "total lumens", "light output", 
+          "φluminaire", "φ luminaire", "φ_luminaire", "Φluminaire", "Φ luminaire"
+        ],     
+      "fitting": [
+        "fitting", "lamp type", "lamp", "fixture", "luminaire type"
+      ], 
       "luminous_flux_total": ["φtotal", "total luminous flux"],
       "luminous_efficacy_lm_per_w": ["lm/w", "efficacy", "luminous efficacy", "light efficiency", "system efficacy"],
       "mounting_height_m": ["mounting height", "height of fixtures", "installation height", "h", "mounting h"],
       "work_plane_height": ["calculation height", "work plane height", "height (calc)", "perpendicular illuminance height"],
       "quantity": ["pcs", "pieces", "units", "number of fixtures", "no. of luminaires", "qty", "quantity"],
-      "article_no": ["article no", "product code", "model number", "catalogue no", "article number"],
-      "manufacturer": ["manufacturer", "brand", "maker", "company"]
+      "article_no": [
+          "article name", "article no", "product code", "model number", "catalogue no", "article number"
+        ],      
+      "manufacturer": [
+        "manufacturer", "brand", "maker", "company", "by signify"
+      ]
     }
   }
   

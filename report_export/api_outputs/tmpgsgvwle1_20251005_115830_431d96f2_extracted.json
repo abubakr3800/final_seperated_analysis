@@ -1,0 +1,56 @@
+{
+    "metadata": {
+        "company_name": null,
+        "project_name": null,
+        "engineer": null,
+        "email": null,
+        "report_title": "tmpgsgvwle1_20251005_115830_431d96f2.pdf"
+    },
+    "lighting_setup": {
+        "average_lux": 362.0,
+        "power_w": 144.9,
+        "luminous_flux_lm": 16650.0,
+        "luminous_efficacy_lm_per_w": 4.0
+    },
+    "luminaires": [
+        {
+            "quantity": 107,
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 150.0,
+            "luminous_flux_lm": 21741.0,
+            "efficacy_lm_per_w": 144.9
+        },
+        {
+            "quantity": 4,
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 150.0,
+            "luminous_flux_lm": 21741.0,
+            "efficacy_lm_per_w": 144.9
+        }
+    ],
+    "rooms": [
+        {
+            "name": "room 1",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 1 · story 1 · room 1",
+            "arrangement": "A1",
+            "layout": []
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "Scene",
+            "average_lux": 362.0,
+            "min_lux": 203.0,
+            "max_lux": 452.0,
+            "uniformity": 0.56,
+            "g1": 0.45,
+            "index": "WP1"
+        }
+    ]
+}

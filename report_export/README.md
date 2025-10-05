@@ -54,6 +54,7 @@ py api/api_server.py
 ✅ **Hybrid PDF Processing** - Text-based + OCR fallback  
 ✅ **Advanced Layout Extraction** - X/Y/Z coordinates & arrangements  
 ✅ **Multiple Extraction Engines** - 4 different extractors  
+✅ **Final PDF Extractor API** - Advanced API with alias mapping  
 ✅ **Batch Processing** - Process entire folders  
 ✅ **REST API** - Web interface for integration  
 ✅ **Command Line Tools** - Direct file processing  
@@ -95,7 +96,7 @@ batch_processing/process_folder.bat input_folder output_folder
 
 ### **3. API Server**
 ```bash
-# Start API server
+# Start API server with Final PDF Extractor
 py api/api_server.py
 
 # Access web interface
@@ -109,6 +110,9 @@ py examples/example_usage.py
 
 # Run tests
 py tests/test_layout.py
+
+# Test Final PDF Extractor API
+py test_final_extractor_api.py
 ```
 
 ## 📋 **Output Format**

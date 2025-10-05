@@ -1,0 +1,121 @@
+{
+    "metadata": {
+        "company_name": "Short circuit",
+        "project_name": null,
+        "engineer": "Eng. Salma Mostafa",
+        "email": "salma@shortcircuitcompany.co",
+        "report_title": "tmpaavk0li3_20251005_143323_991fa7c3.pdf"
+    },
+    "lighting_setup": {
+        "average_lux": 349.0,
+        "uniformity": 0.94,
+        "power_w": 145.0,
+        "luminous_flux_lm": 600.0,
+        "fitting": 1.0,
+        "luminous_efficacy_lm_per_w": 5.0
+    },
+    "luminaires": [
+        {
+            "quantity": 6,
+            "manufacturer": "Philips",
+            "article_no": "BY698P LED265CW G2 WB",
+            "power_w": 100.0,
+            "luminous_flux_lm": 14500.0,
+            "efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "building 2 · storey 1 · room 6",
+            "arrangement": "X",
+            "layout": [
+                {
+                    "x_m": 11.5,
+                    "y_m": 0.556,
+                    "z_m": 3.538
+                },
+                {
+                    "x_m": 0.556,
+                    "y_m": 2.123,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 1.145,
+                    "y_m": 0.556,
+                    "z_m": 0.708
+                },
+                {
+                    "x_m": 11.5,
+                    "y_m": 1.756,
+                    "z_m": 3.538
+                },
+                {
+                    "x_m": 1.756,
+                    "y_m": 2.123,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 1.145,
+                    "y_m": 1.756,
+                    "z_m": 0.708
+                }
+            ]
+        },
+        {
+            "name": "room 6",
+            "arrangement": "X",
+            "layout": [
+                {
+                    "x_m": 11.5,
+                    "y_m": 0.556,
+                    "z_m": 3.538
+                },
+                {
+                    "x_m": 0.556,
+                    "y_m": 2.123,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 1.145,
+                    "y_m": 0.556,
+                    "z_m": 0.708
+                },
+                {
+                    "x_m": 11.5,
+                    "y_m": 1.756,
+                    "z_m": 3.538
+                },
+                {
+                    "x_m": 1.756,
+                    "y_m": 2.123,
+                    "z_m": 11.5
+                },
+                {
+                    "x_m": 1.145,
+                    "y_m": 1.756,
+                    "z_m": 0.708
+                }
+            ]
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "Scene",
+            "average_lux": 349.0,
+            "min_lux": 329.0,
+            "max_lux": 365.0,
+            "uniformity": 0.94,
+            "g1": 0.9,
+            "index": "CG1"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 349.0,
+            "min_lux": 329.0,
+            "max_lux": 365.0,
+            "uniformity": 0.94,
+            "g1": 0.9,
+            "index": "CG1"
+        }
+    ]
+}

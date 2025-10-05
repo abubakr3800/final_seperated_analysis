@@ -53,76 +53,30 @@ class FinalPDFExtractor:
     - Comprehensive luminaire and scene extraction
     - Production-ready error handling
     """
-    
-    def _safe_float(self, value_str):
-        """Try to convert a string to float; return None on failure.
-        Accepts 123, 123.45, 1,234.56 (commas converted to dots).
-        """
-        if value_str is None:
-            return None
-        s = str(value_str).strip()
-        # convert comma decimal separators to dot (and remove thousands separators if present)
-        s = s.replace(',', '.')
-        # remove any characters that are not digits or dot
-        s = re.sub(r'[^\d.]', '', s)
-        # reject empty or a lone dot
-        if not re.match(r'^\d+(\.\d+)?$', s):
-            return None
-        try:
-            return float(s)
-        except Exception:
-            return None
 
     def __init__(self, alias_file: str = "aliases.json"):
         """
         Initialize the Final PDF Extractor.
-        Supports both external alias file and built-in defaults.
+        
+        Args:
+            alias_file (str): Path to the alias mapping file for field recognition
         """
+        # Always resolve path relative to this script
         base_dir = os.path.dirname(os.path.abspath(__file__))
         alias_path = os.path.join(base_dir, alias_file)
 
-        # Default aliases (used if JSON missing or broken)
-        default_aliases = {
-            "places": {
-                "Factory": ["factory", "the factory", "industrial hall", "workshop", "production hall"],
-                "Office": ["office", "workplace", "open office", "meeting room"],
-                "Classroom": ["classroom", "lecture hall", "study room"],
-                "Corridor": ["corridor", "hallway", "passage", "hall"],
-                "Warehouse": ["warehouse", "storage hall", "stock room"],
-                "Parking": ["parking", "garage", "car park"],
-                "Hospital Ward": ["ward", "patient room"],
-                "Retail": ["shop", "store", "retail"],
-                "IT Room": ["server room", "it room"]
-            },
-            "parameters": {
-                "average_lux": ["ē", "eavg", "average lux", "lux", "illumination", "lighting level"],
-                "min_lux": ["emin", "minimum lux", "e_min"],
-                "max_lux": ["emax", "maximum lux", "e_max"],
-                "uniformity": ["uniformity", "uo", "emin/eavg", "e_min/e_avg"],
-                "glare_related": ["g1", "g2", "index"],
-                "power_w": ["power", "watt", "p"],
-                "luminous_flux_lm": ["lm", "lumens", "φluminaire"],
-                "luminous_efficacy_lm_per_w": ["lm/w", "efficacy", "luminous efficacy"]
-            }
-        }
+        if not os.path.exists(alias_path):
+            raise FileNotFoundError(f"Alias file not found: {alias_path}")
 
-        # Try loading external aliases.json, otherwise fallback
-        try:
-            if os.path.exists(alias_path):
-                with open(alias_path, "r", encoding="utf-8") as f:
-                    self.aliases = json.load(f)
-                print(f"✓ Loaded aliases from {alias_path}")
-            else:
-                raise FileNotFoundError
-        except Exception as e:
-            print(f"⚠️ Using default aliases (reason: {e})")
-            self.aliases = default_aliases
-
-        # Text extractors
+        # Set up text extraction methods in order of preference
         self.text_extractors = [
             self._extract_with_pdfplumber,
             self._extract_with_pymupdf
         ]
+
+        # Load alias mappings for improved field recognition
+        with open(alias_path, "r", encoding="utf-8") as f:
+            self.aliases = json.load(f)
 
     # -----------------------------------------------------
     # TEXT EXTRACTION METHODS
@@ -349,149 +303,108 @@ class FinalPDFExtractor:
     # LIGHTING SETUP EXTRACTION
     # -----------------------------------------------------
     def _extract_lighting_setup(self, text: str, data: Dict[str, Any]):
-        """Extract lighting setup values using aliases and robust fallbacks (supports Ē)."""
+        """
+        Extract lighting setup information from the PDF text.
+        
+        This method searches for and extracts overall lighting system configuration
+        including lux values, uniformity, and other DIALux-specific metrics.
+        It uses both DIALux-style pattern matching and fallback regex patterns.
+        
+        Args:
+            text (str): Raw text extracted from the PDF
+            data (Dict[str, Any]): Data dictionary to populate with lighting setup info
+        """
+
         lighting_setup = {}
 
-        number_pattern = r"([0-9]+(?:[.,][0-9]+)?)"
+        # Primary DIALux-style pattern matching
+        # This regex captures the standard DIALux output format:
+        # "673 lx 277 lx 949 lx 0.41 0.49 CG6"
+        # Where: avg_lux min_lux max_lux uniformity g1_index lighting_class
+        match = re.search(
+            r"([\d.]+)\s*lx\s+"     # Group 1: Average lux value (e.g., "673")
+            r"([\d.]+)\s*lx\s+"     # Group 2: Minimum lux value (e.g., "277") 
+            r"([\d.]+)\s*lx\s+"     # Group 3: Maximum lux value (e.g., "949")
+            r"([\d.]+)\s+"          # Group 4: Uniformity ratio (e.g., "0.41")
+            r"([\d.]+)\s+"          # Group 5: G1 index value (e.g., "0.49")
+            r"([A-Za-z0-9]+)",      # Group 6: Lighting class index (e.g., "CG6")
+            text
+        )
 
-        # 1) Alias-driven extraction (safe, uses word boundaries)
-        params = self.aliases.get("parameters", {})
-        for standard, variations in params.items():
-            if standard in lighting_setup:
-                continue
-            for alias in variations:
-                # Use boundaries to avoid partial-word matches (e.g., 'lm' in 'film')
-                pattern = rf"(?<!\w){re.escape(alias)}(?!\w)\s*[:=]?\s*{number_pattern}"
-                m = re.search(pattern, text, re.IGNORECASE | re.UNICODE)
-                if m:
-                    val = self._safe_float(m.group(1))
-                    if val is not None:
-                        lighting_setup[standard] = val
-                    break
+        if match:
+            # Extract all captured groups from the DIALux pattern
+            avg, emin, emax, uo, g1, index = match.groups()
+            lighting_setup.update({
+                "average_lux": float(avg),      # Convert to float for numerical operations
+                "min_lux": float(emin),         # Convert to float for numerical operations
+                "max_lux": float(emax),         # Convert to float for numerical operations
+                "uniformity": float(uo),        # Convert to float for numerical operations
+                "g1": float(g1),               # Convert to float for numerical operations
+                "index": index                 # Keep as string (lighting class identifier)
+            })
+        else:
+            # Fallback to individual field extraction when DIALux pattern doesn't match
+            # This handles cases where the report format is different or fragmented
+            
+            # Average lux extraction with multiple label variations
+            # Matches "Avr.lux:", "Average lux:", "Avr lux -", etc.
+            avg_lux = re.search(r"(?:Avr\.?lux|Average\s*lux)[:\-]?\s*([\d.]+)", text, re.IGNORECASE)
+            if avg_lux:
+                lighting_setup["average_lux"] = float(avg_lux.group(1))  # Convert to float
+            
+            # Uniformity extraction with multiple label variations
+            # Matches "Uniformity:", "Uo:", "Uniformity -", etc.
+            uniformity = re.search(r"(?:Uniformity|Uo)[:\-]?\s*([\d.]+)", text, re.IGNORECASE)
+            if uniformity:
+                lighting_setup["uniformity"] = float(uniformity.group(1))  # Convert to float
 
-        # 2) Fallback: compact DIALux-like line with numbers (avg, min, max, Uo, g1, index)
-        if not lighting_setup.get("average_lux") or not lighting_setup.get("min_lux"):
-            compact = re.compile(
-                rf"(?:(?:Ē|Eavg|Average|E)\s*[:=]?\s*)?{number_pattern}\s*lx?"
-                rf"[\s\n]+(?:(?:Emin|Min)?\s*[:=]?\s*)?{number_pattern}\s*lx?"
-                rf"[\s\n]+(?:(?:Emax|Max)?\s*[:=]?\s*)?{number_pattern}\s*lx?"
-                rf"[\s\n]+{number_pattern}"
-                rf"[\s\n]+{number_pattern}"
-                rf"[\s\n]+([A-Za-z0-9]+)",
-                re.UNICODE
-            )
-            m = compact.search(text)
-            if m:
-                avg = self._safe_float(m.group(1))
-                emin = self._safe_float(m.group(2))
-                emax = self._safe_float(m.group(3))
-                uo = self._safe_float(m.group(4))
-                g1 = self._safe_float(m.group(5))
-                index = m.group(6)
-                if avg is not None: lighting_setup.setdefault("average_lux", avg)
-                if emin is not None: lighting_setup.setdefault("min_lux", emin)
-                if emax is not None: lighting_setup.setdefault("max_lux", emax)
-                if uo is not None: lighting_setup.setdefault("uniformity", uo)
-                if g1 is not None: lighting_setup.setdefault("g1", g1)
-                lighting_setup.setdefault("index", index)
-
+        # Update the main data structure with extracted lighting setup information
         data["lighting_setup"].update(lighting_setup)
 
     # -----------------------------------------------------
     # LUMINAIRE EXTRACTION
     # -----------------------------------------------------
-    # def _extract_luminaires(self, text: str, data: Dict[str, Any]):
-    #     """
-    #     Extract luminaire (lighting fixture) information from the PDF text.
-        
-    #     This method searches for and extracts detailed specifications of lighting
-    #     fixtures including manufacturer, article number, power consumption,
-    #     luminous flux, and efficacy. It uses a comprehensive regex pattern
-    #     to match the standard luminaire specification format.
-        
-    #     Args:
-    #         text (str): Raw text extracted from the PDF
-    #         data (Dict[str, Any]): Data dictionary to populate with luminaire info
-    #     """
-    #     # Comprehensive luminaire specification pattern
-    #     # Matches format: "36 Philips BY698P LED265CW G2 WB 150.0 W 21750 lm 145.0 lm/W"
-    #     # Group 1: Quantity (e.g., "36")
-    #     # Group 2: Manufacturer (e.g., "Philips")
-    #     # Group 3: Article number/model (e.g., "BY698P LED265CW G2 WB")
-    #     # Group 4: Power in watts (e.g., "150.0")
-    #     # Group 5: Luminous flux in lumens (e.g., "21750")
-    #     # Group 6: Efficacy in lm/W (e.g., "145.0")
-    #     luminaire_matches = re.findall(
-    #         r"(\d+)\s+"                           # Group 1: Quantity (digits only)
-    #         r"([A-Za-z]+)\s+"                     # Group 2: Manufacturer (letters only)
-    #         r"([A-Za-z0-9\- ]+)\s+"              # Group 3: Article/model (letters, numbers, hyphens, spaces)
-    #         r"(\d+\.?\d*)\s*W\s+"                # Group 4: Power in watts (decimal number + "W")
-    #         r"(\d+\.?\d*)\s*lm\s+"               # Group 5: Luminous flux in lumens (decimal number + "lm")
-    #         r"(\d+\.?\d*)\s*lm/W",               # Group 6: Efficacy in lm/W (decimal number + "lm/W")
-    #         text
-    #     )
-        
-    #     # Process each matched luminaire specification
-    #     for match in luminaire_matches:
-    #         data["luminaires"].append({
-    #             "quantity": int(match[0]),                    # Quantity of fixtures (convert to integer)
-    #             "manufacturer": match[1],                     # Manufacturer name (e.g., "Philips")
-    #             "article_no": match[2],                       # Article/model number (e.g., "BY698P LED265CW G2 WB")
-    #             "power_w": float(match[3]),                   # Power consumption in watts (convert to float)
-    #             "luminous_flux_lm": float(match[4]),          # Luminous flux in lumens (convert to float)
-    #             "efficacy_lm_per_w": float(match[5])          # Efficacy in lumens per watt (convert to float)
-    #         })
-
     def _extract_luminaires(self, text: str, data: Dict[str, Any]):
-        """Extract luminaire data using regex + alias-based matching."""
-
-        # Handle DIALux layout-style luminaires
-        dialux_style = re.findall(
-            r"Manufacturer\s*[:\-]?\s*([A-Za-z0-9 ]+)\s*"
-            r"Article\s*(?:name|no)\s*[:\-]?\s*([A-Za-z0-9\- /]+)\s*"
-            r"P\s*[:=]?\s*([\d.]+)\s*W\s*"
-            r"(?:Φ[Ll]uminaire|φ[Ll]uminaire)\s*[:=]?\s*([\d.]+)\s*lm",
-            text
-        )
-        for m in dialux_style:
-            manufacturer, article_no, power, lumens = m
-            data["luminaires"].append({
-                "manufacturer": manufacturer.strip(),
-                "article_no": article_no.strip(),
-                "power_w": float(power),
-                "luminous_flux_lm": float(lumens)
-            })
-
-        # Primary regex (structured)
+        """
+        Extract luminaire (lighting fixture) information from the PDF text.
+        
+        This method searches for and extracts detailed specifications of lighting
+        fixtures including manufacturer, article number, power consumption,
+        luminous flux, and efficacy. It uses a comprehensive regex pattern
+        to match the standard luminaire specification format.
+        
+        Args:
+            text (str): Raw text extracted from the PDF
+            data (Dict[str, Any]): Data dictionary to populate with luminaire info
+        """
+        # Comprehensive luminaire specification pattern
+        # Matches format: "36 Philips BY698P LED265CW G2 WB 150.0 W 21750 lm 145.0 lm/W"
+        # Group 1: Quantity (e.g., "36")
+        # Group 2: Manufacturer (e.g., "Philips")
+        # Group 3: Article number/model (e.g., "BY698P LED265CW G2 WB")
+        # Group 4: Power in watts (e.g., "150.0")
+        # Group 5: Luminous flux in lumens (e.g., "21750")
+        # Group 6: Efficacy in lm/W (e.g., "145.0")
         luminaire_matches = re.findall(
-            r"(\d+)\s+([A-Za-z]+)\s+([A-Za-z0-9\- ]+)\s+(\d+\.?\d*)\s*W\s+(\d+\.?\d*)\s*lm\s+(\d+\.?\d*)\s*lm/W",
+            r"(\d+)\s+"                           # Group 1: Quantity (digits only)
+            r"([A-Za-z]+)\s+"                     # Group 2: Manufacturer (letters only)
+            r"([A-Za-z0-9\- ]+)\s+"              # Group 3: Article/model (letters, numbers, hyphens, spaces)
+            r"(\d+\.?\d*)\s*W\s+"                # Group 4: Power in watts (decimal number + "W")
+            r"(\d+\.?\d*)\s*lm\s+"               # Group 5: Luminous flux in lumens (decimal number + "lm")
+            r"(\d+\.?\d*)\s*lm/W",               # Group 6: Efficacy in lm/W (decimal number + "lm/W")
             text
         )
+        
+        # Process each matched luminaire specification
         for match in luminaire_matches:
             data["luminaires"].append({
-                "quantity": int(match[0]),
-                "manufacturer": match[1],
-                "article_no": match[2],
-                "power_w": float(match[3]),
-                "luminous_flux_lm": float(match[4]),
-                "efficacy_lm_per_w": float(match[5])
+                "quantity": int(match[0]),                    # Quantity of fixtures (convert to integer)
+                "manufacturer": match[1],                     # Manufacturer name (e.g., "Philips")
+                "article_no": match[2],                       # Article/model number (e.g., "BY698P LED265CW G2 WB")
+                "power_w": float(match[3]),                   # Power consumption in watts (convert to float)
+                "luminous_flux_lm": float(match[4]),          # Luminous flux in lumens (convert to float)
+                "efficacy_lm_per_w": float(match[5])          # Efficacy in lumens per watt (convert to float)
             })
-
-        # Fallback: alias-driven scanning
-        if not data["luminaires"]:
-            luminaire_data = {}
-            for standard, variations in self.aliases["parameters"].items():
-                for alias in variations:
-                    match = re.search(rf"{alias}\s*[:=]?\s*([\d.]+)", text, re.IGNORECASE)
-                    if match:
-                        value = match.group(1)
-                        # ✅ Prevent crashes on bad matches (e.g., ".")
-                        if re.match(r"^\d+(\.\d+)?$", value):
-                            luminaire_data[standard] = float(value)
-                        break
-            if luminaire_data:
-                data["luminaires"].append(luminaire_data)
-
 
     # -----------------------------------------------------
     # ROOM EXTRACTION
@@ -547,18 +460,13 @@ class FinalPDFExtractor:
 
         # Collect unique room names using all room patterns
         all_rooms = []
-        # Iterate over each regex pattern designed to match room names in various formats
         for pattern in room_patterns:
-            # Find all matches of the current pattern in the text (case-insensitive)
-            matches = re.findall(pattern, text, re.IGNORECASE)
-            # For each matched room name string
+            matches = re.findall(pattern, text, re.IGNORECASE)  # Case-insensitive matching
             for match in matches:
-                # Normalize the matched room name using alias mapping or cleaning
-                normalized = self.normalize_place(match)
-                # Check if this normalized room name is already in the all_rooms list (avoid duplicates)
-                if normalized not in [r["name"] for r in all_rooms]:
-                    # If not already present, add it as a new room entry (dictionary with "name" key)
-                    all_rooms.append({"name": normalized})
+                # Avoid duplicate room names by checking existing rooms
+                if match not in [r["name"] for r in all_rooms]:
+                    all_rooms.append({"name": match.strip()})  # Clean whitespace
+
         # Extract and process coordinate data from all coordinate patterns
         all_coords = []
         for coord_pattern in coord_patterns:
@@ -620,79 +528,63 @@ class FinalPDFExtractor:
     # -----------------------------------------------------
     def _extract_scenes(self, text: str, data: Dict[str, Any]):
         """
-        Extract scene data (lighting performance metrics) from the report text.
-
-        This function attempts to extract scene-related information such as average lux,
-        minimum lux, maximum lux, uniformity, glare index, and other relevant metrics.
-        It uses a robust regular expression to match common scene tables, and falls back
-        to an alias-based search if the main pattern is not found.
-
+        Extract scene information from the PDF text.
+        
+        This method searches for and extracts lighting scene data including
+        scene names, average lux levels, minimum/maximum lux values,
+        uniformity ratios, and utilization profiles. It uses comprehensive
+        regex patterns to match DIALux-style scene output formats.
+        
         Args:
-            text (str): The full extracted text from the PDF report.
-            data (Dict[str, Any]): The main data dictionary to populate with scene info.
-
-        Populates:
-            data["scenes"]: A list of scene dictionaries, each containing extracted metrics.
+            text (str): Raw text extracted from the PDF
+            data (Dict[str, Any]): Data dictionary to populate with scene info
         """
-
-        # -----------------------------------------------------
-        # 1. Attempt to extract scenes using a comprehensive regex pattern
-        # -----------------------------------------------------
-        # This pattern is designed to match scene tables with the following structure:
-        #   [Scene Name] [Average Lux] [Min Lux] [Max Lux] [Uniformity] [G1] [Index]
-        # It supports various label forms (e.g., Ē, Eavg, Average, E) and optional scene names.
-        scene_pattern = re.compile(
-            r"(?:([A-Za-z ]+)\s+)?"
-            r"(?:(?:Ē|Eavg|Average|E)\s*[:=]?\s*)?([\d.]+)\s*lx?"      # Average lux
-            r"[\s\n]+(?:(?:Emin|Min)?\s*[:=]?\s*)?([\d.]+)\s*lx?"      # Min lux
-            r"[\s\n]+(?:(?:Emax|Max)?\s*[:=]?\s*)?([\d.]+)\s*lx?"      # Max lux
-            r"[\s\n]+([\d.]+)"                                         # Uniformity (Uo)
-            r"[\s\n]+([\d.]+)"                                         # G1 (glare index)
-            r"[\s\n]+([A-Za-z0-9]+)",                                  # Index (e.g., CG1)
-            re.UNICODE
+        # Scene extraction with optional scene name and comprehensive metrics
+        # Pattern matches: "Scene Name 673 lx 277 lx 949 lx 0.41 0.49 CG6"
+        # Group 1: Optional scene name (e.g., "the factory", "working place")
+        # Group 2: Average lux value (e.g., "673")
+        # Group 3: Minimum lux value (e.g., "277")
+        # Group 4: Maximum lux value (e.g., "949")
+        # Group 5: Uniformity ratio (e.g., "0.41")
+        # Group 6: G1 index value (e.g., "0.49")
+        # Group 7: Lighting class index (e.g., "CG6")
+        scene_matches = re.findall(
+            r"(?:([A-Za-z ]+)\s+)?([\d.]+)\s*lx\s+([\d.]+)\s*lx\s+([\d.]+)\s*lx\s+([\d.]+)\s+([\d.]+)\s+([A-Za-z0-9]+)",
+            text
         )
 
-        # Find all matches of the scene pattern in the text
-        matches = scene_pattern.findall(text)
-        for sm in matches:
-            # sm is a tuple: (scene_name, avg, emin, emax, uo, g1, index)
-            # If scene name is missing, use a default label
+        # Process each matched scene specification
+        for sm in scene_matches:
+            # Extract scene name (use first group if present, otherwise default)
             scene_name = sm[0].strip() if sm[0] else "Scene"
+            # Extract numerical metrics from remaining groups
             avg, emin, emax, uo, g1, index = sm[1:]
-
-            # Append the extracted scene data to the scenes list
+            
+            # Add complete scene information to data structure
             data["scenes"].append({
-                "scene_name": scene_name,
-                "average_lux": float(avg),
-                "min_lux": float(emin),
-                "max_lux": float(emax),
-                "uniformity": float(uo),
-                "g1": float(g1),
-                "index": index
+                "scene_name": scene_name.strip(),        # Scene identifier (e.g., "the factory")
+                "average_lux": float(avg),               # Average illuminance in lux
+                "min_lux": float(emin),                  # Minimum illuminance in lux
+                "max_lux": float(emax),                  # Maximum illuminance in lux
+                "uniformity": float(uo),                 # Uniformity ratio (0-1)
+                "g1": float(g1),                        # G1 index value
+                "index": index                          # Lighting class index (e.g., "CG6")
             })
 
-        # -----------------------------------------------------
-        # 2. Fallback: Use alias-based search if no scenes were found
-        # -----------------------------------------------------
-        # If the main regex did not match any scenes, try to extract scene metrics
-        # by searching for each parameter using all known aliases.
-        if not data["scenes"]:
-            alias_scene = {}  # Temporary dict to collect found parameters
+        # Fallback: create default scene from lighting setup if no scenes found
+        # This ensures we always have at least one scene entry
+        if not data["scenes"] and "lighting_setup" in data:
+            setup = data["lighting_setup"]
+            data["scenes"].append({
+                "scene_name": "Default Scene",           # Default scene name
+                "average_lux": setup.get("average_lux"), # Use lighting setup average lux
+                "min_lux": setup.get("min_lux"),
+                "max_lux": setup.get("max_lux"),
+                "uniformity": setup.get("uniformity"),
+                "g1": setup.get("g1"),
+                "index": setup.get("index")
+            })
 
-            # Iterate over all standard parameter names and their aliases
-            for standard, variations in self.aliases["parameters"].items():
-                for alias in variations:
-                    # Search for the alias followed by a number (the value)
-                    match = re.search(rf"{alias}\s*[:=]?\s*([\d.]+)", text, re.IGNORECASE)
-                    if match:
-                        # Store the value under the standard parameter name
-                        alias_scene[standard] = float(match.group(1))
-                        break  # Stop after the first matching alias for this parameter
-
-            # If any parameters were found, create a default scene entry
-            if alias_scene:
-                alias_scene["scene_name"] = "Default Scene"
-                data["scenes"].append(alias_scene)
     # -----------------------------------------------------
     # MASTER PARSER
     # -----------------------------------------------------
@@ -787,16 +679,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         pdf_path = sys.argv[1]  # Use provided file path
     else:
-        # If no PDF file path is provided, print a detailed error message in red and exit.
-        # This prevents accidental processing with a hardcoded default file and ensures
-        # the user is clearly informed about the correct usage.
-        error_msg = (
-            "\033[91m[ERROR]\033[0m No PDF file path provided.\n"
-            "Usage: python final_extractor.py [pdf_file_path]\n"
-            "Please specify the path to the PDF file you want to process."
-        )
-        print(error_msg)
-        sys.exit(1)
+        pdf_path = "El- Mohands _Report.pdf"  # Default fallback file
     
     # Process the PDF and extract structured data
     result = extractor.process_report(pdf_path)
