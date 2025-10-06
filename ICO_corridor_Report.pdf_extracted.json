@@ -1,0 +1,60 @@
+{
+    "metadata": {
+        "company_name": "Short Circuit Company",
+        "project_name": "The lighting fiixture is linear with 7w Technical Engineer",
+        "engineer": "Eng. Salma Mostafa",
+        "email": null,
+        "report_title": "ICO_corridor_Report.pdf"
+    },
+    "lighting_setup": {
+        "power_w": 7.0,
+        "luminous_flux_lm": 700.0,
+        "fitting": 1.0,
+        "average_lux": 114.0,
+        "min_lux": 71.4,
+        "max_lux": 121.0,
+        "uniformity": 0.63,
+        "g1": 0.59,
+        "index": "CG1"
+    },
+    "luminaires": [
+        {
+            "power_w": 7.0,
+            "luminous_flux_lm": 700.0,
+            "fitting": 1.0,
+            "mounting_height_m": 7.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "building 1 · storey 1 · room 1",
+            "arrangement": "X",
+            "layout": []
+        },
+        {
+            "name": "room 1",
+            "arrangement": "X",
+            "layout": []
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "Scene",
+            "average_lux": 114.0,
+            "min_lux": 71.4,
+            "max_lux": 121.0,
+            "uniformity": 0.63,
+            "g1": 0.59,
+            "index": "CG1"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 114.0,
+            "min_lux": 71.4,
+            "max_lux": 121.0,
+            "uniformity": 0.63,
+            "g1": 0.59,
+            "index": "CG1"
+        }
+    ]
+}

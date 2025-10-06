@@ -1,0 +1,659 @@
+Fresh factory
+Description
+324 of Back light 48w Technical office
+the average lux 532 and the uniformity 0.52
+Eng. Salma Mostafa
+Short circuit
+T 01040359990
+salma@shortcircuitcompany.co
+m
+1
+Fresh factory
+Images
+Production line
+production line
+calculation of production line
+2
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+3
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+Manufacturer Philips P 48.0 W
+Article name RC133V G4 W62L62 ΦLuminaire 5280 lm
+PSU 1 xLED36S/840
+OC
+Fitting 1x
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 20.554 m / 12.577 m
+/ 3.800 m 17.888 m 15.243 m 3.800 m 116
+X-direction 3 pcs., Centre - 20.554 m 15.243 m 3.800 m 128
+centre, 2.667 m
+23.221 m 15.243 m 3.800 m 140
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 17.888 m 12.577 m 3.800 m 151
+Arrangement A1 20.554 m 12.577 m 3.800 m 157
+23.221 m 12.577 m 3.800 m 175
+17.888 m 9.910 m 3.800 m 188
+20.554 m 9.910 m 3.800 m 200
+23.221 m 9.910 m 3.800 m 212
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+4
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 29.054 m / 12.577 m X Y Mounting Luminaire
+/ 3.800 m height
+X-direction 3 pcs., Centre - 26.388 m 15.243 m 3.800 m 114
+centre, 2.667 m
+29.054 m 15.243 m 3.800 m 126
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 31.721 m 15.243 m 3.800 m 138
+Arrangement A2 26.388 m 12.577 m 3.800 m 149
+29.054 m 12.577 m 3.800 m 158
+31.721 m 12.577 m 3.800 m 173
+26.388 m 9.910 m 3.800 m 186
+29.054 m 9.910 m 3.800 m 198
+31.721 m 9.910 m 3.800 m 210
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 37.304 m / 12.577 m
+/ 3.800 m 34.638 m 15.243 m 3.800 m 111
+X-direction 3 pcs., Centre - 37.304 m 15.243 m 3.800 m 123
+centre, 2.667 m
+39.971 m 15.243 m 3.800 m 135
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 34.638 m 12.577 m 3.800 m 148
+Arrangement A3 37.304 m 12.577 m 3.800 m 159
+39.971 m 12.577 m 3.800 m 172
+34.638 m 9.910 m 3.800 m 183
+37.304 m 9.910 m 3.800 m 195
+39.971 m 9.910 m 3.800 m 207
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+5
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 45.554 m / 12.577 m X Y Mounting Luminaire
+/ 3.800 m height
+X-direction 3 pcs., Centre - 42.888 m 15.243 m 3.800 m 109
+centre, 2.667 m
+45.554 m 15.243 m 3.800 m 121
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 48.221 m 15.243 m 3.800 m 133
+Arrangement A4 42.888 m 12.577 m 3.800 m 146
+45.554 m 12.577 m 3.800 m 160
+48.221 m 12.577 m 3.800 m 170
+42.888 m 9.910 m 3.800 m 181
+45.554 m 9.910 m 3.800 m 193
+48.221 m 9.910 m 3.800 m 205
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 54.304 m / 12.577 m
+/ 3.800 m 51.638 m 15.243 m 3.800 m 110
+X-direction 3 pcs., Centre - 54.304 m 15.243 m 3.800 m 122
+centre, 2.667 m
+56.971 m 15.243 m 3.800 m 134
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 51.638 m 12.577 m 3.800 m 145
+Arrangement A5 54.304 m 12.577 m 3.800 m 161
+56.971 m 12.577 m 3.800 m 169
+51.638 m 9.910 m 3.800 m 182
+54.304 m 9.910 m 3.800 m 194
+56.971 m 9.910 m 3.800 m 206
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+6
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 62.554 m / 12.577 m X Y Mounting Luminaire
+/ 3.800 m height
+X-direction 3 pcs., Centre - 59.888 m 15.243 m 3.800 m 112
+centre, 2.667 m
+62.554 m 15.243 m 3.800 m 124
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 65.221 m 15.243 m 3.800 m 136
+Arrangement A6 59.888 m 12.577 m 3.800 m 147
+62.554 m 12.577 m 3.800 m 162
+65.221 m 12.577 m 3.800 m 171
+59.888 m 9.910 m 3.800 m 184
+62.554 m 9.910 m 3.800 m 196
+65.221 m 9.910 m 3.800 m 208
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 71.054 m / 12.577 m
+/ 3.800 m 68.388 m 15.243 m 3.800 m 113
+X-direction 3 pcs., Centre - 71.054 m 15.243 m 3.800 m 125
+centre, 2.667 m
+73.721 m 15.243 m 3.800 m 137
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 68.388 m 12.577 m 3.800 m 150
+Arrangement A7 71.054 m 12.577 m 3.800 m 163
+73.721 m 12.577 m 3.800 m 174
+68.388 m 9.910 m 3.800 m 185
+71.054 m 9.910 m 3.800 m 197
+73.721 m 9.910 m 3.800 m 209
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+7
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 79.304 m / 12.577 m X Y Mounting Luminaire
+/ 3.800 m height
+X-direction 3 pcs., Centre - 76.638 m 15.243 m 3.800 m 115
+centre, 2.667 m
+79.304 m 15.243 m 3.800 m 127
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 81.971 m 15.243 m 3.800 m 139
+Arrangement A8 76.638 m 12.577 m 3.800 m 152
+79.304 m 12.577 m 3.800 m 164
+81.971 m 12.577 m 3.800 m 176
+76.638 m 9.910 m 3.800 m 187
+79.304 m 9.910 m 3.800 m 199
+81.971 m 9.910 m 3.800 m 211
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 87.554 m / 12.577 m
+/ 3.800 m 84.888 m 15.243 m 3.800 m 117
+X-direction 3 pcs., Centre - 87.554 m 15.243 m 3.800 m 129
+centre, 2.667 m
+90.221 m 15.243 m 3.800 m 141
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 84.888 m 12.577 m 3.800 m 153
+Arrangement A9 87.554 m 12.577 m 3.800 m 165
+90.221 m 12.577 m 3.800 m 177
+84.888 m 9.910 m 3.800 m 189
+87.554 m 9.910 m 3.800 m 201
+90.221 m 9.910 m 3.800 m 213
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+8
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 87.554 m / 21.577 m X Y Mounting Luminaire
+/ 3.800 m height
+X-direction 3 pcs., Centre - 84.888 m 24.243 m 3.800 m 3
+centre, 2.667 m
+87.554 m 24.243 m 3.800 m 7
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 90.221 m 24.243 m 3.800 m 11
+Arrangement A12 84.888 m 21.577 m 3.800 m 15
+87.554 m 21.577 m 3.800 m 17
+90.221 m 21.577 m 3.800 m 23
+84.888 m 18.910 m 3.800 m 27
+87.554 m 18.910 m 3.800 m 31
+90.221 m 18.910 m 3.800 m 35
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 79.304 m / 21.577 m
+/ 3.800 m 76.638 m 24.243 m 3.800 m 2
+X-direction 3 pcs., Centre - 79.304 m 24.243 m 3.800 m 6
+centre, 2.667 m
+81.971 m 24.243 m 3.800 m 10
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 76.638 m 21.577 m 3.800 m 14
+Arrangement A13 79.304 m 21.577 m 3.800 m 18
+81.971 m 21.577 m 3.800 m 22
+76.638 m 18.910 m 3.800 m 26
+79.304 m 18.910 m 3.800 m 30
+81.971 m 18.910 m 3.800 m 34
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+9
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 70.804 m / 21.577 m X Y Mounting Luminaire
+/ 3.800 m height
+X-direction 3 pcs., Centre - 68.138 m 24.243 m 3.800 m 1
+centre, 2.667 m
+70.804 m 24.243 m 3.800 m 5
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 73.471 m 24.243 m 3.800 m 9
+Arrangement A14 68.138 m 21.577 m 3.800 m 13
+70.804 m 21.577 m 3.800 m 19
+73.471 m 21.577 m 3.800 m 21
+68.138 m 18.910 m 3.800 m 25
+70.804 m 18.910 m 3.800 m 29
+73.471 m 18.910 m 3.800 m 33
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 62.554 m / 21.077 m
+/ 3.800 m 59.888 m 23.743 m 3.800 m 39
+X-direction 3 pcs., Centre - 62.554 m 23.743 m 3.800 m 47
+centre, 2.667 m
+65.221 m 23.743 m 3.800 m 55
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 59.888 m 21.077 m 3.800 m 63
+Arrangement A15 62.554 m 21.077 m 3.800 m 69
+65.221 m 21.077 m 3.800 m 79
+59.888 m 18.410 m 3.800 m 87
+62.554 m 18.410 m 3.800 m 95
+65.221 m 18.410 m 3.800 m 103
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+10
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 54.304 m / 21.077 m X Y Mounting Luminaire
+/ 3.800 m height
+X-direction 3 pcs., Centre - 51.638 m 23.743 m 3.800 m 37
+centre, 2.667 m
+54.304 m 23.743 m 3.800 m 45
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 56.971 m 23.743 m 3.800 m 53
+Arrangement A16 51.638 m 21.077 m 3.800 m 62
+54.304 m 21.077 m 3.800 m 70
+56.971 m 21.077 m 3.800 m 78
+51.638 m 18.410 m 3.800 m 85
+54.304 m 18.410 m 3.800 m 93
+56.971 m 18.410 m 3.800 m 101
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 45.804 m / 21.077 m
+/ 3.800 m 43.138 m 23.743 m 3.800 m 38
+X-direction 3 pcs., Centre - 45.804 m 23.743 m 3.800 m 46
+centre, 2.667 m
+48.471 m 23.743 m 3.800 m 54
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 43.138 m 21.077 m 3.800 m 61
+Arrangement A17 45.804 m 21.077 m 3.800 m 71
+48.471 m 21.077 m 3.800 m 77
+43.138 m 18.410 m 3.800 m 86
+45.804 m 18.410 m 3.800 m 94
+48.471 m 18.410 m 3.800 m 102
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+11
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 20.554 m / 21.077 m X Y Mounting Luminaire
+/ 3.800 m height
+X-direction 3 pcs., Centre - 17.888 m 23.743 m 3.800 m 42
+centre, 2.667 m
+20.554 m 23.743 m 3.800 m 50
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 23.221 m 23.743 m 3.800 m 58
+Arrangement A18 17.888 m 21.077 m 3.800 m 66
+20.554 m 21.077 m 3.800 m 72
+23.221 m 21.077 m 3.800 m 82
+17.888 m 18.410 m 3.800 m 90
+20.554 m 18.410 m 3.800 m 98
+23.221 m 18.410 m 3.800 m 106
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 12.304 m / 21.077 m
+/ 3.800 m 9.638 m 23.743 m 3.800 m 43
+X-direction 3 pcs., Centre - 12.304 m 23.743 m 3.800 m 51
+centre, 2.667 m
+14.971 m 23.743 m 3.800 m 59
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 9.638 m 21.077 m 3.800 m 67
+Arrangement A19 12.304 m 21.077 m 3.800 m 73
+14.971 m 21.077 m 3.800 m 83
+9.638 m 18.410 m 3.800 m 91
+12.304 m 18.410 m 3.800 m 99
+14.971 m 18.410 m 3.800 m 107
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+12
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 4.054 m / 21.077 m / X Y Mounting Luminaire
+3.800 m height
+X-direction 3 pcs., Centre - 1.388 m 23.743 m 3.800 m 44
+centre, 2.667 m
+4.054 m 23.743 m 3.800 m 52
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 6.721 m 23.743 m 3.800 m 60
+Arrangement A20 1.388 m 21.077 m 3.800 m 68
+4.054 m 21.077 m 3.800 m 74
+6.721 m 21.077 m 3.800 m 84
+1.388 m 18.410 m 3.800 m 92
+4.054 m 18.410 m 3.800 m 100
+6.721 m 18.410 m 3.800 m 108
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 4.054 m / 12.577 m /
+3.800 m 1.388 m 15.243 m 3.800 m 120
+X-direction 3 pcs., Centre - 4.054 m 15.243 m 3.800 m 132
+centre, 2.667 m
+6.721 m 15.243 m 3.800 m 144
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 1.388 m 12.577 m 3.800 m 155
+Arrangement A21 4.054 m 12.577 m 3.800 m 166
+6.721 m 12.577 m 3.800 m 179
+1.388 m 9.910 m 3.800 m 192
+4.054 m 9.910 m 3.800 m 204
+6.721 m 9.910 m 3.800 m 216
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+13
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 4.054 m / 4.077 m / X Y Mounting Luminaire
+3.800 m height
+X-direction 3 pcs., Centre - 1.388 m 6.743 m 3.800 m 226
+centre, 2.667 m
+4.054 m 6.743 m 3.800 m 236
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 6.721 m 6.743 m 3.800 m 246
+Arrangement A22 1.388 m 4.077 m 3.800 m 255
+4.054 m 4.077 m 3.800 m 257
+6.721 m 4.077 m 3.800 m 275
+1.388 m 1.410 m 3.800 m 286
+4.054 m 1.410 m 3.800 m 296
+6.721 m 1.410 m 3.800 m 306
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 12.500 m / 4.077 m /
+3.800 m 9.833 m 6.743 m 3.800 m 225
+X-direction 3 pcs., Centre - 12.500 m 6.743 m 3.800 m 235
+centre, 2.667 m
+15.167 m 6.743 m 3.800 m 245
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 9.833 m 4.077 m 3.800 m 254
+Arrangement A23 12.500 m 4.077 m 3.800 m 258
+15.167 m 4.077 m 3.800 m 274
+9.833 m 1.410 m 3.800 m 285
+12.500 m 1.410 m 3.800 m 295
+15.167 m 1.410 m 3.800 m 305
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+14
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 20.554 m / 4.077 m / X Y Mounting Luminaire
+3.800 m height
+X-direction 3 pcs., Centre - 17.888 m 6.743 m 3.800 m 224
+centre, 2.667 m
+20.554 m 6.743 m 3.800 m 234
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 23.221 m 6.743 m 3.800 m 244
+Arrangement A24 17.888 m 4.077 m 3.800 m 253
+20.554 m 4.077 m 3.800 m 259
+23.221 m 4.077 m 3.800 m 273
+17.888 m 1.410 m 3.800 m 284
+20.554 m 1.410 m 3.800 m 294
+23.221 m 1.410 m 3.800 m 304
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 29.054 m / 4.077 m /
+3.800 m 26.388 m 6.743 m 3.800 m 222
+X-direction 3 pcs., Centre - 29.054 m 6.743 m 3.800 m 232
+centre, 2.667 m
+31.721 m 6.743 m 3.800 m 242
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 26.388 m 4.077 m 3.800 m 250
+Arrangement A25 29.054 m 4.077 m 3.800 m 260
+31.721 m 4.077 m 3.800 m 270
+26.388 m 1.410 m 3.800 m 282
+29.054 m 1.410 m 3.800 m 292
+31.721 m 1.410 m 3.800 m 302
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+15
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 45.554 m / 4.077 m / X Y Mounting Luminaire
+3.800 m height
+X-direction 3 pcs., Centre - 42.888 m 6.743 m 3.800 m 218
+centre, 2.667 m
+45.554 m 6.743 m 3.800 m 228
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 48.221 m 6.743 m 3.800 m 238
+Arrangement A27 42.888 m 4.077 m 3.800 m 247
+45.554 m 4.077 m 3.800 m 261
+48.221 m 4.077 m 3.800 m 267
+42.888 m 1.410 m 3.800 m 278
+45.554 m 1.410 m 3.800 m 288
+48.221 m 1.410 m 3.800 m 298
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 54.054 m / 4.077 m /
+3.800 m 51.388 m 6.743 m 3.800 m 217
+X-direction 3 pcs., Centre - 54.054 m 6.743 m 3.800 m 227
+centre, 2.667 m
+56.721 m 6.743 m 3.800 m 237
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 51.388 m 4.077 m 3.800 m 248
+Arrangement A28 54.054 m 4.077 m 3.800 m 262
+56.721 m 4.077 m 3.800 m 268
+51.388 m 1.410 m 3.800 m 277
+54.054 m 1.410 m 3.800 m 287
+56.721 m 1.410 m 3.800 m 297
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+16
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 62.554 m / 4.077 m / X Y Mounting Luminaire
+3.800 m height
+X-direction 3 pcs., Centre - 59.888 m 6.743 m 3.800 m 220
+centre, 2.667 m
+62.554 m 6.743 m 3.800 m 230
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 65.221 m 6.743 m 3.800 m 240
+Arrangement A29 59.888 m 4.077 m 3.800 m 249
+62.554 m 4.077 m 3.800 m 263
+65.221 m 4.077 m 3.800 m 269
+59.888 m 1.410 m 3.800 m 280
+62.554 m 1.410 m 3.800 m 290
+65.221 m 1.410 m 3.800 m 300
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 71.054 m / 4.077 m /
+3.800 m 68.388 m 6.743 m 3.800 m 221
+X-direction 3 pcs., Centre - 71.054 m 6.743 m 3.800 m 231
+centre, 2.667 m
+73.721 m 6.743 m 3.800 m 241
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 68.388 m 4.077 m 3.800 m 251
+Arrangement A30 71.054 m 4.077 m 3.800 m 264
+73.721 m 4.077 m 3.800 m 271
+68.388 m 1.410 m 3.800 m 281
+71.054 m 1.410 m 3.800 m 291
+73.721 m 1.410 m 3.800 m 301
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+17
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 79.054 m / 4.077 m / X Y Mounting Luminaire
+3.800 m height
+X-direction 3 pcs., Centre - 76.388 m 6.743 m 3.800 m 223
+centre, 2.667 m
+79.054 m 6.743 m 3.800 m 233
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 81.721 m 6.743 m 3.800 m 243
+Arrangement A31 76.388 m 4.077 m 3.800 m 252
+79.054 m 4.077 m 3.800 m 265
+81.721 m 4.077 m 3.800 m 272
+76.388 m 1.410 m 3.800 m 283
+79.054 m 1.410 m 3.800 m 293
+81.721 m 1.410 m 3.800 m 303
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 87.554 m / 3.827 m /
+3.800 m 84.888 m 6.493 m 3.800 m 307
+X-direction 3 pcs., Centre - 87.554 m 6.493 m 3.800 m 309
+centre, 2.667 m
+90.221 m 6.493 m 3.800 m 311
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 84.888 m 3.827 m 3.800 m 313
+Arrangement A32 87.554 m 3.827 m 3.800 m 315
+90.221 m 3.827 m 3.800 m 317
+84.888 m 1.160 m 3.800 m 319
+87.554 m 1.160 m 3.800 m 321
+90.221 m 1.160 m 3.800 m 323
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+18
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 96.304 m / 3.827 m / X Y Mounting Luminaire
+3.800 m height
+X-direction 3 pcs., Centre - 93.638 m 6.493 m 3.800 m 308
+centre, 2.667 m
+96.304 m 6.493 m 3.800 m 310
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 98.971 m 6.493 m 3.800 m 312
+Arrangement A33 93.638 m 3.827 m 3.800 m 314
+96.304 m 3.827 m 3.800 m 316
+98.971 m 3.827 m 3.800 m 318
+93.638 m 1.160 m 3.800 m 320
+96.304 m 1.160 m 3.800 m 322
+98.971 m 1.160 m 3.800 m 324
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 96.304 m / 12.577 m
+/ 3.800 m 93.638 m 15.243 m 3.800 m 119
+X-direction 3 pcs., Centre - 96.304 m 15.243 m 3.800 m 131
+centre, 2.667 m
+98.971 m 15.243 m 3.800 m 143
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 93.638 m 12.577 m 3.800 m 156
+Arrangement A10 96.304 m 12.577 m 3.800 m 167
+98.971 m 12.577 m 3.800 m 180
+93.638 m 9.910 m 3.800 m 191
+96.304 m 9.910 m 3.800 m 203
+98.971 m 9.910 m 3.800 m 215
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+19
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 96.304 m / 21.577 m X Y Mounting Luminaire
+/ 3.800 m height
+X-direction 3 pcs., Centre - 93.638 m 24.243 m 3.800 m 4
+centre, 2.667 m
+96.304 m 24.243 m 3.800 m 8
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 98.971 m 24.243 m 3.800 m 12
+Arrangement A11 93.638 m 21.577 m 3.800 m 16
+96.304 m 21.577 m 3.800 m 20
+98.971 m 21.577 m 3.800 m 24
+93.638 m 18.910 m 3.800 m 28
+96.304 m 18.910 m 3.800 m 32
+98.971 m 18.910 m 3.800 m 36
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 37.554 m / 21.077 m
+/ 3.800 m 34.888 m 23.743 m 3.800 m 40
+X-direction 3 pcs., Centre - 37.554 m 23.743 m 3.800 m 48
+centre, 2.667 m
+40.221 m 23.743 m 3.800 m 56
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 34.888 m 21.077 m 3.800 m 64
+Arrangement A34 37.554 m 21.077 m 3.800 m 75
+40.221 m 21.077 m 3.800 m 80
+34.888 m 18.410 m 3.800 m 88
+37.554 m 18.410 m 3.800 m 96
+40.221 m 18.410 m 3.800 m 104
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+20
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 12.304 m / 12.577 m X Y Mounting Luminaire
+/ 3.800 m height
+X-direction 3 pcs., Centre - 9.638 m 15.243 m 3.800 m 118
+centre, 2.667 m
+12.304 m 15.243 m 3.800 m 130
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 14.971 m 15.243 m 3.800 m 142
+Arrangement A35 9.638 m 12.577 m 3.800 m 154
+12.304 m 12.577 m 3.800 m 168
+14.971 m 12.577 m 3.800 m 178
+9.638 m 9.910 m 3.800 m 190
+12.304 m 9.910 m 3.800 m 202
+14.971 m 9.910 m 3.800 m 214
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 29.054 m / 21.077 m
+/ 3.800 m 26.388 m 23.743 m 3.800 m 41
+X-direction 3 pcs., Centre - 29.054 m 23.743 m 3.800 m 49
+centre, 2.667 m
+31.721 m 23.743 m 3.800 m 57
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 26.388 m 21.077 m 3.800 m 65
+Arrangement A36 29.054 m 21.077 m 3.800 m 76
+31.721 m 21.077 m 3.800 m 81
+26.388 m 18.410 m 3.800 m 89
+29.054 m 18.410 m 3.800 m 97
+31.721 m 18.410 m 3.800 m 105
+9 x Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC
+Type Field Arrangement
+21
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 39.971 m / 4.077 m / X Y Mounting Luminaire
+3.800 m height
+X-direction 3 pcs., Centre - 34.638 m 6.743 m 3.800 m 219
+centre, 2.667 m
+37.304 m 6.743 m 3.800 m 229
+Y-direction 3 pcs., Centre -
+centre, 2.667 m 39.971 m 6.743 m 3.800 m 239
+Arrangement A26 34.638 m 4.077 m 3.800 m 256
+37.304 m 4.077 m 3.800 m 266
+39.971 m 4.077 m 3.800 m 276
+34.638 m 1.410 m 3.800 m 279
+37.304 m 1.410 m 3.800 m 289
+39.971 m 1.410 m 3.800 m 299
+22
+Fresh factory
+Building 1 · Storey 1 · Room 1
+Luminaire list
+Φtotal Ptotal Luminous efficacy
+1710720 lm 15552.0 W 110.0 lm/W
+pcs. Manufacturer Article No. Article name P Φ Luminous efficacy
+324 Philips RC133V G4 W62L62 PSU 1 xLED36S/840 OC 48.0 W 5280 lm 110.0 lm/W
+23
+Fresh factory
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+Calculation surface 3
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 3 532 lx 274 lx 625 lx 0.52 0.44 CG1
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+24

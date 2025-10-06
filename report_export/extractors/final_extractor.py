@@ -220,31 +220,31 @@ class FinalPDFExtractor:
                 return text
         return self._ocr_pdf(pdf_path)
 
-    def process_report(self, pdf_path: str) -> Dict[str, Any]:
-        """
-        Main processing function that handles the complete PDF extraction workflow.
+    # def process_report(self, pdf_path: str) -> Dict[str, Any]:
+    #     """
+    #     Main processing function that handles the complete PDF extraction workflow.
         
-        This is the primary method that orchestrates the entire extraction process:
-        1. Extracts text from the PDF using the best available method
-        2. Parses the text to extract structured data
-        3. Returns comprehensive report data
+    #     This is the primary method that orchestrates the entire extraction process:
+    #     1. Extracts text from the PDF using the best available method
+    #     2. Parses the text to extract structured data
+    #     3. Returns comprehensive report data
         
-        Args:
-            pdf_path (str): Path to the PDF file to process
+    #     Args:
+    #         pdf_path (str): Path to the PDF file to process
             
-        Returns:
-            Dict[str, Any]: Complete structured data extracted from the PDF
-        """
-        print(f"Processing: {pdf_path}")
+    #     Returns:
+    #         Dict[str, Any]: Complete structured data extracted from the PDF
+    #     """
+    #     print(f"Processing: {pdf_path}")
         
-        # Extract text using the fallback chain
-        text = self.extract_text(pdf_path)
-        print(f"Extracted {len(text)} characters")
+    #     # Extract text using the fallback chain
+    #     text = self.extract_text(pdf_path)
+    #     print(f"Extracted {len(text)} characters")
         
-        # Parse the extracted text into structured data
-        data = self.parse_report(text, os.path.basename(pdf_path))
+    #     # Parse the extracted text into structured data
+    #     data = self.parse_report(text, os.path.basename(pdf_path))
         
-        return data
+    #     return data
 
     # -----------------------------------------------------
     # NORMALIZATION USING ALIASES
@@ -290,7 +290,8 @@ class FinalPDFExtractor:
     # -----------------------------------------------------
     # METADATA EXTRACTION
     # -----------------------------------------------------
-    def _extract_metadata(self, text: str, data: Dict[str, Any]):
+    # def _extract_metadata(self, text: str, data: Dict[str, Any]):
+    def _extract_metadata(self, text: str, data: Dict[str, Any], pdf_path: str):
         """
         Extract metadata fields from the PDF text.
         
@@ -321,16 +322,32 @@ class FinalPDFExtractor:
         # Pattern 1: Matches "Project Name" or "Lighting study" followed by content until newline
         # Pattern 2: Structured project name field with colon or dash separator
         # Pattern 3: Matches "Lighting study for" followed by project description
-        project_patterns = [
-            r"(Project\s*Name|Lighting study.*?)\n",  # Multi-line project name
-            r"Project\s*Name[:\-]?\s*(.+)",  # Structured project name field
-            r"Lighting\s*study\s*for\s*(.+)"  # Descriptive project name format
-        ]
-        for pattern in project_patterns:
-            match = re.search(pattern, text, re.IGNORECASE)  # Case-insensitive matching
-            if match:
-                data["metadata"]["project_name"] = match.group(0).strip()  # Clean whitespace
-                break  # Use first successful match
+
+        # project_patterns = [
+        #     r"(Project\s*Name|Lighting study.*?)\n",  # Multi-line project name
+        #     r"Project\s*Name[:\-]?\s*(.+)",  # Structured project name field
+        #     r"Lighting\s*study\s*for\s*(.+)"  # Descriptive project name format
+        # ]
+        # for pattern in project_patterns:
+        #     match = re.search(pattern, text, re.IGNORECASE)  # Case-insensitive matching
+        #     if match:
+        #         data["metadata"]["project_name"] = match.group(0).strip()  # Clean whitespace
+        #         break  # Use first successful match
+
+        # --- Improved project name extraction ---
+
+        try:
+            with pdfplumber.open(pdf_path) as pdf:
+                first_page = pdf.pages[0]
+                first_text = first_page.extract_text().strip().splitlines()
+                # Take first non-empty, non-"Description" line
+                for line in first_text:
+                    clean = line.strip()
+                    if clean and not re.match(r"(?i)description|images|technical|company|ico", clean):
+                        data["metadata"]["project_name"] = clean
+                        break
+        except Exception as e:
+            print("⚠️ Could not extract project name from first page:", e)
 
         # Engineer name extraction
         # Matches "Eng." followed by engineer's name (common format in reports)
@@ -361,12 +378,22 @@ class FinalPDFExtractor:
                 continue
             for alias in variations:
                 # Use boundaries to avoid partial-word matches (e.g., 'lm' in 'film')
-                pattern = rf"(?<!\w){re.escape(alias)}(?!\w)\s*[:=]?\s*{number_pattern}"
+                # Match number + optional unit right after
+                pattern = rf"(?<!\w){re.escape(alias)}(?!\w)\s*[:=]?\s*{number_pattern}\s*([A-Za-z/]+)?"
                 m = re.search(pattern, text, re.IGNORECASE | re.UNICODE)
                 if m:
                     val = self._safe_float(m.group(1))
+                    unit = (m.group(2) or "").lower().strip()
+
+                    # --- Intelligent unit handling ---
                     if val is not None:
-                        lighting_setup[standard] = val
+                        # --- Explicit unit-based mapping ---
+                        if re.search(r"\blm/?w\b", unit) or "efficacy" in alias.lower():
+                            lighting_setup["luminous_efficacy_lm_per_w"] = val
+                        elif re.search(r"\bw(att)?s?\b", unit):
+                            lighting_setup["power_w"] = val
+                        else:
+                            lighting_setup[standard] = val
                     break
 
         # 2) Fallback: compact DIALux-like line with numbers (avg, min, max, Uo, g1, index)
@@ -442,61 +469,205 @@ class FinalPDFExtractor:
     #             "efficacy_lm_per_w": float(match[5])          # Efficacy in lumens per watt (convert to float)
     #         })
 
-    def _extract_luminaires(self, text: str, data: Dict[str, Any]):
-        """Extract luminaire data using regex + alias-based matching."""
+    # def _extract_luminaires(self, text: str, data: Dict[str, Any]):
+    #     """Extract luminaire data using regex + alias-based matching."""
 
-        # Handle DIALux layout-style luminaires
-        dialux_style = re.findall(
-            r"Manufacturer\s*[:\-]?\s*([A-Za-z0-9 ]+)\s*"
-            r"Article\s*(?:name|no)\s*[:\-]?\s*([A-Za-z0-9\- /]+)\s*"
-            r"P\s*[:=]?\s*([\d.]+)\s*W\s*"
-            r"(?:Φ[Ll]uminaire|φ[Ll]uminaire)\s*[:=]?\s*([\d.]+)\s*lm",
-            text
+    #     # Handle DIALux layout-style luminaires
+    #     dialux_style = re.findall(
+    #         r"Manufacturer\s*[:\-]?\s*([A-Za-z0-9 ]+)\s*"
+    #         r"Article\s*(?:name|no)\s*[:\-]?\s*([A-Za-z0-9\- /]+)\s*"
+    #         r"P\s*[:=]?\s*([\d.]+)\s*W\s*"
+    #         r"(?:Φ[Ll]uminaire|φ[Ll]uminaire)\s*[:=]?\s*([\d.]+)\s*lm",
+    #         text
+    #     )
+    #     for m in dialux_style:
+    #         manufacturer, article_no, power, lumens = m
+    #         data["luminaires"].append({
+    #             "manufacturer": manufacturer.strip(),
+    #             "article_no": article_no.strip(),
+    #             "power_w": float(power),
+    #             "luminous_flux_lm": float(lumens)
+    #         })
+
+    #     # Primary regex (structured)
+    #     luminaire_matches = re.findall(
+    #         r"(\d+)\s+([A-Za-z]+)\s+([A-Za-z0-9\- ]+)\s+(\d+\.?\d*)\s*W\s+(\d+\.?\d*)\s*lm\s+(\d+\.?\d*)\s*lm/W",
+    #         text
+    #     )
+    #     for match in luminaire_matches:
+    #         data["luminaires"].append({
+    #             "quantity": int(match[0]),
+    #             "manufacturer": match[1],
+    #             "article_no": match[2],
+    #             "power_w": float(match[3]),
+    #             "luminous_flux_lm": float(match[4]),
+    #             "efficacy_lm_per_w": float(match[5])
+    #         })
+
+    #     # Fallback only if none found
+    #     if data["luminaires"]:
+    #         return
+
+    #     # Fallback: alias-driven scanning
+    #     if not data["luminaires"]:
+    #         luminaire_data = {}
+    #         for standard, variations in self.aliases["parameters"].items():
+    #             for alias in variations:
+    #                 match = re.search(rf"{alias}\s*[:=]?\s*([\d.]+)", text, re.IGNORECASE)
+    #                 if match:
+    #                     value = match.group(1)
+    #                     # ✅ Prevent crashes on bad matches (e.g., ".")
+    #                     if re.match(r"^\d+(\.\d+)?$", value):
+    #                         luminaire_data[standard] = float(value)
+    #                     break
+    #         if luminaire_data:
+    #             data["luminaires"].append(luminaire_data)
+
+    def _extract_luminaires(self, text, data):
+        luminaire_section = re.search(
+            r"Luminaire list\s+Φtotal\s+Ptotal\s+Luminous efficacy\s+([\s\S]+?)(?:Calculation surface|$)",
+            text,
+            flags=re.IGNORECASE,
         )
-        for m in dialux_style:
-            manufacturer, article_no, power, lumens = m
+        if not luminaire_section:
+            return
+
+        section_text = luminaire_section.group(1)
+
+        # Extract totals
+        totals_match = re.search(
+            r"([\d\.]+)\s*lm\s+([\d\.]+)\s*W\s+([\d\.]+)\s*lm/W",
+            section_text,
+            flags=re.IGNORECASE,
+        )
+        if totals_match:
+            data["lighting_setup"]["luminous_flux_total"] = float(totals_match.group(1))
+            data["lighting_setup"]["power_w"] = float(totals_match.group(2))
+            data["lighting_setup"]["luminous_efficacy_lm_per_w"] = float(totals_match.group(3))
+
+        # Extract per-luminaire line
+        for match in re.findall(
+            r"(\d+)\s+([A-Za-z]+)\s+([\w\-\/]+)\s+([A-Za-z0-9\s\-\+x/]+?)\s+([\d\.]+)\s*W\s+([\d\.]+)\s*lm\s+([\d\.]+)\s*lm/W",
+            section_text,
+        ):
+            pcs, manuf, art_no, name, pw, lm, eff = match
             data["luminaires"].append({
-                "manufacturer": manufacturer.strip(),
-                "article_no": article_no.strip(),
-                "power_w": float(power),
-                "luminous_flux_lm": float(lumens)
+                "quantity": int(pcs),
+                "manufacturer": manuf,
+                "article_no": art_no,
+                "article_name": name.strip(),
+                "power_w": float(pw),
+                "luminous_flux_lm": float(lm),
+                "luminous_efficacy_lm_per_w": float(eff),
             })
 
-        # Primary regex (structured)
-        luminaire_matches = re.findall(
-            r"(\d+)\s+([A-Za-z]+)\s+([A-Za-z0-9\- ]+)\s+(\d+\.?\d*)\s*W\s+(\d+\.?\d*)\s*lm\s+(\d+\.?\d*)\s*lm/W",
-            text
+        print(f"✅ Extracted {len(data['luminaires'])} luminaires")
+
+    # def _extract_layout(self, pdf_path: str):
+    #     """
+    #     Extract luminaire layout coordinates (X, Y, Z) from table structures in the PDF.
+        
+    #     This version uses pdfplumber’s built-in table extraction to avoid regex misreads
+    #     and interference between unrelated tables.
+
+    #     Returns:
+    #         list[dict]: Each dict contains {'x_m': float, 'y_m': float, 'z_m': float}
+    #     """
+    #     # import pdfplumber
+
+    #     layout_coords = []
+
+    #     try:
+    #         with pdfplumber.open(pdf_path) as pdf:
+    #             for page in pdf.pages:
+    #                 tables = page.extract_tables()
+
+    #                 for table in tables:
+    #                     if not table or len(table) < 2:
+    #                         continue
+
+    #                     headers = [str(h).strip().lower() for h in table[0] if h]
+    #                     # --- Normalize headers using aliases (for variations like "installation height") ---
+    #                     for i, h in enumerate(headers):
+    #                         for std, alts in self.aliases["parameters"].items():
+    #                             if any(a.lower() in h for a in alts):
+    #                                 headers[i] = std
+    #                                 break
+
+    #                     print(f"📄 Page {page.page_number} headers detected: {headers}")
+    #                     print(f"✓ Found layout table on page {page.page_number} with headers: {headers}")
+                        
+    #                     # Identify layout table by keywords
+    #                     if any(h in headers for h in ["x", "y", "z", "mounting height", "luminaire", "x (m)"]):
+    #                         for row in table[1:]:
+    #                             if not row:
+    #                                 continue
+
+    #                             # Attempt to read X, Y, Z from first 3 numeric columns
+    #                             numeric_values = []
+    #                             for cell in row:
+    #                                 try:
+    #                                     val = float(str(cell).replace(',', '.'))
+    #                                     numeric_values.append(val)
+    #                                 except:
+    #                                     pass
+
+    #                             if len(numeric_values) >= 3:
+    #                                 # Convert to meters if units seem large
+    #                                 x, y, z = numeric_values[:3]
+    #                                 if max(x, y, z) > 100:  # looks like mm
+    #                                     x, y, z = x / 1000, y / 1000, z / 1000
+
+    #                                 layout_coords.append({
+    #                                     "x_m": x,
+    #                                     "y_m": y,
+    #                                     "z_m": z
+    #                                 })
+                            
+    #                         print(f"✅ Extracted {len(layout_coords)} coordinates so far from page {page.page_number}")
+                            
+    #                         if layout_coords:
+    #                             print(f"✅ Found {len(layout_coords)} layout points.")
+    #                         else:
+    #                             print("⚠️ No layout points detected on this page.")
+    #         # Sort from rightmost to leftmost (optional for interference fix)
+    #         layout_coords.sort(key=lambda c: c["x_m"], reverse=True)
+
+    #     except Exception as e:
+    #         print(f"⚠️ Layout extraction error: {e}")
+
+    #     # Aggregate all coordinates found across pages
+    #     if layout_coords:
+    #         print(f"✓ Extracted {len(layout_coords)} layout points total")
+    #     return layout_coords
+
+    def _extract_layout(self, text):
+        layout_blocks = re.findall(
+            r"1st luminaire \(X/Y/Z\)\s*([\d\.]+)\s*m\s*/\s*([\d\.]+)\s*m\s*/\s*([\d\.]+)\s*m([\s\S]+?)(?=9 x|Luminaire list|$)",
+            text,
+            flags=re.IGNORECASE,
         )
-        for match in luminaire_matches:
-            data["luminaires"].append({
-                "quantity": int(match[0]),
-                "manufacturer": match[1],
-                "article_no": match[2],
-                "power_w": float(match[3]),
-                "luminous_flux_lm": float(match[4]),
-                "efficacy_lm_per_w": float(match[5])
+
+        layout_coords = []
+        for block in layout_blocks:
+            x0, y0, z0, rest = block
+            layout_coords.append({
+                "X": float(x0),
+                "Y": float(y0),
+                "Z": float(z0),
             })
-
-        # Fallback: alias-driven scanning
-        if not data["luminaires"]:
-            luminaire_data = {}
-            for standard, variations in self.aliases["parameters"].items():
-                for alias in variations:
-                    match = re.search(rf"{alias}\s*[:=]?\s*([\d.]+)", text, re.IGNORECASE)
-                    if match:
-                        value = match.group(1)
-                        # ✅ Prevent crashes on bad matches (e.g., ".")
-                        if re.match(r"^\d+(\.\d+)?$", value):
-                            luminaire_data[standard] = float(value)
-                        break
-            if luminaire_data:
-                data["luminaires"].append(luminaire_data)
-
+            # find all coordinate triplets in the rest of the block
+            for m in re.findall(r"([\d\.]+)\s*m\s+([\d\.]+)\s*m\s+([\d\.]+)\s*m", rest):
+                x, y, z = map(float, m)
+                layout_coords.append({"X": x, "Y": y, "Z": z})
+        print(f"✅ Extracted {len(layout_coords)} layout points")
+        return layout_coords
 
     # -----------------------------------------------------
     # ROOM EXTRACTION
     # -----------------------------------------------------
-    def _extract_rooms(self, text: str, data: Dict[str, Any]):
+    # def _extract_rooms(self, text: str, data: Dict[str, Any]):
+    def _extract_rooms(self, text: str, data: Dict[str, Any], pdf_path: str):
         """
         Extract room information with enhanced layout extraction.
         
@@ -526,12 +697,12 @@ class FinalPDFExtractor:
         # Pattern 2: "4000.000 mm 36002.000 mm 7000.000 mm" (millimeters with unit labels)
         # Pattern 3: "X: 4000.000 mm Y: 36002.000 mm Z: 7000.000 mm" (labeled coordinates in mm)
         # Pattern 4: "X: 4.000 Y: 36.002 Z: 7.000" (labeled coordinates in meters)
-        coord_patterns = [
-            r"(\d+\.?\d*)\s*m\s+(\d+\.?\d*)\s*m\s+(\d+\.?\d*)\s*m",  # Meters with unit labels
-            r"(\d+\.?\d*)\s*mm\s+(\d+\.?\d*)\s*mm\s+(\d+\.?\d*)\s*mm",  # Millimeters with unit labels
-            r"X\s*[:\-]?\s*(\d+\.?\d*)\s*mm\s*Y\s*[:\-]?\s*(\d+\.?\d*)\s*mm\s*Z\s*[:\-]?\s*(\d+\.?\d*)\s*mm",  # Labeled mm coordinates
-            r"X\s*[:\-]?\s*(\d+\.?\d*)\s*Y\s*[:\-]?\s*(\d+\.?\d*)\s*Z\s*[:\-]?\s*(\d+\.?\d*)"  # Labeled meter coordinates
-        ]
+        # coord_patterns = [
+        #     r"(\d+\.?\d*)\s*m\s+(\d+\.?\d*)\s*m\s+(\d+\.?\d*)\s*m",  # Meters with unit labels
+        #     r"(\d+\.?\d*)\s*mm\s+(\d+\.?\d*)\s*mm\s+(\d+\.?\d*)\s*mm",  # Millimeters with unit labels
+        #     r"X\s*[:\-]?\s*(\d+\.?\d*)\s*mm\s*Y\s*[:\-]?\s*(\d+\.?\d*)\s*mm\s*Z\s*[:\-]?\s*(\d+\.?\d*)\s*mm",  # Labeled mm coordinates
+        #     r"X\s*[:\-]?\s*(\d+\.?\d*)\s*Y\s*[:\-]?\s*(\d+\.?\d*)\s*Z\s*[:\-]?\s*(\d+\.?\d*)"  # Labeled meter coordinates
+        # ]
 
         # Arrangement patterns - multiple formats to handle different arrangement labels
         # Pattern 1: "Arrangement: A1" or "Arrangement - A1"
@@ -561,23 +732,27 @@ class FinalPDFExtractor:
                     all_rooms.append({"name": normalized})
         # Extract and process coordinate data from all coordinate patterns
         all_coords = []
-        for coord_pattern in coord_patterns:
-            matches = re.findall(coord_pattern, text, re.IGNORECASE)  # Case-insensitive matching
-            for match in matches:
-                try:
-                    # Extract X, Y, Z coordinate values and convert to float
-                    x, y, z = float(match[0]), float(match[1]), float(match[2])
+        # for coord_pattern in coord_patterns:
+        #     matches = re.findall(coord_pattern, text, re.IGNORECASE)  # Case-insensitive matching
+        #     for match in matches:
+        #         try:
+        #             # Extract X, Y, Z coordinate values and convert to float
+        #             x, y, z = float(match[0]), float(match[1]), float(match[2])
                     
-                    # Unit conversion: check if pattern ends with "mm" (millimeter coordinates)
-                    if coord_pattern.endswith("mm"):
-                        # Convert millimeters to meters (divide by 1000)
-                        x, y, z = x/1000, y/1000, z/1000
+        #             # Unit conversion: check if pattern ends with "mm" (millimeter coordinates)
+        #             if coord_pattern.endswith("mm"):
+        #                 # Convert millimeters to meters (divide by 1000)
+        #                 x, y, z = x/1000, y/1000, z/1000
                     
-                    # Add coordinate to collection with proper units (always in meters)
-                    all_coords.append({"x_m": x, "y_m": y, "z_m": z})
-                except Exception:
-                    # Skip invalid coordinate matches (non-numeric values, conversion errors)
-                    continue
+        #             # Add coordinate to collection with proper units (always in meters)
+        #             all_coords.append({"x_m": x, "y_m": y, "z_m": z})
+        #         except Exception:
+        #             # Skip invalid coordinate matches (non-numeric values, conversion errors)
+        #             continue
+
+        # Extract structured layout coordinates using pdfplumber
+        # all_coords = self._extract_layout(pdf_path)
+        all_coords = self._extract_layout(text)
 
         # Extract arrangement patterns from all arrangement regex patterns
         arrangements = []
@@ -611,8 +786,15 @@ class FinalPDFExtractor:
         # Deduplicate rooms by name (case-insensitive)
         # This prevents duplicate room entries from multiple pattern matches
         unique = {}
+        # for r in data["rooms"]:
+        #     unique[r["name"].lower()] = r  # Use lowercase name as key for deduplication
+
         for r in data["rooms"]:
-            unique[r["name"].lower()] = r  # Use lowercase name as key for deduplication
+            # clean_name = re.sub(r"\s+", " ", r["name"].strip().lower())
+            clean = re.sub(r"[\W_]+", "", r["name"].lower())
+            if clean not in unique:
+                unique[clean] = r
+
         data["rooms"] = list(unique.values())  # Convert back to list of unique rooms
 
     # -----------------------------------------------------
@@ -698,7 +880,7 @@ class FinalPDFExtractor:
     # -----------------------------------------------------
     # MAIN PARSING METHOD
     # -----------------------------------------------------
-    def parse_report(self, text: str, filename: str = "report.pdf") -> Dict[str, Any]:
+    def parse_report(self, text: str, pdf_path: str, filename: str = "report.pdf") -> Dict[str, Any]:
         """
         Parse extracted text and extract structured data from the PDF report.
         
@@ -735,10 +917,12 @@ class FinalPDFExtractor:
 
         # Execute all extraction methods in sequence
         # Each method populates its respective section of the data structure
-        self._extract_metadata(text, data)           # Extract basic report information
+        # self._extract_metadata(text, data)           # Extract basic report information
+        self._extract_metadata(text, data, pdf_path)           # Extract basic report information
         self._extract_lighting_setup(text, data)     # Extract lighting system configuration
         self._extract_luminaires(text, data)         # Extract fixture specifications
-        self._extract_rooms(text, data)              # Extract room layouts and coordinates
+        # self._extract_rooms(text, data)              # Extract room layouts and coordinates
+        self._extract_rooms(text, data, pdf_path)
         self._extract_scenes(text, data)             # Extract scene performance data
 
         return data
@@ -762,9 +946,15 @@ class FinalPDFExtractor:
         # Extract text using the fallback chain (pdfplumber -> PyMuPDF -> OCR)
         text = self.extract_text(pdf_path)
         print(f"Extracted {len(text)} characters")
-        # Parse the extracted text into structured data
-        return self.parse_report(text, os.path.basename(pdf_path))
+        # TEMP DEBUG: Save extracted text to inspect structure
+        debug_txt = os.path.splitext(os.path.basename(pdf_path))[0] + "_debug.txt"
+        with open(debug_txt, "w", encoding="utf-8") as dbg:
+            dbg.write(text)
+        print(f"🧩 Saved extracted text to {debug_txt}")
 
+        # Parse the extracted text into structured data
+        return self.parse_report(text, pdf_path, os.path.basename(pdf_path))
+    
 # -----------------------------------------------------
 # MAIN EXECUTION BLOCK
 # -----------------------------------------------------

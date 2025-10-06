@@ -1,0 +1,82 @@
+ICO
+Description
+The lighting fiixture is linear with 7w Technical Engineer
+and the average lux is 114 and the uniformity is 0.63
+Eng. Salma Mostafa
+Short Circuit Company
+Yousef Ammer-Cairo Mall - El-
+Haram - Giza
+T 01094839174
+1
+ICO
+Images
+corridor
+corridor
+Calculation of the corridor
+2
+ICO
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+3
+ICO
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+Manufacturer RIDI P 7.0 W
+Article No. 1551103SI ΦLuminaire 700 lm
+Article name VLGFP1501-
+5NDSI840B0800-RF-
+Pos0
+Fitting 1x LED-M
+17 x RIDI Leuchten GmbH VLGFP1501-5NDSI840B0800-RF-Pos0
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 24.265 m / 1.000 m /
+2.400 m 24.265 m 1.000 m 2.400 m 1
+X-direction 17 pcs., Centre - 22.794 m 1.000 m 2.400 m 2
+centre, 1.471 m
+21.324 m 1.000 m 2.400 m 3
+Arrangement A1
+19.853 m 1.000 m 2.400 m 4
+18.382 m 1.000 m 2.400 m 5
+16.912 m 1.000 m 2.400 m 6
+15.441 m 1.000 m 2.400 m 7
+13.971 m 1.000 m 2.400 m 8
+12.500 m 1.000 m 2.400 m 9
+11.029 m 1.000 m 2.400 m 10
+9.559 m 1.000 m 2.400 m 11
+8.088 m 1.000 m 2.400 m 12
+6.618 m 1.000 m 2.400 m 13
+4
+ICO
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+5.147 m 1.000 m 2.400 m 14
+3.676 m 1.000 m 2.400 m 15
+2.206 m 1.000 m 2.400 m 16
+0.735 m 1.000 m 2.400 m 17
+5
+ICO
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+Calculation objects
+6
+ICO
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 1 114 lx 71.4 lx 121 lx 0.63 0.59 CG1
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+7
+ICO
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+Calculation surface 1
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 1 114 lx 71.4 lx 121 lx 0.63 0.59 CG1
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+8
