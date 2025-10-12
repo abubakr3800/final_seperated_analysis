@@ -1,0 +1,423 @@
+City Club
+Description
+Light study with 48 X high bay 200w ( 145 Lm/W) and 100x triproof Technical Engineer
+36w (110 Lm/w)
+Eng.salma mostafa
+the average lux of the court 731 and uniformity 0.64
+Short Circuit Company
+the average lux of the audience 528 and uniformity 0.21
+Yousef Ammer-Cairo Mall - El-
+Haram - Giza
+T 01040359990
+1
+City Club
+Images
+Basketcourt
+calculation of the basketcourt
+calculation of the audience
+2
+City Club
+Site 1
+Luminaire layout plan
+3
+City Club
+Site 1
+Luminaire layout plan
+Manufacturer Philips P 200.0 W
+Article name BY698P LED265CW ΦLuminaire 29000 lm
+G2 WB
+Fitting 1x LED
+48 x Philips BY698P LED265CW G2 WB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 3.111 m / -4.192 m /
+12.000 m 3.111 m 18.975 m 12.000 m 101
+X-direction 8 pcs., Centre - 7.711 m 18.975 m 12.000 m 102
+centre, Distances not
+equal 12.761 m 18.975 m 12.000 m 103
+Y-direction 6 pcs., Centre - 17.161 m 18.975 m 12.000 m 104
+centre, Distances not
+equal 22.211 m 18.975 m 12.000 m 105
+Arrangement A1 27.011 m 18.975 m 12.000 m 106
+31.628 m 18.975 m 12.000 m 107
+36.244 m 18.975 m 12.000 m 108
+3.111 m 14.858 m 12.750 m 109
+27.011 m 14.858 m 12.750 m 110
+7.711 m 14.858 m 12.750 m 111
+12.761 m 14.858 m 12.750 m 112
+17.161 m 14.858 m 12.750 m 113
+4
+City Club
+Site 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+22.211 m 14.858 m 12.750 m 114
+31.628 m 14.858 m 12.750 m 115
+36.244 m 14.858 m 12.750 m 116
+3.111 m 9.858 m 13.500 m 117
+27.011 m 9.858 m 13.500 m 118
+7.711 m 9.858 m 13.500 m 119
+17.161 m 9.858 m 13.500 m 120
+36.244 m 9.858 m 13.500 m 121
+12.761 m 9.858 m 13.500 m 122
+22.211 m 9.858 m 13.500 m 123
+31.628 m 9.858 m 13.500 m 124
+12.761 m 4.858 m 13.500 m 125
+31.628 m 4.858 m 13.500 m 126
+3.111 m 4.858 m 13.500 m 127
+7.711 m 4.858 m 13.500 m 128
+17.161 m 4.858 m 13.500 m 129
+22.211 m 4.858 m 13.500 m 130
+36.244 m 4.858 m 13.500 m 131
+27.011 m 4.858 m 13.500 m 132
+3.111 m -0.142 m 12.750 m 133
+7.711 m -0.142 m 12.750 m 134
+12.761 m -0.142 m 12.750 m 135
+17.161 m -0.142 m 12.750 m 136
+22.211 m -0.142 m 12.750 m 137
+5
+City Club
+Site 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+27.011 m -0.142 m 12.750 m 138
+31.628 m -0.142 m 12.750 m 139
+36.244 m -0.142 m 12.750 m 140
+3.111 m -4.192 m 12.000 m 141
+7.711 m -4.192 m 12.000 m 142
+12.761 m -4.192 m 12.000 m 143
+17.161 m -4.192 m 12.000 m 144
+22.211 m -4.192 m 12.000 m 145
+27.011 m -4.192 m 12.000 m 146
+31.628 m -4.192 m 12.000 m 147
+36.244 m -4.192 m 12.000 m 148
+6
+City Club
+Site 1
+Luminaire layout plan
+Manufacturer Philips P 36.0 W
+Article name LL612X 1 ΦLuminaire 3960 lm
+xLED50S/840 MB
+Fitting 1x
+50 x Philips LL612X 1 xLED50S/840 MB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) -0.020 m / 23.783 m /
+12.000 m -0.020 m 32.183 m 12.000 m 51
+X-direction 10 pcs., Centre - 4.480 m 32.183 m 12.000 m 52
+centre, 4.500 m
+8.980 m 32.183 m 12.000 m 53
+Y-direction 5 pcs., Centre -
+centre, 2.100 m 13.480 m 32.183 m 12.000 m 54
+Arrangement A2 17.980 m 32.183 m 12.000 m 55
+22.480 m 32.183 m 12.000 m 56
+26.980 m 32.183 m 12.000 m 57
+31.480 m 32.183 m 12.000 m 58
+35.980 m 32.183 m 12.000 m 59
+40.480 m 32.183 m 12.000 m 60
+-0.020 m 30.083 m 12.000 m 61
+4.480 m 30.083 m 12.000 m 62
+8.980 m 30.083 m 12.000 m 63
+7
+City Club
+Site 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+13.480 m 30.083 m 12.000 m 64
+17.980 m 30.083 m 12.000 m 65
+22.480 m 30.083 m 12.000 m 66
+26.980 m 30.083 m 12.000 m 67
+31.480 m 30.083 m 12.000 m 68
+35.980 m 30.083 m 12.000 m 69
+40.480 m 30.083 m 12.000 m 70
+-0.020 m 27.983 m 12.000 m 71
+4.480 m 27.983 m 12.000 m 72
+8.980 m 27.983 m 12.000 m 73
+13.480 m 27.983 m 12.000 m 74
+17.980 m 27.983 m 12.000 m 75
+22.480 m 27.983 m 12.000 m 76
+26.980 m 27.983 m 12.000 m 77
+31.480 m 27.983 m 12.000 m 78
+35.980 m 27.983 m 12.000 m 79
+40.480 m 27.983 m 12.000 m 80
+-0.020 m 25.883 m 12.000 m 81
+4.480 m 25.883 m 12.000 m 82
+8.980 m 25.883 m 12.000 m 83
+13.480 m 25.883 m 12.000 m 84
+17.980 m 25.883 m 12.000 m 85
+22.480 m 25.883 m 12.000 m 86
+26.980 m 25.883 m 12.000 m 87
+8
+City Club
+Site 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+31.480 m 25.883 m 12.000 m 88
+35.980 m 25.883 m 12.000 m 89
+40.480 m 25.883 m 12.000 m 90
+-0.020 m 23.783 m 12.000 m 91
+4.480 m 23.783 m 12.000 m 92
+8.980 m 23.783 m 12.000 m 93
+13.480 m 23.783 m 12.000 m 94
+17.980 m 23.783 m 12.000 m 95
+22.480 m 23.783 m 12.000 m 96
+26.980 m 23.783 m 12.000 m 97
+31.480 m 23.783 m 12.000 m 98
+35.980 m 23.783 m 12.000 m 99
+40.480 m 23.783 m 12.000 m 100
+50 x Philips LL612X 1 xLED50S/840 MB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) -0.020 m / 23.983 m /
+12.000 m -0.020 m 32.383 m 12.000 m 1
+X-direction 10 pcs., Centre - 4.480 m 32.383 m 12.000 m 2
+centre, 4.500 m
+8.980 m 32.383 m 12.000 m 3
+Y-direction 5 pcs., Centre -
+centre, 2.100 m 13.480 m 32.383 m 12.000 m 4
+Arrangement A3 17.980 m 32.383 m 12.000 m 5
+22.480 m 32.383 m 12.000 m 6
+26.980 m 32.383 m 12.000 m 7
+31.480 m 32.383 m 12.000 m 8
+9
+City Club
+Site 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+35.980 m 32.383 m 12.000 m 9
+40.480 m 32.383 m 12.000 m 10
+-0.020 m 30.283 m 12.000 m 11
+4.480 m 30.283 m 12.000 m 12
+8.980 m 30.283 m 12.000 m 13
+13.480 m 30.283 m 12.000 m 14
+17.980 m 30.283 m 12.000 m 15
+22.480 m 30.283 m 12.000 m 16
+26.980 m 30.283 m 12.000 m 17
+31.480 m 30.283 m 12.000 m 18
+35.980 m 30.283 m 12.000 m 19
+40.480 m 30.283 m 12.000 m 20
+-0.020 m 28.183 m 12.000 m 21
+4.480 m 28.183 m 12.000 m 22
+8.980 m 28.183 m 12.000 m 23
+13.480 m 28.183 m 12.000 m 24
+17.980 m 28.183 m 12.000 m 25
+22.480 m 28.183 m 12.000 m 26
+26.980 m 28.183 m 12.000 m 27
+31.480 m 28.183 m 12.000 m 28
+35.980 m 28.183 m 12.000 m 29
+40.480 m 28.183 m 12.000 m 30
+-0.020 m 26.083 m 12.000 m 31
+4.480 m 26.083 m 12.000 m 32
+10
+City Club
+Site 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+8.980 m 26.083 m 12.000 m 33
+13.480 m 26.083 m 12.000 m 34
+17.980 m 26.083 m 12.000 m 35
+22.480 m 26.083 m 12.000 m 36
+26.980 m 26.083 m 12.000 m 37
+31.480 m 26.083 m 12.000 m 38
+35.980 m 26.083 m 12.000 m 39
+40.480 m 26.083 m 12.000 m 40
+-0.020 m 23.983 m 12.000 m 41
+4.480 m 23.983 m 12.000 m 42
+8.980 m 23.983 m 12.000 m 43
+13.480 m 23.983 m 12.000 m 44
+17.980 m 23.983 m 12.000 m 45
+22.480 m 23.983 m 12.000 m 46
+26.980 m 23.983 m 12.000 m 47
+31.480 m 23.983 m 12.000 m 48
+35.980 m 23.983 m 12.000 m 49
+40.480 m 23.983 m 12.000 m 50
+50 x Philips LL612X 1 xLED50S/840 MB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) -0.020 m / -16.517 m
+/ 12.000 m -0.020 m -8.117 m 12.000 m 149
+X-direction 10 pcs., Centre - 4.480 m -8.117 m 12.000 m 150
+centre, 4.500 m
+8.980 m -8.117 m 12.000 m 151
+11
+City Club
+Site 1
+Luminaire layout plan
+Y-direction 5 pcs., Centre - X Y Mounting Luminaire
+centre, 2.100 m height
+Arrangement A4 13.480 m -8.117 m 12.000 m 152
+17.980 m -8.117 m 12.000 m 153
+22.480 m -8.117 m 12.000 m 154
+26.980 m -8.117 m 12.000 m 155
+31.480 m -8.117 m 12.000 m 156
+35.980 m -8.117 m 12.000 m 157
+40.480 m -8.117 m 12.000 m 158
+-0.020 m -10.217 m 12.000 m 159
+4.480 m -10.217 m 12.000 m 160
+8.980 m -10.217 m 12.000 m 161
+13.480 m -10.217 m 12.000 m 162
+17.980 m -10.217 m 12.000 m 163
+22.480 m -10.217 m 12.000 m 164
+26.980 m -10.217 m 12.000 m 165
+31.480 m -10.217 m 12.000 m 166
+35.980 m -10.217 m 12.000 m 167
+40.480 m -10.217 m 12.000 m 168
+-0.020 m -12.317 m 12.000 m 169
+4.480 m -12.317 m 12.000 m 170
+8.980 m -12.317 m 12.000 m 171
+13.480 m -12.317 m 12.000 m 172
+17.980 m -12.317 m 12.000 m 173
+22.480 m -12.317 m 12.000 m 174
+26.980 m -12.317 m 12.000 m 175
+12
+City Club
+Site 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+31.480 m -12.317 m 12.000 m 176
+35.980 m -12.317 m 12.000 m 177
+40.480 m -12.317 m 12.000 m 178
+-0.020 m -14.417 m 12.000 m 179
+4.480 m -14.417 m 12.000 m 180
+8.980 m -14.417 m 12.000 m 181
+13.480 m -14.417 m 12.000 m 182
+17.980 m -14.417 m 12.000 m 183
+22.480 m -14.417 m 12.000 m 184
+26.980 m -14.417 m 12.000 m 185
+31.480 m -14.417 m 12.000 m 186
+35.980 m -14.417 m 12.000 m 187
+40.480 m -14.417 m 12.000 m 188
+-0.020 m -16.517 m 12.000 m 189
+4.480 m -16.517 m 12.000 m 190
+8.980 m -16.517 m 12.000 m 191
+13.480 m -16.517 m 12.000 m 192
+17.980 m -16.517 m 12.000 m 193
+22.480 m -16.517 m 12.000 m 194
+26.980 m -16.517 m 12.000 m 195
+31.480 m -16.517 m 12.000 m 196
+35.980 m -16.517 m 12.000 m 197
+40.480 m -16.517 m 12.000 m 198
+13
+City Club
+Site 1
+Luminaire layout plan
+50 x Philips LL612X 1 xLED50S/840 MB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) -0.020 m / -16.717 m
+/ 12.000 m -0.020 m -8.317 m 12.000 m 199
+X-direction 10 pcs., Centre - 4.480 m -8.317 m 12.000 m 200
+centre, 4.500 m
+8.980 m -8.317 m 12.000 m 201
+Y-direction 5 pcs., Centre -
+centre, 2.100 m 13.480 m -8.317 m 12.000 m 202
+Arrangement A5 17.980 m -8.317 m 12.000 m 203
+22.480 m -8.317 m 12.000 m 204
+26.980 m -8.317 m 12.000 m 205
+31.480 m -8.317 m 12.000 m 206
+35.980 m -8.317 m 12.000 m 207
+40.480 m -8.317 m 12.000 m 208
+-0.020 m -10.417 m 12.000 m 209
+4.480 m -10.417 m 12.000 m 210
+8.980 m -10.417 m 12.000 m 211
+13.480 m -10.417 m 12.000 m 212
+17.980 m -10.417 m 12.000 m 213
+22.480 m -10.417 m 12.000 m 214
+26.980 m -10.417 m 12.000 m 215
+31.480 m -10.417 m 12.000 m 216
+35.980 m -10.417 m 12.000 m 217
+40.480 m -10.417 m 12.000 m 218
+-0.020 m -12.517 m 12.000 m 219
+4.480 m -12.517 m 12.000 m 220
+14
+City Club
+Site 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+8.980 m -12.517 m 12.000 m 221
+13.480 m -12.517 m 12.000 m 222
+17.980 m -12.517 m 12.000 m 223
+22.480 m -12.517 m 12.000 m 224
+26.980 m -12.517 m 12.000 m 225
+31.480 m -12.517 m 12.000 m 226
+35.980 m -12.517 m 12.000 m 227
+40.480 m -12.517 m 12.000 m 228
+-0.020 m -14.617 m 12.000 m 229
+4.480 m -14.617 m 12.000 m 230
+8.980 m -14.617 m 12.000 m 231
+13.480 m -14.617 m 12.000 m 232
+17.980 m -14.617 m 12.000 m 233
+22.480 m -14.617 m 12.000 m 234
+26.980 m -14.617 m 12.000 m 235
+31.480 m -14.617 m 12.000 m 236
+35.980 m -14.617 m 12.000 m 237
+40.480 m -14.617 m 12.000 m 238
+-0.020 m -16.717 m 12.000 m 239
+4.480 m -16.717 m 12.000 m 240
+8.980 m -16.717 m 12.000 m 241
+13.480 m -16.717 m 12.000 m 242
+17.980 m -16.717 m 12.000 m 243
+22.480 m -16.717 m 12.000 m 244
+15
+City Club
+Site 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+26.980 m -16.717 m 12.000 m 245
+31.480 m -16.717 m 12.000 m 246
+35.980 m -16.717 m 12.000 m 247
+40.480 m -16.717 m 12.000 m 248
+16
+City Club
+Site 1
+Luminaire list
+Φtotal Ptotal Luminous efficacy
+2184000 lm 16800.0 W 130.0 lm/W
+pcs. Manufacturer Article No. Article name P Φ Luminous efficacy
+48 Philips BY698P LED265CW G2 WB 200.0 W 29000 lm 145.0 lm/W
+200 Philips LL612X 1 xLED50S/840 MB 36.0 W 3960 lm 110.0 lm/W
+17
+City Club
+Site 1 (Light scene 1)
+Calculation objects
+18
+City Club
+Site 1 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 4 731 lx 467 lx 988 lx 0.64 0.47 CG1
+Perpendicular illuminance
+Height: 0.100 m
+Calculation surface 5 528 lx 110 lx 747 lx 0.21 0.15 CG2
+Perpendicular illuminance
+Height: 2.200 m
+Utilisation profile: DIALux presetting (5.1.4 Standard (outdoor transportation area))
+19
+City Club
+Site 1 (Light scene 1)
+Calculation surface 4
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 4 731 lx 467 lx 988 lx 0.64 0.47 CG1
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.1.4 Standard (outdoor transportation area))
+20
+City Club
+Site 1 (Light scene 1)
+Calculation surface 5
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 5 528 lx 110 lx 747 lx 0.21 0.15 CG2
+Perpendicular illuminance
+Height: 2.200 m
+Utilisation profile: DIALux presetting (5.1.4 Standard (outdoor transportation area))
+21

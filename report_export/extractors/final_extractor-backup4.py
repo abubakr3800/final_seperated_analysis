@@ -22,7 +22,6 @@ import os
 from typing import Dict, Any
 import sys
     
-
 # class FinalPDFExtractor:
 #     """Final PDF extractor combining all approaches"""
 
@@ -38,20 +37,21 @@ import sys
 class FinalPDFExtractor:
     """
     Final PDF extractor combining all approaches and features.
-    
+    ========================================================
     This is the most comprehensive extractor that combines:
     - Advanced text extraction with multiple fallback methods
     - Enhanced room layout extraction with spatial coordinates
     - Alias mapping for improved field recognition
     - Comprehensive metadata and lighting setup extraction
     - Robust error handling and logging
-    
+    ========================================================
     Features:
     - Hybrid text extraction (pdfplumber + PyMuPDF + OCR fallback)
     - Advanced room layout extraction with multiple coordinate formats
     - Alias-based field mapping for better recognition
     - Comprehensive luminaire and scene extraction
     - Production-ready error handling
+    ========================================================
     """
     
     def _safe_float(self, value_str):
@@ -129,6 +129,7 @@ class FinalPDFExtractor:
     # -----------------------------------------------------
     def _extract_with_pdfplumber(self, pdf_path: str) -> str:
         """
+        ========================================================
         Extract text from PDF using pdfplumber library.
         
         This is the primary text extraction method as it's fast and accurate
@@ -139,6 +140,7 @@ class FinalPDFExtractor:
             
         Returns:
             str: Extracted text content, or empty string if extraction fails
+        ========================================================
         """
         text = ""
         try:
@@ -152,6 +154,7 @@ class FinalPDFExtractor:
 
     def _extract_with_pymupdf(self, pdf_path: str) -> str:
         """
+        ========================================================
         Extract text from PDF using PyMuPDF (fitz) library.
         
         This is an alternative text extraction method that can handle
@@ -163,6 +166,7 @@ class FinalPDFExtractor:
             
         Returns:
             str: Extracted text content, or empty string if extraction fails
+        ========================================================
         """
         text = ""
         try:
@@ -178,6 +182,7 @@ class FinalPDFExtractor:
 
     def _ocr_pdf(self, pdf_path: str) -> str:
         """
+        ========================================================
         Extract text from PDF using OCR (Optical Character Recognition).
         
         This method is used as a fallback when text-based extraction fails.
@@ -189,6 +194,7 @@ class FinalPDFExtractor:
             
         Returns:
             str: OCR extracted text content, or empty string if extraction fails
+        ========================================================
         """
         text = ""
         try:
@@ -201,6 +207,7 @@ class FinalPDFExtractor:
 
     def extract_text(self, pdf_path: str) -> str:
         """
+        ========================================================
         Extract text from PDF using a fallback chain of methods.
         
         This method tries multiple extraction approaches in order of preference:
@@ -213,6 +220,7 @@ class FinalPDFExtractor:
             
         Returns:
             str: Extracted text content from the most successful method
+        ========================================================
         """
         for extractor in self.text_extractors:
             text = extractor(pdf_path)
@@ -251,6 +259,7 @@ class FinalPDFExtractor:
     # -----------------------------------------------------
     def normalize_parameter(self, param: str) -> str:
         """
+        ========================================================
         Normalize parameter names using the alias mapping system.
         
         This method helps standardize parameter names by mapping various aliases
@@ -261,6 +270,7 @@ class FinalPDFExtractor:
             
         Returns:
             str: The normalized parameter name, or original if no mapping found
+        ========================================================
         """
         param = param.lower().strip()
         for standard, variations in self.aliases["parameters"].items():
@@ -270,6 +280,7 @@ class FinalPDFExtractor:
 
     def normalize_place(self, place: str) -> str:
         """
+        ========================================================
         Normalize place names using the alias mapping system.
         
         This method helps standardize place names by mapping various aliases
@@ -280,6 +291,7 @@ class FinalPDFExtractor:
             
         Returns:
             str: The normalized place name, or original if no mapping found
+        ========================================================
         """
         place = place.lower().strip()
         for standard, variations in self.aliases["places"].items():
@@ -293,6 +305,7 @@ class FinalPDFExtractor:
     # def _extract_metadata(self, text: str, data: Dict[str, Any]):
     def _extract_metadata(self, text: str, data: Dict[str, Any], pdf_path: str):
         """
+        ========================================================
         Extract metadata fields from the PDF text.
         
         This method searches for and extracts basic information about the report
@@ -302,6 +315,7 @@ class FinalPDFExtractor:
         Args:
             text (str): Raw text extracted from the PDF
             data (Dict[str, Any]): Data dictionary to populate with extracted metadata
+        ========================================================
         """
         # Company name extraction with multiple pattern matching
         # Pattern 1: Matches "Company", "Short Cicuit", or "Short Circuit" followed by any text until newline or end
@@ -366,7 +380,11 @@ class FinalPDFExtractor:
     # LIGHTING SETUP EXTRACTION
     # -----------------------------------------------------
     def _extract_lighting_setup(self, text: str, data: Dict[str, Any]):
-        """Extract lighting setup values using aliases and robust fallbacks (supports Ē)."""
+        """
+        ========================================================
+        Extract lighting setup values using aliases and robust fallbacks (supports Ē).
+        ========================================================
+        """
         lighting_setup = {}
 
         number_pattern = r"([0-9]+(?:[.,][0-9]+)?)"
@@ -429,16 +447,18 @@ class FinalPDFExtractor:
     # -----------------------------------------------------
     # def _extract_luminaires(self, text: str, data: Dict[str, Any]):
     #     """
+    #     ========================================================
     #     Extract luminaire (lighting fixture) information from the PDF text.
         
     #     This method searches for and extracts detailed specifications of lighting
     #     fixtures including manufacturer, article number, power consumption,
     #     luminous flux, and efficacy. It uses a comprehensive regex pattern
     #     to match the standard luminaire specification format.
-        
+    #     ========================================================
     #     Args:
     #         text (str): Raw text extracted from the PDF
     #         data (Dict[str, Any]): Data dictionary to populate with luminaire info
+    #     ========================================================
     #     """
     #     # Comprehensive luminaire specification pattern
     #     # Matches format: "36 Philips BY698P LED265CW G2 WB 150.0 W 21750 lm 145.0 lm/W"
@@ -524,53 +544,44 @@ class FinalPDFExtractor:
     #             data["luminaires"].append(luminaire_data)
 
     def _extract_luminaires(self, text, data):
-        """
-        Improved luminaire extractor that captures both per-luminaire entries
-        and the total summary block.
-        """
-        # --- Locate the luminaire section more flexibly ---
-        section_match = re.search(
-            r"Luminaire list[\s\S]+?(?=Calculation surface|Room|$)",
+        luminaire_section = re.search(
+            r"Luminaire list\s+Φtotal\s+Ptotal\s+Luminous efficacy\s+([\s\S]+?)(?:Calculation surface|$)",
             text,
             flags=re.IGNORECASE,
         )
-        if not section_match:
-            print("⚠️ No 'Luminaire list' section found.")
+        if not luminaire_section:
             return
 
-        section_text = section_match.group(0)
+        section_text = luminaire_section.group(1)
 
-        # --- Extract total summary (bottom of section) ---
-        total_match = re.search(
-            r"Φtotal.*?([\d.,]+)\s*lm.*?([\d.,]+)\s*W.*?([\d.,]+)\s*lm/W",
+        # Extract totals
+        totals_match = re.search(
+            r"([\d\.]+)\s*lm\s+([\d\.]+)\s*W\s+([\d\.]+)\s*lm/W",
             section_text,
-            flags=re.IGNORECASE | re.DOTALL,
-        )
-        if total_match:
-            data["lighting_setup"]["luminous_flux_total"] = self._safe_float(total_match.group(1))
-            data["lighting_setup"]["power_w"] = self._safe_float(total_match.group(2))
-            data["lighting_setup"]["luminous_efficacy_lm_per_w"] = self._safe_float(total_match.group(3))
-
-        # --- Extract individual luminaire lines ---
-        luminaire_pattern = re.compile(
-            r"(\d+)\s+([A-Za-z]+)\s+([\w\-\/]+)\s+([A-Za-z0-9\s\-\+x\/]+?)\s+([\d.,]+)\s*(?:W|\[W\]|\(W\))\s+([\d.,]+)\s*(?:lm|\[lm\]|\(lm\))\s+([\d.,]+)\s*(?:lm/W|\[lm/W\]|\(lm/W\))",
             flags=re.IGNORECASE,
         )
-        matches = luminaire_pattern.findall(section_text)
-        for m in matches:
-            pcs, manuf, art_no, name, pw, lm, eff = m
+        if totals_match:
+            data["lighting_setup"]["luminous_flux_total"] = float(totals_match.group(1))
+            data["lighting_setup"]["power_w"] = float(totals_match.group(2))
+            data["lighting_setup"]["luminous_efficacy_lm_per_w"] = float(totals_match.group(3))
+
+        # Extract per-luminaire line
+        for match in re.findall(
+            r"(\d+)\s+([A-Za-z]+)\s+([\w\-\/]+)\s+([A-Za-z0-9\s\-\+x/]+?)\s+([\d\.]+)\s*W\s+([\d\.]+)\s*lm\s+([\d\.]+)\s*lm/W",
+            section_text,
+        ):
+            pcs, manuf, art_no, name, pw, lm, eff = match
             data["luminaires"].append({
                 "quantity": int(pcs),
                 "manufacturer": manuf,
                 "article_no": art_no,
                 "article_name": name.strip(),
-                "power_w": self._safe_float(pw),
-                "luminous_flux_lm": self._safe_float(lm),
-                "luminous_efficacy_lm_per_w": self._safe_float(eff),
+                "power_w": float(pw),
+                "luminous_flux_lm": float(lm),
+                "luminous_efficacy_lm_per_w": float(eff),
             })
 
-        print(f"✅ Extracted {len(data['luminaires'])} luminaires (including totals)")
-
+        print(f"✅ Extracted {len(data['luminaires'])} luminaires")
 
     # def _extract_layout(self, pdf_path: str):
     #     """
@@ -650,60 +661,28 @@ class FinalPDFExtractor:
     #         print(f"✓ Extracted {len(layout_coords)} layout points total")
     #     return layout_coords
 
-    def _extract_layout(self, text: str):
-        """
-        Extract luminaire layout coordinates (right-to-left scanning).
-        Ensures X, Y, Z correspond correctly even when the Mounting height (Z)
-        appears before X/Y visually in the report.
-        """
-        layout_by_arr = {}
-        current_arr = "A1"
-
-        # Capture table blocks following any header with X/Y/height
-        table_pattern = re.compile(
-            r"(?:X\s*Y\s*Mounting\s*height[\s\S]+?)(?=(?:Arrangement|Luminaire list|Building|$))",
-            re.IGNORECASE
+    def _extract_layout(self, text):
+        layout_blocks = re.findall(
+            r"1st luminaire \(X/Y/Z\)\s*([\d\.]+)\s*m\s*/\s*([\d\.]+)\s*m\s*/\s*([\d\.]+)\s*m([\s\S]+?)(?=9 x|Luminaire list|$)",
+            text,
+            flags=re.IGNORECASE,
         )
-        tables = table_pattern.findall(text)
-        total_points = 0
 
-        for tbl in tables:
-            arr_match = re.search(r"Arrangement\s+([A-Z]?\d+)", tbl, re.IGNORECASE)
-            current_arr = arr_match.group(1).strip() if arr_match else f"A{len(layout_by_arr)+1}"
+        layout_coords = []
+        for block in layout_blocks:
+            x0, y0, z0, rest = block
+            layout_coords.append({
+                "X": float(x0),
+                "Y": float(y0),
+                "Z": float(z0),
+            })
+            # find all coordinate triplets in the rest of the block
+            for m in re.findall(r"([\d\.]+)\s*m\s+([\d\.]+)\s*m\s+([\d\.]+)\s*m", rest):
+                x, y, z = map(float, m)
+                layout_coords.append({"X": x, "Y": y, "Z": z})
+        print(f"✅ Extracted {len(layout_coords)} layout points")
+        return layout_coords
 
-            coords = []
-            # match lines with 3 float+m values (order reversed: Z,Y,X)
-            for match in re.finditer(r"(\d+\.\d+)\s*m[^0-9]+(\d+\.\d+)\s*m[^0-9]+(\d+\.\d+)\s*m", tbl):
-                # take values right-to-left (Z,Y,X)
-                z, y, x = map(float, match.groups()[::-1])
-                coords.append({"X": x, "Y": y, "Z": z})
-
-            if coords:
-                # remove duplicates while preserving order
-                seen = set()
-                unique = []
-                for c in coords:
-                    key = (c["X"], c["Y"], c["Z"])
-                    if key not in seen:
-                        seen.add(key)
-                        unique.append(c)
-                layout_by_arr[current_arr] = unique
-                total_points += len(unique)
-
-        # fallback if no arrangement tables found
-        if not layout_by_arr:
-            coords = []
-            for match in re.finditer(r"(\d+\.\d+)\s*m[^0-9]+(\d+\.\d+)\s*m[^0-9]+(\d+\.\d+)\s*m", text):
-                z, y, x = map(float, match.groups()[::-1])
-                coords.append({"X": x, "Y": y, "Z": z})
-            if coords:
-                layout_by_arr["A1"] = coords
-                total_points = len(coords)
-
-        print(f"✅ Extracted {total_points} points across {len(layout_by_arr)} arrangements (right-to-left layout parsing)")
-        return layout_by_arr
-
-   
     # -----------------------------------------------------
     # ROOM EXTRACTION
     # -----------------------------------------------------

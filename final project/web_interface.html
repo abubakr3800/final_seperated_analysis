@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lighting Compliance Checker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -102,6 +106,86 @@
             background: #e9ecef;
             border-radius: 8px;
             display: none;
+        }
+
+        .report-analysis-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .report-analysis-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .analysis-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #3498db;
+        }
+
+        .analysis-section {
+            margin-bottom: 25px;
+        }
+
+        .analysis-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 8px;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .analysis-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #3498db;
+        }
+
+        .analysis-item strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .analysis-item span {
+            color: #7f8c8d;
+        }
+
+        .analysis-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .analysis-list li {
+            background: #f8f9fa;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            border-left: 3px solid #3498db;
+        }
+
+        .analysis-list li strong {
+            color: #2c3e50;
+        }
+
+        .analysis-list li span {
+            color: #7f8c8d;
+            margin-left: 10px;
         }
 
         .results-section {
@@ -527,10 +611,193 @@
             gap: 10px;
             margin-top: 15px;
         }
+
+        /* JSON Sidebar Styles */
+        .json-toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .json-toggle-btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,123,255,0.4);
+        }
+
+        .json-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background: #f8f9fa;
+            border-left: 1px solid #dee2e6;
+            z-index: 999;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        }
+
+        .json-sidebar.open {
+            right: 0;
+        }
+
+        .json-sidebar-header {
+            background: #007bff;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #0056b3;
+        }
+
+        .json-sidebar-header h5 {
+            margin: 0;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .json-sidebar-header .btn-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .json-sidebar-header .btn-close:hover {
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+        }
+
+        .json-sidebar-content {
+            padding: 20px;
+        }
+
+        .json-content {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.4;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #4a5568;
+        }
+
+        .accordion-button {
+            font-size: 0.9em;
+            padding: 12px 15px;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .accordion-body {
+            padding: 15px;
+        }
+
+        /* Adjust main container when sidebar is open */
+        .container.sidebar-open {
+            margin-right: 400px;
+            transition: margin-right 0.3s ease;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .json-sidebar {
+                width: 100%;
+                right: -100%;
+            }
+            
+            .container.sidebar-open {
+                margin-right: 0;
+            }
+            
+            .json-toggle-btn {
+                top: 10px;
+                right: 10px;
+                padding: 10px 15px;
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- JSON Sidebar Toggle Button -->
+    <button class="json-toggle-btn" id="jsonToggleBtn" onclick="toggleJsonSidebar()">
+        <i class="bi bi-code-slash"></i>
+        <span>JSON</span>
+    </button>
+
+    <!-- JSON Sidebar -->
+    <div class="json-sidebar" id="jsonSidebar">
+        <div class="json-sidebar-header">
+            <h5><i class="bi bi-code-slash"></i> Raw JSON Data</h5>
+            <button class="btn-close" onclick="toggleJsonSidebar()"></button>
+        </div>
+        <div class="json-sidebar-content">
+            <div class="accordion" id="jsonAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#extractedDataCollapse" aria-expanded="false" aria-controls="extractedDataCollapse">
+                            <i class="bi bi-file-earmark-text me-2"></i>Extracted Data
+                        </button>
+                    </h2>
+                    <div id="extractedDataCollapse" class="accordion-collapse collapse" data-bs-parent="#jsonAccordion">
+                        <div class="accordion-body">
+                            <pre id="extractedJsonContent" class="json-content">No data available</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#complianceDataCollapse" aria-expanded="false" aria-controls="complianceDataCollapse">
+                            <i class="bi bi-check-circle me-2"></i>Compliance Data
+                        </button>
+                    </h2>
+                    <div id="complianceDataCollapse" class="accordion-collapse collapse" data-bs-parent="#jsonAccordion">
+                        <div class="accordion-body">
+                            <pre id="complianceJsonContent" class="json-content">No data available</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="mainContainer">
         <div class="header">
             <h1>🔍 Lighting Compliance Checker</h1>
             <p>Upload your PDF lighting report to check compliance against standards</p>
@@ -573,6 +840,12 @@
             <!-- Error/Success Messages -->
             <div class="error-message" id="error-message"></div>
             <div class="success-message" id="success-message"></div>
+
+            <!-- Report Analysis Section -->
+            <div class="report-analysis-section" id="report-analysis-section" style="display: none;">
+                <h2>📋 Report Analysis</h2>
+                <div id="report-analysis-content"></div>
+            </div>
 
             <!-- Results Section -->
             <div class="results-section" id="results-section">
@@ -676,11 +949,152 @@
             }
         }
 
+        function showReportAnalysis(extractedData) {
+            const analysisContent = document.getElementById('report-analysis-content');
+            const analysisSection = document.getElementById('report-analysis-section');
+            
+            let html = '<div class="analysis-card">';
+            
+            // Metadata Section
+            if (extractedData.metadata) {
+                html += '<div class="analysis-section">';
+                html += '<h3>📋 Project Information</h3>';
+                html += '<div class="analysis-grid">';
+                
+                const metadata = extractedData.metadata;
+                if (metadata.company_name) html += `<div class="analysis-item"><strong>Company:</strong> <span>${metadata.company_name}</span></div>`;
+                if (metadata.project_name) html += `<div class="analysis-item"><strong>Project:</strong> <span>${metadata.project_name}</span></div>`;
+                if (metadata.engineer) html += `<div class="analysis-item"><strong>Engineer:</strong> <span>${metadata.engineer}</span></div>`;
+                if (metadata.email) html += `<div class="analysis-item"><strong>Email:</strong> <span>${metadata.email}</span></div>`;
+                if (metadata.report_title) html += `<div class="analysis-item"><strong>Report:</strong> <span>${metadata.report_title}</span></div>`;
+                
+                html += '</div></div>';
+            }
+            
+            // Lighting Setup Section
+            if (extractedData.lighting_setup) {
+                html += '<div class="analysis-section">';
+                html += '<h3>💡 Lighting Setup</h3>';
+                html += '<div class="analysis-grid">';
+                
+                const lighting = extractedData.lighting_setup;
+                if (lighting.number_of_fixtures) html += `<div class="analysis-item"><strong>Fixtures:</strong> <span>${lighting.number_of_fixtures}</span></div>`;
+                if (lighting.fixture_type) html += `<div class="analysis-item"><strong>Type:</strong> <span>${lighting.fixture_type}</span></div>`;
+                if (lighting.mounting_height_m) html += `<div class="analysis-item"><strong>Height:</strong> <span>${lighting.mounting_height_m} m</span></div>`;
+                if (lighting.average_lux) html += `<div class="analysis-item"><strong>Average Lux:</strong> <span>${lighting.average_lux}</span></div>`;
+                if (lighting.uniformity) html += `<div class="analysis-item"><strong>Uniformity:</strong> <span>${lighting.uniformity}</span></div>`;
+                if (lighting.total_power_w) html += `<div class="analysis-item"><strong>Power:</strong> <span>${lighting.total_power_w} W</span></div>`;
+                if (lighting.luminous_efficacy_lm_per_w) html += `<div class="analysis-item"><strong>Efficacy:</strong> <span>${lighting.luminous_efficacy_lm_per_w} lm/W</span></div>`;
+                
+                html += '</div></div>';
+            }
+            
+            // Luminaires Section
+            if (extractedData.luminaires && extractedData.luminaires.length > 0) {
+                html += '<div class="analysis-section">';
+                html += `<h3>🔦 Luminaires (${extractedData.luminaires.length})</h3>`;
+                html += '<ul class="analysis-list">';
+                
+                extractedData.luminaires.forEach((lum, index) => {
+                    html += '<li>';
+                    html += `<strong>${index + 1}. ${lum.manufacturer || 'Unknown'}</strong>`;
+                    if (lum.article_no) html += `<span> - ${lum.article_no}</span>`;
+                    html += '<br>';
+                    if (lum.quantity) html += `<span>Quantity: ${lum.quantity}</span>`;
+                    if (lum.power_w) html += `<span> | Power: ${lum.power_w} W</span>`;
+                    if (lum.luminous_flux_lm) html += `<span> | Flux: ${lum.luminous_flux_lm} lm</span>`;
+                    html += '</li>';
+                });
+                
+                html += '</ul></div>';
+            }
+            
+            // Rooms Section
+            if (extractedData.rooms && extractedData.rooms.length > 0) {
+                html += '<div class="analysis-section">';
+                html += `<h3>🏠 Rooms (${extractedData.rooms.length})</h3>`;
+                html += '<ul class="analysis-list">';
+                
+                extractedData.rooms.forEach((room, index) => {
+                    html += '<li>';
+                    html += `<strong>${index + 1}. ${room.name}</strong>`;
+                    if (room.arrangement) html += `<span> - ${room.arrangement} arrangement</span>`;
+                    if (room.layout && room.layout.length > 0) {
+                        html += `<span> | ${room.layout.length} layout points</span>`;
+                    }
+                    html += '</li>';
+                });
+                
+                html += '</ul></div>';
+            }
+            
+            // Scenes Section
+            if (extractedData.scenes && extractedData.scenes.length > 0) {
+                html += '<div class="analysis-section">';
+                html += `<h3>🎬 Scenes (${extractedData.scenes.length})</h3>`;
+                html += '<ul class="analysis-list">';
+                
+                extractedData.scenes.forEach((scene, index) => {
+                    html += '<li>';
+                    html += `<strong>${index + 1}. ${scene.scene_name || 'Unnamed Scene'}</strong>`;
+                    if (scene.average_lux) html += `<span> | Lux: ${scene.average_lux}</span>`;
+                    if (scene.uniformity) html += `<span> | Uniformity: ${scene.uniformity}</span>`;
+                    if (scene.utilisation_profile) html += `<span> | Profile: ${scene.utilisation_profile}</span>`;
+                    html += '</li>';
+                });
+                
+                html += '</ul></div>';
+            }
+            
+            html += '</div>';
+            
+            analysisContent.innerHTML = html;
+            analysisSection.style.display = 'block';
+        }
+
+        // JSON Sidebar Functions
+        function toggleJsonSidebar() {
+            const sidebar = document.getElementById('jsonSidebar');
+            const container = document.getElementById('mainContainer');
+            const toggleBtn = document.getElementById('jsonToggleBtn');
+            
+            if (sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+                container.classList.remove('sidebar-open');
+                toggleBtn.innerHTML = '<i class="bi bi-code-slash"></i><span>JSON</span>';
+            } else {
+                sidebar.classList.add('open');
+                container.classList.add('sidebar-open');
+                toggleBtn.innerHTML = '<i class="bi bi-x-lg"></i><span>Close</span>';
+            }
+        }
+
+        function updateJsonContent(extractedData, complianceData) {
+            const extractedContent = document.getElementById('extractedJsonContent');
+            const complianceContent = document.getElementById('complianceJsonContent');
+            
+            if (extractedData) {
+                extractedContent.textContent = JSON.stringify(extractedData, null, 2);
+            }
+            
+            if (complianceData) {
+                complianceContent.textContent = JSON.stringify(complianceData, null, 2);
+            }
+        }
+
         function showResults(data) {
             const complianceResult = data.compliance_result;
             const resultsContent = document.getElementById('results-content');
             
             let html = '';
+            
+            // Update JSON sidebar content
+            updateJsonContent(data.extracted_report_data, data.compliance_result);
+            
+            // Show report analysis first
+            if (data.extracted_report_data) {
+                showReportAnalysis(data.extracted_report_data);
+            }
             
             // Show extracted report data first
             if (data.extracted_report_data) {
@@ -923,6 +1337,7 @@
 
         function hideResults() {
             resultsSection.style.display = 'none';
+            document.getElementById('report-analysis-section').style.display = 'none';
         }
 
         function showExtractedData(extractedData) {
@@ -1159,5 +1574,8 @@
             return html;
         }
     </script>
+    
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

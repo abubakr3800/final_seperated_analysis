@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Report Analysis Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .test-button {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+        }
+        
+        .test-button:hover {
+            background: #2980b9;
+        }
+        
+        .report-analysis-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .report-analysis-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .analysis-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #3498db;
+        }
+
+        .analysis-section {
+            margin-bottom: 25px;
+        }
+
+        .analysis-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 8px;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .analysis-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #3498db;
+        }
+
+        .analysis-item strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .analysis-item span {
+            color: #7f8c8d;
+        }
+
+        .analysis-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .analysis-list li {
+            background: #f8f9fa;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            border-left: 3px solid #3498db;
+        }
+
+        .analysis-list li strong {
+            color: #2c3e50;
+        }
+
+        .analysis-list li span {
+            color: #7f8c8d;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Test Report Analysis Section</h1>
+        <p>This page tests the new Report Analysis section that displays extracted JSON data in a readable format.</p>
+        
+        <button class="test-button" onclick="testReportAnalysis()">Test Report Analysis</button>
+        <button class="test-button" onclick="hideReportAnalysis()">Hide Report Analysis</button>
+        
+        <!-- Report Analysis Section -->
+        <div class="report-analysis-section" id="report-analysis-section">
+            <h2>📋 Report Analysis</h2>
+            <div id="report-analysis-content"></div>
+        </div>
+    </div>
+
+    <script>
+        // Sample extracted data for testing
+        const sampleExtractedData = {
+            "metadata": {
+                "company_name": "Test Company Ltd",
+                "project_name": "Office Building Lighting Design",
+                "engineer": "Eng. John Smith",
+                "email": "john.smith@testcompany.com",
+                "report_title": "Office_Lighting_Report.pdf"
+            },
+            "lighting_setup": {
+                "number_of_fixtures": 24,
+                "fixture_type": "LED Panel 40W",
+                "mounting_height_m": 3.0,
+                "average_lux": 500,
+                "uniformity": 0.7,
+                "total_power_w": 960,
+                "luminous_efficacy_lm_per_w": 120
+            },
+            "luminaires": [
+                {
+                    "quantity": 24,
+                    "manufacturer": "Philips",
+                    "article_no": "CoreLine LED Panel 40W",
+                    "power_w": 40,
+                    "luminous_flux_lm": 4800,
+                    "efficacy_lm_per_w": 120
+                }
+            ],
+            "rooms": [
+                {
+                    "name": "Office Room 1",
+                    "arrangement": "Grid",
+                    "layout": [
+                        {"x_m": 2.0, "y_m": 2.0, "z_m": 3.0},
+                        {"x_m": 4.0, "y_m": 2.0, "z_m": 3.0},
+                        {"x_m": 6.0, "y_m": 2.0, "z_m": 3.0}
+                    ]
+                },
+                {
+                    "name": "Meeting Room",
+                    "arrangement": "Linear",
+                    "layout": [
+                        {"x_m": 1.5, "y_m": 1.5, "z_m": 3.0},
+                        {"x_m": 3.0, "y_m": 1.5, "z_m": 3.0}
+                    ]
+                }
+            ],
+            "scenes": [
+                {
+                    "scene_name": "General Office Work",
+                    "average_lux": 500,
+                    "min_lux": 300,
+                    "max_lux": 700,
+                    "uniformity": 0.7,
+                    "utilisation_profile": "Office work - General"
+                },
+                {
+                    "scene_name": "Meeting Mode",
+                    "average_lux": 400,
+                    "min_lux": 250,
+                    "max_lux": 550,
+                    "uniformity": 0.6,
+                    "utilisation_profile": "Meeting rooms"
+                }
+            ]
+        };
+
+        function showReportAnalysis(extractedData) {
+            const analysisContent = document.getElementById('report-analysis-content');
+            const analysisSection = document.getElementById('report-analysis-section');
+            
+            let html = '<div class="analysis-card">';
+            
+            // Metadata Section
+            if (extractedData.metadata) {
+                html += '<div class="analysis-section">';
+                html += '<h3>📋 Project Information</h3>';
+                html += '<div class="analysis-grid">';
+                
+                const metadata = extractedData.metadata;
+                if (metadata.company_name) html += `<div class="analysis-item"><strong>Company:</strong> <span>${metadata.company_name}</span></div>`;
+                if (metadata.project_name) html += `<div class="analysis-item"><strong>Project:</strong> <span>${metadata.project_name}</span></div>`;
+                if (metadata.engineer) html += `<div class="analysis-item"><strong>Engineer:</strong> <span>${metadata.engineer}</span></div>`;
+                if (metadata.email) html += `<div class="analysis-item"><strong>Email:</strong> <span>${metadata.email}</span></div>`;
+                if (metadata.report_title) html += `<div class="analysis-item"><strong>Report:</strong> <span>${metadata.report_title}</span></div>`;
+                
+                html += '</div></div>';
+            }
+            
+            // Lighting Setup Section
+            if (extractedData.lighting_setup) {
+                html += '<div class="analysis-section">';
+                html += '<h3>💡 Lighting Setup</h3>';
+                html += '<div class="analysis-grid">';
+                
+                const lighting = extractedData.lighting_setup;
+                if (lighting.number_of_fixtures) html += `<div class="analysis-item"><strong>Fixtures:</strong> <span>${lighting.number_of_fixtures}</span></div>`;
+                if (lighting.fixture_type) html += `<div class="analysis-item"><strong>Type:</strong> <span>${lighting.fixture_type}</span></div>`;
+                if (lighting.mounting_height_m) html += `<div class="analysis-item"><strong>Height:</strong> <span>${lighting.mounting_height_m} m</span></div>`;
+                if (lighting.average_lux) html += `<div class="analysis-item"><strong>Average Lux:</strong> <span>${lighting.average_lux}</span></div>`;
+                if (lighting.uniformity) html += `<div class="analysis-item"><strong>Uniformity:</strong> <span>${lighting.uniformity}</span></div>`;
+                if (lighting.total_power_w) html += `<div class="analysis-item"><strong>Power:</strong> <span>${lighting.total_power_w} W</span></div>`;
+                if (lighting.luminous_efficacy_lm_per_w) html += `<div class="analysis-item"><strong>Efficacy:</strong> <span>${lighting.luminous_efficacy_lm_per_w} lm/W</span></div>`;
+                
+                html += '</div></div>';
+            }
+            
+            // Luminaires Section
+            if (extractedData.luminaires && extractedData.luminaires.length > 0) {
+                html += '<div class="analysis-section">';
+                html += `<h3>🔦 Luminaires (${extractedData.luminaires.length})</h3>`;
+                html += '<ul class="analysis-list">';
+                
+                extractedData.luminaires.forEach((lum, index) => {
+                    html += '<li>';
+                    html += `<strong>${index + 1}. ${lum.manufacturer || 'Unknown'}</strong>`;
+                    if (lum.article_no) html += `<span> - ${lum.article_no}</span>`;
+                    html += '<br>';
+                    if (lum.quantity) html += `<span>Quantity: ${lum.quantity}</span>`;
+                    if (lum.power_w) html += `<span> | Power: ${lum.power_w} W</span>`;
+                    if (lum.luminous_flux_lm) html += `<span> | Flux: ${lum.luminous_flux_lm} lm</span>`;
+                    html += '</li>';
+                });
+                
+                html += '</ul></div>';
+            }
+            
+            // Rooms Section
+            if (extractedData.rooms && extractedData.rooms.length > 0) {
+                html += '<div class="analysis-section">';
+                html += `<h3>🏠 Rooms (${extractedData.rooms.length})</h3>`;
+                html += '<ul class="analysis-list">';
+                
+                extractedData.rooms.forEach((room, index) => {
+                    html += '<li>';
+                    html += `<strong>${index + 1}. ${room.name}</strong>`;
+                    if (room.arrangement) html += `<span> - ${room.arrangement} arrangement</span>`;
+                    if (room.layout && room.layout.length > 0) {
+                        html += `<span> | ${room.layout.length} layout points</span>`;
+                    }
+                    html += '</li>';
+                });
+                
+                html += '</ul></div>';
+            }
+            
+            // Scenes Section
+            if (extractedData.scenes && extractedData.scenes.length > 0) {
+                html += '<div class="analysis-section">';
+                html += `<h3>🎬 Scenes (${extractedData.scenes.length})</h3>`;
+                html += '<ul class="analysis-list">';
+                
+                extractedData.scenes.forEach((scene, index) => {
+                    html += '<li>';
+                    html += `<strong>${index + 1}. ${scene.scene_name || 'Unnamed Scene'}</strong>`;
+                    if (scene.average_lux) html += `<span> | Lux: ${scene.average_lux}</span>`;
+                    if (scene.uniformity) html += `<span> | Uniformity: ${scene.uniformity}</span>`;
+                    if (scene.utilisation_profile) html += `<span> | Profile: ${scene.utilisation_profile}</span>`;
+                    html += '</li>';
+                });
+                
+                html += '</ul></div>';
+            }
+            
+            html += '</div>';
+            
+            analysisContent.innerHTML = html;
+            analysisSection.style.display = 'block';
+        }
+
+        function testReportAnalysis() {
+            showReportAnalysis(sampleExtractedData);
+        }
+
+        function hideReportAnalysis() {
+            document.getElementById('report-analysis-section').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+

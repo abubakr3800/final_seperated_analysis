@@ -1,0 +1,71 @@
+Platinum club (tennis court 1)
+Description
+Lighting study for tennis court with flood light Technical Engineer
+Eng.Mostafa Emad
+- No. of fixutr are 24 x Flood light 400 watt
+- Each pole has 2 arms fixed with 6 x flood light
+Short Cicuit Company
+Calculation
+mostafaattalla122@gmail.com
+- Avr.lux 421 lux
+- Uniformity 0.67
+1
+Platinum club (tennis court 1)
+Luminaire list
+pcs. Manufacturer Article No. Article name P Φ Luminous efficacy
+24 Philips BVP232 LED480/CW 400W SWB X 400.0 W 58000 lm 145.0 lm/W
+2
+Platinum club (tennis court 1)
+Site 1
+Luminaire layout plan
+3
+Platinum club (tennis court 1)
+Site 1
+Luminaire layout plan
+Manufacturer Philips P 400.0 W
+Article name BVP232 LED480/CW ΦLuminaire 58000 lm
+400W SWB X
+Fitting 1x LED
+Individual luminaires
+X Y Mounting Luminaire
+height
+3.460 m 29.992 m 12.000 m 1
+14.558 m 29.864 m 12.000 m 2
+3.776 m 29.647 m 11.500 m 3
+14.835 m 29.615 m 11.500 m 4
+3.793 m 29.595 m 12.000 m 5
+14.892 m 29.500 m 12.000 m 6
+4.111 m 29.311 m 12.000 m 7
+4.098 m 29.274 m 11.500 m 8
+15.175 m 29.261 m 11.500 m 9
+15.182 m 29.231 m 12.000 m 10
+4.417 m 28.957 m 12.000 m 11
+15.455 m 28.925 m 12.000 m 12
+15.397 m -4.515 m 12.000 m 13
+4
+Platinum club (tennis court 1)
+Site 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+4.493 m 4.530 m 12.000 m 14
+4.119 m 4.855 m 12.000 m 15
+4.148 m 4.872 m 11.500 m 16
+15.098 m 4.911 m 12.000 m 17
+15.039 m 4.933 m 11.500 m 18
+-3.829 m 5.168 m 12.000 m 19
+14.793 m 5.195 m 12.000 m 20
+3.844 m 5.204 m 11.500 m 21
+14.741 m 5.296 m 11.500 m 22
+14.476 m 5.510 m 12.000 m 23
+3.533 m 5.516 m 12.000 m 24
+5
+Platinum club (tennis court 1)
+Site 1 (Light scene 1)
+tennis court 1
+Properties Ē Emin Emax Uo (g1) g2 Index
+tennis court 1 421 lx 281 lx 533 lx 0.67 0.53 CG2
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.1.4 Standard (outdoor transportation area))
+6

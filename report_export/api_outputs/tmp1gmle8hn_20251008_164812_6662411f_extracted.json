@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "company_name": "Short Circuit Company",
+        "project_name": "City Club",
+        "engineer": "Eng.salma mostafa",
+        "email": null,
+        "report_title": "tmp1gmle8hn_20251008_164812_6662411f.pdf"
+    },
+    "lighting_setup": {
+        "uniformity": 0.64,
+        "luminous_efficacy_lm_per_w": 130.0,
+        "power_w": 16800.0,
+        "fitting": 1.0,
+        "average_lux": 731.0,
+        "min_lux": 467.0,
+        "max_lux": 988.0,
+        "g1": 0.47,
+        "index": "CG1",
+        "luminous_flux_total": 2184000.0
+    },
+    "luminaires": [
+        {
+            "quantity": 48,
+            "manufacturer": "Philips",
+            "article_no": "BY698P",
+            "article_name": "LED265CW G2 WB",
+            "power_w": 200.0,
+            "luminous_flux_lm": 29000.0,
+            "luminous_efficacy_lm_per_w": 145.0
+        },
+        {
+            "quantity": 200,
+            "manufacturer": "Philips",
+            "article_no": "LL612X",
+            "article_name": "1 xLED50S/840 MB",
+            "power_w": 36.0,
+            "luminous_flux_lm": 3960.0,
+            "luminous_efficacy_lm_per_w": 110.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": []
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "Scene",
+            "average_lux": 731.0,
+            "min_lux": 467.0,
+            "max_lux": 988.0,
+            "uniformity": 0.64,
+            "g1": 0.47,
+            "index": "CG1"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 528.0,
+            "min_lux": 110.0,
+            "max_lux": 747.0,
+            "uniformity": 0.21,
+            "g1": 0.15,
+            "index": "CG2"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 731.0,
+            "min_lux": 467.0,
+            "max_lux": 988.0,
+            "uniformity": 0.64,
+            "g1": 0.47,
+            "index": "CG1"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 528.0,
+            "min_lux": 110.0,
+            "max_lux": 747.0,
+            "uniformity": 0.21,
+            "g1": 0.15,
+            "index": "CG2"
+        }
+    ]
+}

@@ -1,0 +1,631 @@
+Port Said
+Description
+Lighting study with Flood light 500W (120lm/W) Technical Engineer
+Eng. Noura Anwar
+short circuit company
+st youssef amer el haram
+T 01094839174
+shortcircuitcompany.com
+1
+Port Said
+Images
+Port Said
+Lighting study with Flood light 500W
+(120lm/W)
+Site 1
+Calculation Surface
+2
+Port Said
+Site 1
+Luminaire layout plan
+3
+Port Said
+Site 1
+Luminaire layout plan
+Manufacturer Philips P 500.0 W
+Article name BVP140 T25 S ΦLuminaire 60000 lm
+LED320/- NO
+Fitting 1x LED320-4S/840
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 44.499 m / 101.000
+m / 25.000 m 44.499 m 101.000 m 25.000 m 1
+X-direction 2 pcs., Centre - 45.499 m 101.000 m 25.000 m 9
+centre, Distances not
+equal
+Arrangement A1
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 44.499 m / 101.000
+m / 26.000 m 44.499 m 101.000 m 26.000 m 2
+X-direction 2 pcs., Centre - 45.499 m 101.000 m 26.000 m 10
+centre, Distances not
+equal
+Arrangement A2
+2 x Philips BVP140 T25 S LED320/- NO
+4
+Port Said
+Site 1
+Luminaire layout plan
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 45.499 m / 98.993 m
+/ 26.000 m 45.499 m 98.993 m 26.000 m 67
+X-direction 2 pcs., Centre - 44.499 m 98.993 m 26.000 m 70
+centre, Distances not
+equal
+Arrangement A3
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 45.499 m / 98.993 m
+/ 25.000 m 45.499 m 98.993 m 25.000 m 68
+X-direction 2 pcs., Centre - 44.499 m 98.993 m 25.000 m 71
+centre, Distances not
+equal
+Arrangement A4
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 45.977 m / 100.500
+m / 26.000 m 45.977 m 100.500 m 26.000 m 21
+X-direction 2 pcs., Centre - 45.977 m 99.500 m 26.000 m 37
+centre, Distances not
+equal
+Arrangement A5
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 45.977 m / 100.500
+m / 25.000 m 45.977 m 100.500 m 25.000 m 22
+45.977 m 99.500 m 25.000 m 38
+5
+Port Said
+Site 1
+Luminaire layout plan
+X-direction 2 pcs., Centre -
+centre, Distances not
+equal
+Arrangement A6
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 43.970 m / 99.500 m
+/ 26.000 m 43.970 m 99.500 m 26.000 m 23
+X-direction 2 pcs., Centre - 43.970 m 100.500 m 26.000 m 39
+centre, Distances not
+equal
+Arrangement A7
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 43.970 m / 99.500 m
+/ 25.000 m 43.970 m 99.500 m 25.000 m 24
+X-direction 2 pcs., Centre - 43.970 m 100.500 m 25.000 m 40
+centre, Distances not
+equal
+Arrangement A8
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 145.977 m / 100.500
+m / 26.000 m 145.977 m 100.500 m 26.000 m 25
+X-direction 2 pcs., Centre - 145.977 m 99.500 m 26.000 m 41
+centre, Distances not
+equal
+Arrangement A9
+6
+Port Said
+Site 1
+Luminaire layout plan
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 145.499 m / 98.993
+m / 26.000 m 145.499 m 98.993 m 26.000 m 69
+X-direction 2 pcs., Centre - 144.499 m 98.993 m 26.000 m 72
+centre, Distances not
+equal
+Arrangement A10
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 144.499 m / 101.000
+m / 26.000 m 144.499 m 101.000 m 26.000 m 3
+X-direction 2 pcs., Centre - 145.499 m 101.000 m 26.000 m 11
+centre, Distances not
+equal
+Arrangement A11
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 143.970 m / 99.500
+m / 26.000 m 143.970 m 99.500 m 26.000 m 26
+X-direction 2 pcs., Centre - 143.970 m 100.500 m 26.000 m 42
+centre, Distances not
+equal
+Arrangement A12
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+7
+Port Said
+Site 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 145.499 m / 98.993 X Y Mounting Luminaire
+m / 25.000 m height
+X-direction 2 pcs., Centre - 145.499 m 98.993 m 25.000 m 61
+centre, Distances not
+equal 144.499 m 98.993 m 25.000 m 64
+Arrangement A13
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 145.977 m / 100.500
+m / 25.000 m 145.977 m 100.500 m 25.000 m 27
+X-direction 2 pcs., Centre - 145.977 m 99.500 m 25.000 m 43
+centre, Distances not
+equal
+Arrangement A14
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 144.499 m / 101.000
+m / 25.000 m 144.499 m 101.000 m 25.000 m 4
+X-direction 2 pcs., Centre - 145.499 m 101.000 m 25.000 m 12
+centre, Distances not
+equal
+Arrangement A15
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 143.970 m / 99.500
+m / 25.000 m 143.970 m 99.500 m 25.000 m 28
+X-direction 2 pcs., Centre - 143.970 m 100.500 m 25.000 m 44
+centre, Distances not
+equal
+8
+Port Said
+Site 1
+Luminaire layout plan
+Arrangement A16
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 245.977 m / 100.500
+m / 26.000 m 245.977 m 100.500 m 26.000 m 29
+X-direction 2 pcs., Centre - 245.977 m 99.500 m 26.000 m 45
+centre, Distances not
+equal
+Arrangement A17
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 244.499 m / 101.000
+m / 26.000 m 244.499 m 101.000 m 26.000 m 5
+X-direction 2 pcs., Centre - 245.499 m 101.000 m 26.000 m 13
+centre, Distances not
+equal
+Arrangement A18
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 243.970 m / 99.500
+m / 26.000 m 243.970 m 99.500 m 26.000 m 30
+X-direction 2 pcs., Centre - 243.970 m 100.500 m 26.000 m 46
+centre, Distances not
+equal
+Arrangement A19
+2 x Philips BVP140 T25 S LED320/- NO
+9
+Port Said
+Site 1
+Luminaire layout plan
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 245.977 m / 100.500
+m / 25.000 m 245.977 m 100.500 m 25.000 m 31
+X-direction 2 pcs., Centre - 245.977 m 99.500 m 25.000 m 47
+centre, Distances not
+equal
+Arrangement A20
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 244.499 m / 101.000
+m / 25.000 m 244.499 m 101.000 m 25.000 m 6
+X-direction 2 pcs., Centre - 245.499 m 101.000 m 25.000 m 14
+centre, Distances not
+equal
+Arrangement A21
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 243.970 m / 99.500
+m / 25.000 m 243.970 m 99.500 m 25.000 m 32
+X-direction 2 pcs., Centre - 243.970 m 100.500 m 25.000 m 48
+centre, Distances not
+equal
+Arrangement A22
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 345.927 m / 100.500
+m / 26.000 m 345.927 m 100.500 m 26.000 m 33
+345.927 m 99.500 m 26.000 m 49
+10
+Port Said
+Site 1
+Luminaire layout plan
+X-direction 2 pcs., Centre -
+centre, Distances not
+equal
+Arrangement A23
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 345.449 m / 98.993
+m / 26.000 m 345.449 m 98.993 m 26.000 m 73
+X-direction 2 pcs., Centre - 344.449 m 98.993 m 26.000 m 75
+centre, Distances not
+equal
+Arrangement A24
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 344.449 m / 101.000
+m / 26.000 m 344.449 m 101.000 m 26.000 m 7
+X-direction 2 pcs., Centre - 345.449 m 101.000 m 26.000 m 15
+centre, Distances not
+equal
+Arrangement A25
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 343.920 m / 99.500
+m / 26.000 m 343.920 m 99.500 m 26.000 m 34
+X-direction 2 pcs., Centre - 343.920 m 100.500 m 26.000 m 50
+centre, Distances not
+equal
+Arrangement A26
+11
+Port Said
+Site 1
+Luminaire layout plan
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 345.449 m / 98.993
+m / 25.000 m 345.449 m 98.993 m 25.000 m 62
+X-direction 2 pcs., Centre - 344.449 m 98.993 m 25.000 m 65
+centre, Distances not
+equal
+Arrangement A27
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 345.927 m / 100.500
+m / 25.000 m 345.927 m 100.500 m 25.000 m 35
+X-direction 2 pcs., Centre - 345.927 m 99.500 m 25.000 m 51
+centre, Distances not
+equal
+Arrangement A28
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 344.449 m / 101.000
+m / 25.000 m 344.449 m 101.000 m 25.000 m 8
+X-direction 2 pcs., Centre - 345.449 m 101.000 m 25.000 m 16
+centre, Distances not
+equal
+Arrangement A29
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+12
+Port Said
+Site 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 343.920 m / 99.500 X Y Mounting Luminaire
+m / 25.000 m height
+X-direction 2 pcs., Centre - 343.920 m 99.500 m 25.000 m 36
+centre, Distances not
+equal 343.920 m 100.500 m 25.000 m 52
+Arrangement A30
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 444.009 m / 99.493
+m / 26.000 m 444.009 m 99.493 m 26.000 m 53
+X-direction 2 pcs., Centre - 444.009 m 100.493 m 26.000 m 57
+centre, Distances not
+equal
+Arrangement A31
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 444.487 m / 101.000
+m / 26.000 m 444.487 m 101.000 m 26.000 m 17
+X-direction 2 pcs., Centre - 445.487 m 101.000 m 26.000 m 19
+centre, Distances not
+equal
+Arrangement A32
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 445.487 m / 98.993
+m / 26.000 m 445.487 m 98.993 m 26.000 m 77
+X-direction 2 pcs., Centre - 444.487 m 98.993 m 26.000 m 79
+centre, Distances not
+equal
+13
+Port Said
+Site 1
+Luminaire layout plan
+Arrangement A33
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 446.015 m / 100.493
+m / 26.000 m 446.015 m 100.493 m 26.000 m 54
+X-direction 2 pcs., Centre - 446.015 m 99.493 m 26.000 m 58
+centre, Distances not
+equal
+Arrangement A34
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 444.487 m / 101.000
+m / 25.000 m 444.487 m 101.000 m 25.000 m 18
+X-direction 2 pcs., Centre - 445.487 m 101.000 m 25.000 m 20
+centre, Distances not
+equal
+Arrangement A35
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 444.009 m / 99.493
+m / 25.000 m 444.009 m 99.493 m 25.000 m 55
+X-direction 2 pcs., Centre - 444.009 m 100.493 m 25.000 m 59
+centre, Distances not
+equal
+Arrangement A36
+2 x Philips BVP140 T25 S LED320/- NO
+14
+Port Said
+Site 1
+Luminaire layout plan
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 445.487 m / 98.993
+m / 25.000 m 445.487 m 98.993 m 25.000 m 78
+X-direction 2 pcs., Centre - 444.487 m 98.993 m 25.000 m 80
+centre, Distances not
+equal
+Arrangement A37
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 446.015 m / 100.493
+m / 25.000 m 446.015 m 100.493 m 25.000 m 56
+X-direction 2 pcs., Centre - 446.015 m 99.493 m 25.000 m 60
+centre, Distances not
+equal
+Arrangement A38
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 473.991 m / 16.047
+m / 26.000 m 473.991 m 16.047 m 26.000 m 97
+X-direction 2 pcs., Centre - 473.991 m 17.047 m 26.000 m 99
+centre, Distances not
+equal
+Arrangement A39
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 474.469 m / 17.553
+m / 26.000 m 474.469 m 17.553 m 26.000 m 85
+475.469 m 17.553 m 26.000 m 87
+15
+Port Said
+Site 1
+Luminaire layout plan
+X-direction 2 pcs., Centre -
+centre, Distances not
+equal
+Arrangement A40
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 475.469 m / 15.547
+m / 26.000 m 475.469 m 15.547 m 26.000 m 109
+X-direction 2 pcs., Centre - 474.469 m 15.547 m 26.000 m 111
+centre, Distances not
+equal
+Arrangement A41
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 475.998 m / 17.047
+m / 26.000 m 475.998 m 17.047 m 26.000 m 101
+X-direction 2 pcs., Centre - 475.998 m 16.047 m 26.000 m 103
+centre, Distances not
+equal
+Arrangement A42
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 473.991 m / 16.047
+m / 25.000 m 473.991 m 16.047 m 25.000 m 98
+X-direction 2 pcs., Centre - 473.991 m 17.047 m 25.000 m 100
+centre, Distances not
+equal
+Arrangement A43
+16
+Port Said
+Site 1
+Luminaire layout plan
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 474.469 m / 17.553
+m / 25.000 m 474.469 m 17.553 m 25.000 m 86
+X-direction 2 pcs., Centre - 475.469 m 17.553 m 25.000 m 88
+centre, Distances not
+equal
+Arrangement A44
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 475.469 m / 15.547
+m / 25.000 m 475.469 m 15.547 m 25.000 m 110
+X-direction 2 pcs., Centre - 474.469 m 15.547 m 25.000 m 112
+centre, Distances not
+equal
+Arrangement A45
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 475.998 m / 17.047
+m / 25.000 m 475.998 m 17.047 m 25.000 m 102
+X-direction 2 pcs., Centre - 475.998 m 16.047 m 25.000 m 104
+centre, Distances not
+equal
+Arrangement A46
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+17
+Port Said
+Site 1
+Luminaire layout plan
+1st luminaire (X/Y/Z) 16.991 m / 16.997 m X Y Mounting Luminaire
+/ 26.000 m height
+X-direction 2 pcs., Centre - 16.991 m 16.997 m 26.000 m 89
+centre, Distances not
+equal 16.991 m 17.997 m 26.000 m 92
+Arrangement A47
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 17.469 m / 18.503 m
+/ 26.000 m 17.469 m 18.503 m 26.000 m 81
+X-direction 2 pcs., Centre - 18.469 m 18.503 m 26.000 m 83
+centre, Distances not
+equal
+Arrangement A48
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 18.469 m / 16.497 m
+/ 26.000 m 18.469 m 16.497 m 26.000 m 105
+X-direction 2 pcs., Centre - 17.469 m 16.497 m 26.000 m 107
+centre, Distances not
+equal
+Arrangement A49
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 18.998 m / 17.997 m
+/ 26.000 m 18.998 m 17.997 m 26.000 m 90
+X-direction 2 pcs., Centre - 18.998 m 16.997 m 26.000 m 93
+centre, Distances not
+equal
+18
+Port Said
+Site 1
+Luminaire layout plan
+Arrangement A50
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 16.991 m / 16.997 m
+/ 25.000 m 16.991 m 16.997 m 25.000 m 91
+X-direction 2 pcs., Centre - 16.991 m 17.997 m 25.000 m 94
+centre, Distances not
+equal
+Arrangement A51
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 17.469 m / 18.503 m
+/ 25.000 m 17.469 m 18.503 m 25.000 m 82
+X-direction 2 pcs., Centre - 18.469 m 18.503 m 25.000 m 84
+centre, Distances not
+equal
+Arrangement A52
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 18.469 m / 16.497 m
+/ 25.000 m 18.469 m 16.497 m 25.000 m 106
+X-direction 2 pcs., Centre - 17.469 m 16.497 m 25.000 m 108
+centre, Distances not
+equal
+Arrangement A53
+2 x Philips BVP140 T25 S LED320/- NO
+19
+Port Said
+Site 1
+Luminaire layout plan
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 18.998 m / 17.997 m
+/ 25.000 m 18.998 m 17.997 m 25.000 m 95
+X-direction 2 pcs., Centre - 18.998 m 16.997 m 25.000 m 96
+centre, Distances not
+equal
+Arrangement A54
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 245.499 m / 98.993
+m / 26.000 m 245.499 m 98.993 m 26.000 m 74
+X-direction 2 pcs., Centre - 244.499 m 98.993 m 26.000 m 76
+centre, Distances not
+equal
+Arrangement A55
+2 x Philips BVP140 T25 S LED320/- NO
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 245.499 m / 98.993
+m / 25.000 m 245.499 m 98.993 m 25.000 m 63
+X-direction 2 pcs., Centre - 244.499 m 98.993 m 25.000 m 66
+centre, Distances not
+equal
+Arrangement A56
+20
+Port Said
+Site 1
+Luminaire list
+Φtotal Ptotal Luminous efficacy
+6720000 lm 56000.0 W 120.0 lm/W
+pcs. Manufacturer Article No. Article name P Φ Luminous efficacy
+112 Philips BVP140 T25 S LED320/- NO 500.0 W 60000 lm 120.0 lm/W
+21
+Port Said
+Site 1 (Light scene 1)
+Calculation objects
+22
+Port Said
+Site 1 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 1 46.8 lx 7.21 lx 201 lx 0.15 0.036 CG1
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.1.4 Standard (outdoor transportation area))
+23
+Port Said
+Site 1 (Light scene 1)
+Calculation surface 1
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 1 46.8 lx 7.21 lx 201 lx 0.15 0.036 CG1
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.1.4 Standard (outdoor transportation area))
+24

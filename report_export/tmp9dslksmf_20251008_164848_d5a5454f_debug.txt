@@ -1,0 +1,69 @@
+Ola textile factory
+Description
+3x Highbay 200w Technical office
+the average lux 353 and the uniformity 0.95 on height 11.5m
+Eng. Salma Mostafa
+Short circuit
+T 01040359990
+salma@shortcircuitcompany.co
+m
+1
+Ola textile factory
+Images
+Production line
+calculation of the production line
+2
+Ola textile factory
+Building 2 · Storey 1 · Room 6
+Luminaire layout plan
+3
+Ola textile factory
+Building 2 · Storey 1 · Room 6
+Luminaire layout plan
+Manufacturer Philips P 200.0 W
+Article name BY698P LED265CW ΦLuminaire 29000 lm
+G2 WB
+Fitting 1x LED
+3 x Philips BY698P LED265CW G2 WB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 1.106 m / 0.708 m /
+11.500 m 1.106 m 3.538 m 11.500 m 1
+X-direction 1 pcs., Centre - 1.106 m 2.123 m 11.500 m 2
+centre, 1.145 m
+1.106 m 0.708 m 11.500 m 3
+Y-direction 3 pcs., Centre -
+centre, 1.415 m
+Arrangement A1
+4
+Ola textile factory
+Building 2 · Storey 1 · Room 6
+Luminaire list
+Φtotal Ptotal Luminous efficacy
+87000 lm 600.0 W 145.0 lm/W
+pcs. Manufacturer Article No. Article name P Φ Luminous efficacy
+3 Philips BY698P LED265CW G2 WB 200.0 W 29000 lm 145.0 lm/W
+5
+Ola textile factory
+Building 2 · Storey 1 · Room 6 (Light scene 1)
+Calculation objects
+6
+Ola textile factory
+Building 2 · Storey 1 · Room 6 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 6 353 lx 334 lx 369 lx 0.95 0.91 CG1
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+7
+Ola textile factory
+Building 2 · Storey 1 · Room 6 (Light scene 1)
+Calculation surface 6
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 6 353 lx 334 lx 369 lx 0.95 0.91 CG1
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+8
