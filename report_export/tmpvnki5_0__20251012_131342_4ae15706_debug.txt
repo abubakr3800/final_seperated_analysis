@@ -1,0 +1,95 @@
+NESSTRA
+Description
+Lighting study for nesstra factory with HighBay light Technical Engineer
+Eng.Mostafa Emad
+- No. of fixutr are 36 x HighBay 150 watt
+- Height of fixtures is 7 m
+Short Cicuit Company
+- Avr.lux 673 lux
+- Uniformity 0.41
+mostafaattalla122@gmail.com
+1
+NESSTRA
+Luminaire list
+5400.0 W 145.0 lm/W
+pcs. Manufacturer Article No. Article name P Φ Luminous efficacy
+36 Philips BY698P LED265CW G2 WB 150.0 W 21750 lm 145.0 lm/W
+2
+NESSTRA
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+3
+NESSTRA
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+Manufacturer Philips P 150.0 W
+Article name BY698P LED265CW ΦLuminaire 21750 lm
+G2 WB
+Fitting 1x LED
+36 x Philips BY698P LED265CW G2 WB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 4.000 m / 4.002 m /
+7.000 m 4.000 m 36.002 m 7.000 m 1
+X-direction 4 pcs., Centre - 8.000 m 36.002 m 7.000 m 2
+centre, Distances not
+equal 12.000 m 36.002 m 7.000 m 3
+Y-direction 9 pcs., Centre - 16.000 m 36.002 m 7.000 m 4
+centre, Distances not
+equal 4.000 m 32.002 m 7.000 m 5
+Arrangement A1 8.000 m 32.002 m 7.000 m 6
+12.000 m 32.002 m 7.000 m 7
+16.000 m 32.002 m 7.000 m 8
+4.000 m 28.002 m 7.000 m 9
+8.000 m 28.002 m 7.000 m
+12.000 m 28.002 m 7.000 m
+16.000 m 28.002 m 7.000 m
+4.000 m 24.002 m 7.000 m
+4
+NESSTRA
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+8.000 m 24.002 m 7.000 m 14
+12.000 m 24.002 m 7.000 m 15
+16.000 m 24.002 m 7.000 m 16
+4.000 m 20.002 m 7.000 m 17
+8.000 m 20.002 m 7.000 m 18
+12.000 m 20.002 m 7.000 m 19
+16.000 m 20.002 m 7.000 m 20
+4.000 m 16.002 m 7.000 m 21
+8.000 m 16.002 m 7.000 m 22
+12.000 m 16.002 m 7.000 m 23
+16.000 m 16.002 m 7.000 m 24
+4.000 m 12.002 m 7.000 m 25
+8.000 m 12.002 m 7.000 m 26
+12.000 m 12.002 m 7.000 m 27
+16.000 m 12.002 m 7.000 m 28
+4.000 m 8.002 m 7.000 m 29
+8.000 m 8.002 m 7.000 m 30
+12.000 m 8.002 m 7.000 m 31
+16.000 m 8.002 m 7.000 m 32
+4.000 m 4.002 m 7.000 m 33
+8.000 m 4.002 m 7.000 m 34
+12.000 m 4.002 m 7.000 m 35
+16.000 m 4.002 m 7.000 m 36
+5
+NESSTRA
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+the factory
+Properties Ē Emin Emax Uo (g1) g2 Index
+the factory 673 lx 277 lx 949 lx 0.41 0.29 CG1
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)
+6
+NESSTRA
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+working place
+Properties Ē Emin Emax Uo (g1) g2 Index
+working place 721 lx 356 lx 954 lx 0.49 0.37 CG2
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: Health care premises - Operating areas (5.46.1 Pre-op and recovery rooms)
+7

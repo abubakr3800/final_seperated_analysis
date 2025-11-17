@@ -126,4 +126,3 @@ Calculation surface 2 391 lx 178 lx 678 lx 0.46 0.26 CG2
 Perpendicular illuminance
 Height: 0.100 m
 Utilisation profile: DIALux presetting (5.26.2 Standard (office))
-11

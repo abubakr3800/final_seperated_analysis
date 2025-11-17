@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "company_name": "short circuit company",
+        "project_name": "Sola Project",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "Sola Project 60% _Report.pdf"
+    },
+    "lighting_setup": {
+        "average_lux": 16.1,
+        "min_lux": 12.36,
+        "uniformity": 0.76,
+        "power_w": 100.0,
+        "luminous_flux_lm": 9600.0,
+        "mounting_height_m": 60.0
+    },
+    "luminaires": [],
+    "rooms": [
+        {
+            "name": "Building 1 · Storey 1 · Room 1",
+            "arrangement": "A1",
+            "layout": {
+                "A1": [
+                    {
+                        "X": 60.0,
+                        "Y": 18.3,
+                        "Z": 1.5
+                    },
+                    {
+                        "X": 60.0,
+                        "Y": 24.9,
+                        "Z": 1.5
+                    },
+                    {
+                        "X": 60.0,
+                        "Y": 4.1,
+                        "Z": 1.5
+                    },
+                    {
+                        "X": 60.0,
+                        "Y": 10.7,
+                        "Z": 1.5
+                    }
+                ]
+            }
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "horizontal illuminance",
+            "average_lux": 16.1,
+            "min_lux": 12.4,
+            "max_lux": 20.3,
+            "uniformity": 0.77,
+            "g1": 0.61,
+            "index": "9"
+        },
+        {
+            "scene_name": "horizontal illuminance",
+            "average_lux": 20.7,
+            "min_lux": 17.4,
+            "max_lux": 25.3,
+            "uniformity": 0.84,
+            "g1": 0.69,
+            "index": "13"
+        },
+        {
+            "scene_name": "horizontal illuminance",
+            "average_lux": 20.7,
+            "min_lux": 17.4,
+            "max_lux": 25.3,
+            "uniformity": 0.84,
+            "g1": 0.69,
+            "index": "29"
+        },
+        {
+            "scene_name": "horizontal illuminance",
+            "average_lux": 16.1,
+            "min_lux": 12.4,
+            "max_lux": 20.3,
+            "uniformity": 0.77,
+            "g1": 0.61,
+            "index": "45"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+Enco Steel
+Description
+111 HighBay 150 watt
+chip philips
+effeciy 145 Lm/w
+avr.lux 362 Lux
+1
+Enco Steel
+Images
+Story 1 (8)
+Story 1 (11)
+Story 1 (7)
+2
+Enco Steel
+Building 1
+Luminaire list
+Φtotal Ptotal Luminous efficacy
+2413251 lm 16650.0 W 144.9 lm/W
+pcs. Manufacturer Article No. Article name P Φ Luminous efficacy
+107 Philips BY698P LED265CW G2 WB 150.0 W 21741 lm 144.9 lm/W
+4 Philips BY698P LED265CW G2 WB 150.0 W 21741 lm 144.9 lm/W
+3
+Enco Steel
+Building 1 · Story 1 · Room 1
+Calculation objects
+4
+Enco Steel
+Building 1 · Story 1 · Room 1
+Calculation objects
+Working planes
+Properties Ē Emin Emax g1 g2 Index
+(Target)
+Working plane (Room 1) 362 lx 203 lx 452 lx 0.56 0.45 WP1
+Perpendicular illuminance (adaptive) (≥ 350 lx)
+Height: 0.100 m, Wall zone: 0.000 m
+Utilization profile: Industrial activities and crafts - Foundries and metal casting, Casthouses
+5

@@ -1,0 +1,202 @@
+{
+    "metadata": {
+        "company_name": "short circuit company",
+        "project_name": "Appliance Factory",
+        "engineer": "Eng. Noura Anwar",
+        "email": null,
+        "report_title": "Appliance Factory 1_Report.pdf"
+    },
+    "lighting_setup": {
+        "luminous_efficacy_lm_per_w": 145.0,
+        "power_w": 16400.0,
+        "average_lux": 344.0,
+        "min_lux": 225.0,
+        "max_lux": 409.0,
+        "uniformity": 0.65,
+        "g1": 0.55,
+        "index": "CG2",
+        "luminous_flux_total": 2378000.0
+    },
+    "luminaires": [
+        {
+            "quantity": 106,
+            "manufacturer": "Philips",
+            "article_no": "BY698P",
+            "article_name": "LED265CW G2 WB",
+            "power_w": 150.0,
+            "luminous_flux_lm": 21750.0,
+            "luminous_efficacy_lm_per_w": 145.0
+        },
+        {
+            "quantity": 5,
+            "manufacturer": "Philips",
+            "article_no": "BY698P",
+            "article_name": "LED265CW G2 WB",
+            "power_w": 100.0,
+            "luminous_flux_lm": 14500.0,
+            "luminous_efficacy_lm_per_w": 145.0
+        }
+    ],
+    "rooms": [
+        {
+            "name": "building 2 · storey 1 · room 3",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 2 · storey 2 · room 4",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 3 · storey 1 · room 5",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 4 · storey 1 · room 6",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "building 5 · storey 1 · room 7",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 3",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 4",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 5",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 6",
+            "arrangement": "A1",
+            "layout": []
+        },
+        {
+            "name": "room 7",
+            "arrangement": "A1",
+            "layout": []
+        }
+    ],
+    "scenes": [
+        {
+            "scene_name": "Calculation of First Floor",
+            "average_lux": 344.0,
+            "min_lux": 225.0,
+            "max_lux": 409.0,
+            "uniformity": 0.65,
+            "g1": 0.55,
+            "index": "CG2"
+        },
+        {
+            "scene_name": "Calculation of interior Storage",
+            "average_lux": 214.0,
+            "min_lux": 94.9,
+            "max_lux": 318.0,
+            "uniformity": 0.44,
+            "g1": 0.3,
+            "index": "CG3"
+        },
+        {
+            "scene_name": "Calculation of First Floor",
+            "average_lux": 344.0,
+            "min_lux": 225.0,
+            "max_lux": 409.0,
+            "uniformity": 0.65,
+            "g1": 0.55,
+            "index": "CG2"
+        },
+        {
+            "scene_name": "Calculation of interior Storage",
+            "average_lux": 214.0,
+            "min_lux": 94.9,
+            "max_lux": 318.0,
+            "uniformity": 0.44,
+            "g1": 0.3,
+            "index": "CG3"
+        },
+        {
+            "scene_name": "Calculation of Second Floor",
+            "average_lux": 346.0,
+            "min_lux": 258.0,
+            "max_lux": 401.0,
+            "uniformity": 0.75,
+            "g1": 0.64,
+            "index": "CG1"
+        },
+        {
+            "scene_name": "Calculation of Second Floor",
+            "average_lux": 346.0,
+            "min_lux": 258.0,
+            "max_lux": 401.0,
+            "uniformity": 0.75,
+            "g1": 0.64,
+            "index": "CG1"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 152.0,
+            "min_lux": 79.4,
+            "max_lux": 196.0,
+            "uniformity": 0.52,
+            "g1": 0.41,
+            "index": "CG6"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 152.0,
+            "min_lux": 79.4,
+            "max_lux": 196.0,
+            "uniformity": 0.52,
+            "g1": 0.41,
+            "index": "CG6"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 164.0,
+            "min_lux": 117.0,
+            "max_lux": 198.0,
+            "uniformity": 0.71,
+            "g1": 0.59,
+            "index": "CG5"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 164.0,
+            "min_lux": 117.0,
+            "max_lux": 198.0,
+            "uniformity": 0.71,
+            "g1": 0.59,
+            "index": "CG5"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 187.0,
+            "min_lux": 139.0,
+            "max_lux": 214.0,
+            "uniformity": 0.74,
+            "g1": 0.65,
+            "index": "CG4"
+        },
+        {
+            "scene_name": "Scene",
+            "average_lux": 187.0,
+            "min_lux": 139.0,
+            "max_lux": 214.0,
+            "uniformity": 0.74,
+            "g1": 0.65,
+            "index": "CG4"
+        }
+    ]
+}

@@ -1,0 +1,150 @@
+Appliance Factory 2
+Description
+Lighting Study with high bay 200W (145 Lm/W) Technical Engineer
+Eng. Noura Anwar
+short circuit company
+st youssef amer el haram
+T 01094839174
+shortcircuitcompany.com
+1
+Appliance Factory 2
+Images
+Appliance Factory 2
+Lighting Study with high bay 200W (145
+Lm/W)
+Calculation of Production Hall
+Calculation of Storey
+2
+Appliance Factory 2
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+3
+Appliance Factory 2
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+Manufacturer Philips P 200.0 W
+Article name BY698P LED265CW ΦLuminaire 29000 lm
+G2 WB
+Fitting 1x LED
+40 x Philips BY698P LED265CW G2 WB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 3.321 m / 4.737 m /
+12.000 m 3.414 m 90.217 m 12.000 m 15
+X-direction 4 pcs., Centre - 10.289 m 90.210 m 12.000 m 16
+centre, 6.875 m
+17.164 m 90.202 m 12.000 m 17
+Y-direction 10 pcs., Centre -
+centre, 9.498 m 24.039 m 90.195 m 12.000 m 18
+Arrangement A1 3.404 m 80.720 m 12.000 m 19
+10.279 m 80.712 m 12.000 m 20
+17.154 m 80.705 m 12.000 m 21
+24.029 m 80.697 m 12.000 m 22
+3.394 m 71.222 m 12.000 m 23
+10.269 m 71.214 m 12.000 m 24
+17.144 m 71.207 m 12.000 m 25
+24.019 m 71.199 m 12.000 m 26
+3.383 m 61.724 m 12.000 m 27
+4
+Appliance Factory 2
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+10.258 m 61.717 m 12.000 m 28
+17.133 m 61.709 m 12.000 m 29
+24.008 m 61.702 m 12.000 m 30
+3.373 m 52.226 m 12.000 m 31
+10.248 m 52.219 m 12.000 m 32
+17.123 m 52.211 m 12.000 m 33
+23.998 m 52.204 m 12.000 m 34
+3.363 m 42.728 m 12.000 m 35
+10.238 m 42.721 m 12.000 m 36
+17.113 m 42.713 m 12.000 m 37
+23.988 m 42.706 m 12.000 m 38
+3.352 m 33.231 m 12.000 m 39
+10.227 m 33.223 m 12.000 m 40
+17.102 m 33.216 m 12.000 m 41
+23.977 m 33.208 m 12.000 m 42
+3.342 m 23.733 m 12.000 m 43
+10.217 m 23.725 m 12.000 m 44
+17.092 m 23.718 m 12.000 m 45
+23.967 m 23.710 m 12.000 m 46
+3.331 m 14.235 m 12.000 m 47
+10.206 m 14.228 m 12.000 m 48
+17.081 m 14.220 m 12.000 m 49
+23.956 m 14.213 m 12.000 m 50
+3.321 m 4.737 m 12.000 m 51
+5
+Appliance Factory 2
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+10.196 m 4.730 m 12.000 m 52
+17.071 m 4.722 m 12.000 m 53
+23.946 m 4.715 m 12.000 m 54
+14 x Philips BY698P LED265CW G2 WB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 36.599 m / 6.781 m /
+12.000 m 36.599 m 88.159 m 12.000 m 1
+X-direction 2 pcs., Centre - 50.333 m 88.159 m 12.000 m 2
+centre, 13.734 m
+36.599 m 74.596 m 12.000 m 3
+Y-direction 7 pcs., Centre -
+centre, 13.563 m 50.333 m 74.596 m 12.000 m 4
+Arrangement A2 36.599 m 61.033 m 12.000 m 5
+50.333 m 61.033 m 12.000 m 6
+36.599 m 47.470 m 12.000 m 7
+50.333 m 47.470 m 12.000 m 8
+36.599 m 33.907 m 12.000 m 9
+50.333 m 33.907 m 12.000 m 10
+36.599 m 20.344 m 12.000 m 11
+50.333 m 20.344 m 12.000 m 12
+36.599 m 6.781 m 12.000 m 13
+50.333 m 6.781 m 12.000 m 14
+6
+Appliance Factory 2
+Building 1 · Storey 1 · Room 1
+Luminaire list
+Φtotal Ptotal Luminous efficacy
+1566000 lm 10800.0 W 145.0 lm/W
+pcs. Manufacturer Article No. Article name P Φ Luminous efficacy
+54 Philips BY698P LED265CW G2 WB 200.0 W 29000 lm 145.0 lm/W
+7
+Appliance Factory 2
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+Calculation objects
+8
+Appliance Factory 2
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 1 309 lx 164 lx 369 lx 0.53 0.44 CG1
+Perpendicular illuminance
+Height: 0.000 m
+Calculation surface 2 161 lx 83.8 lx 240 lx 0.52 0.35 CG2
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+9
+Appliance Factory 2
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+Calculation surface 1
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 1 309 lx 164 lx 369 lx 0.53 0.44 CG1
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+10
+Appliance Factory 2
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+Calculation surface 2
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 2 161 lx 83.8 lx 240 lx 0.52 0.35 CG2
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+11
