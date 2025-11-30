@@ -1,0 +1,152 @@
+Appliance Factory
+Description
+lighting study with high bay 100,150W (145 Lm/W) Technical Engineer
+Eng. Noura Anwar
+short circuit company
+st youssef amer el haram
+T 01094839174
+shortcircuitcompany.com
+1
+Appliance Factory
+Images
+Factory
+Production hall
+Appliance Factory
+lighting study with high bay 100,150W
+(145 Lm/W)
+2
+Appliance Factory
+Luminaire list
+Φtotal Ptotal Luminous efficacy
+2378000 lm 16400.0 W 145.0 lm/W
+pcs. Manufacturer Article No. Article name P Φ Luminous efficacy
+106 Philips BY698P LED265CW G2 WB 150.0 W 21750 lm 145.0 lm/W
+5 Philips BY698P LED265CW G2 WB 100.0 W 14500 lm 145.0 lm/W
+3
+Appliance Factory
+Building 2 · Storey 1 · Room 3 (Light scene 1)
+Calculation objects
+4
+Appliance Factory
+Building 2 · Storey 1 · Room 3 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of First Floor 344 lx 225 lx 409 lx 0.65 0.55 CG2
+Perpendicular illuminance
+Height: 0.000 m
+Calculation of interior Storage 214 lx 94.9 lx 318 lx 0.44 0.30 CG3
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+5
+Appliance Factory
+Building 2 · Storey 1 · Room 3 (Light scene 1)
+Calculation of First Floor
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of First Floor 344 lx 225 lx 409 lx 0.65 0.55 CG2
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+6
+Appliance Factory
+Building 2 · Storey 1 · Room 3 (Light scene 1)
+Calculation of interior Storage
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of interior Storage 214 lx 94.9 lx 318 lx 0.44 0.30 CG3
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+7
+Appliance Factory
+Building 2 · Storey 2 · Room 4 (Light scene 1)
+Calculation objects
+8
+Appliance Factory
+Building 2 · Storey 2 · Room 4 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Second Floor 346 lx 258 lx 401 lx 0.75 0.64 CG1
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+9
+Appliance Factory
+Building 2 · Storey 2 · Room 4 (Light scene 1)
+Calculation of Second Floor
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Second Floor 346 lx 258 lx 401 lx 0.75 0.64 CG1
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+10
+Appliance Factory
+Building 3 · Storey 1 · Room 5 (Light scene 1)
+Calculation objects
+11
+Appliance Factory
+Building 3 · Storey 1 · Room 5 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Storage 1 152 lx 79.4 lx 196 lx 0.52 0.41 CG6
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+12
+Appliance Factory
+Building 3 · Storey 1 · Room 5 (Light scene 1)
+Calculation of Storage 1
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Storage 1 152 lx 79.4 lx 196 lx 0.52 0.41 CG6
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+13
+Appliance Factory
+Building 4 · Storey 1 · Room 6 (Light scene 1)
+Calculation objects
+14
+Appliance Factory
+Building 4 · Storey 1 · Room 6 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Storage 2 164 lx 117 lx 198 lx 0.71 0.59 CG5
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+15
+Appliance Factory
+Building 4 · Storey 1 · Room 6 (Light scene 1)
+Calculation of Storage 2
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Storage 2 164 lx 117 lx 198 lx 0.71 0.59 CG5
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+16
+Appliance Factory
+Building 5 · Storey 1 · Room 7 (Light scene 1)
+Calculation objects
+17
+Appliance Factory
+Building 5 · Storey 1 · Room 7 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Storage 3 187 lx 139 lx 214 lx 0.74 0.65 CG4
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+18
+Appliance Factory
+Building 5 · Storey 1 · Room 7 (Light scene 1)
+Calculation of Storage 3
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Storage 3 187 lx 139 lx 214 lx 0.74 0.65 CG4
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+19

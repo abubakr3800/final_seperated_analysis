@@ -1,0 +1,228 @@
+{
+  "generated_at": "2025-11-30T17:35:46.175232",
+  "report_id": "24472098-d60c-4688-93d0-dc9befd7d981",
+  "report_data": {
+    "metadata": {
+      "company_name": "test",
+      "project_name": "test",
+      "engineer": "LuxSCale Generator",
+      "email": "",
+      "report_title": "LuxSCale_Report_test"
+    },
+    "lighting_setup": {
+      "average_lux": 3.5,
+      "min_lux": 2.1,
+      "max_lux": 4.8,
+      "uniformity": 0.6,
+      "power_w": 12.0,
+      "power_total_w": 264.0,
+      "luminous_flux_lm": 989.0,
+      "luminous_flux_total": 21758.0,
+      "luminous_efficacy_lm_per_w": 82.4,
+      "mounting_height_m": 69.0,
+      "work_plane_height": 1.1,
+      "quantity": 22
+    },
+    "rooms": [
+      {
+        "name": "Room 1 - test",
+        "arrangement": "Grid",
+        "utilisation_profile": "Traffic zones inside buildings",
+        "layout": [
+          {
+            "X": 7.5,
+            "Y": 9.333,
+            "Z": 69.0
+          },
+          {
+            "X": 15.0,
+            "Y": 9.333,
+            "Z": 69.0
+          },
+          {
+            "X": 22.5,
+            "Y": 9.333,
+            "Z": 69.0
+          },
+          {
+            "X": 30.0,
+            "Y": 9.333,
+            "Z": 69.0
+          },
+          {
+            "X": 37.5,
+            "Y": 9.333,
+            "Z": 69.0
+          },
+          {
+            "X": 7.5,
+            "Y": 18.667,
+            "Z": 69.0
+          },
+          {
+            "X": 15.0,
+            "Y": 18.667,
+            "Z": 69.0
+          },
+          {
+            "X": 22.5,
+            "Y": 18.667,
+            "Z": 69.0
+          },
+          {
+            "X": 30.0,
+            "Y": 18.667,
+            "Z": 69.0
+          },
+          {
+            "X": 37.5,
+            "Y": 18.667,
+            "Z": 69.0
+          },
+          {
+            "X": 7.5,
+            "Y": 28.0,
+            "Z": 69.0
+          },
+          {
+            "X": 15.0,
+            "Y": 28.0,
+            "Z": 69.0
+          },
+          {
+            "X": 22.5,
+            "Y": 28.0,
+            "Z": 69.0
+          },
+          {
+            "X": 30.0,
+            "Y": 28.0,
+            "Z": 69.0
+          },
+          {
+            "X": 37.5,
+            "Y": 28.0,
+            "Z": 69.0
+          },
+          {
+            "X": 7.5,
+            "Y": 37.333,
+            "Z": 69.0
+          },
+          {
+            "X": 15.0,
+            "Y": 37.333,
+            "Z": 69.0
+          },
+          {
+            "X": 22.5,
+            "Y": 37.333,
+            "Z": 69.0
+          },
+          {
+            "X": 30.0,
+            "Y": 37.333,
+            "Z": 69.0
+          },
+          {
+            "X": 37.5,
+            "Y": 37.333,
+            "Z": 69.0
+          },
+          {
+            "X": 7.5,
+            "Y": 46.667,
+            "Z": 69.0
+          },
+          {
+            "X": 15.0,
+            "Y": 46.667,
+            "Z": 69.0
+          }
+        ]
+      }
+    ],
+    "luminaires": [
+      {
+        "quantity": 22,
+        "manufacturer": "",
+        "article_no": "",
+        "power_w": 12.0,
+        "luminous_flux_lm": 989.0,
+        "luminous_efficacy_lm_per_w": 82.4
+      }
+    ],
+    "scenes": [
+      {
+        "scene_name": "test",
+        "average_lux": 3.5,
+        "min_lux": 2.1,
+        "max_lux": 4.8,
+        "uniformity": 0.6,
+        "utilisation_profile": "Traffic zones inside buildings"
+      }
+    ]
+  },
+  "compliance_result": {
+    "overall_compliance": "FAIL",
+    "checks": [
+      {
+        "room": "Room 1 - test",
+        "utilisation_profile": "Traffic zones inside buildings",
+        "standard": {
+          "ref_no": "6.1.1",
+          "category": "Traffic zones inside buildings",
+          "task_or_activity": "Corridors and circulation areas"
+        },
+        "checks": {
+          "lux": {
+            "required": 100.0,
+            "actual": 3.5,
+            "compliant": false,
+            "margin": 96.5
+          },
+          "uniformity": {
+            "required": 0.4,
+            "actual": 0.6,
+            "compliant": true,
+            "margin": 0.19999999999999996
+          },
+          "ra": {
+            "required": 40.0,
+            "actual": 3.5,
+            "compliant": false,
+            "margin": 36.5,
+            "found": true,
+            "source": "average_lux",
+            "note": "Found as average_lux"
+          }
+        },
+        "status": "FAIL"
+      }
+    ],
+    "summary": {
+      "total_rooms": 1,
+      "passed": 0,
+      "failed": 1,
+      "no_standard_found": 0,
+      "pass_rate": 0.0
+    },
+    "timestamp": "2025-11-30T17:35:46.174560"
+  },
+  "input_parameters": {
+    "project_name": "test",
+    "company_name": "test",
+    "room_type": "Traffic zones inside buildings",
+    "room_length": 45.0,
+    "room_width": 56.0,
+    "room_height": 44.0,
+    "luminaire_count": 22,
+    "luminaire_power": 12.0,
+    "luminous_flux": 989.0,
+    "efficacy": 88.0,
+    "mounting_height": 69.0,
+    "work_plane_height": 1.1,
+    "manufacturer": "",
+    "article_no": ""
+  }
+}

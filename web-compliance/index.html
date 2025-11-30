@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighting Compliance Checker - Dark Theme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #151b3d;
+            --bg-tertiary: #1e2648;
+            --bg-card: #252d4a;
+            --text-primary: #e4e6eb;
+            --text-secondary: #b0b3b8;
+            --text-muted: #8a8d93;
+            --accent-primary: #6366f1;
+            --accent-secondary: #818cf8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --border: #2d3748;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px var(--shadow);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            color: white;
+        }
+
+        .upload-section {
+            background: var(--bg-card);
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .upload-section:hover {
+            border-color: var(--accent-primary);
+            background: var(--bg-tertiary);
+        }
+
+        .upload-section.dragover {
+            border-color: var(--accent-primary);
+            background: var(--bg-tertiary);
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .upload-btn {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .upload-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .upload-btn:disabled {
+            background: var(--bg-tertiary);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin: 5px;
+        }
+
+        .status-pass {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+
+        .status-fail {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--error);
+            border: 1px solid var(--error);
+        }
+
+        .status-unknown {
+            background: rgba(139, 92, 246, 0.2);
+            color: #a78bfa;
+            border: 1px solid #a78bfa;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--accent-primary);
+            padding-bottom: 10px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1em;
+        }
+
+        .tab:hover {
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+
+        .tab.active {
+            background: var(--accent-primary);
+            color: white;
+            border-color: var(--accent-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .data-item {
+            background: var(--bg-tertiary);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .data-label {
+            font-size: 0.85em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+
+        .data-value {
+            font-size: 1.2em;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .compliance-room {
+            background: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--border);
+        }
+
+        .compliance-room.pass {
+            border-left-color: var(--success);
+        }
+
+        .compliance-room.fail {
+            border-left-color: var(--error);
+        }
+
+        .room-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .room-name {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .check-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: var(--bg-secondary);
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+
+        .check-label {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .check-value {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .value-item {
+            text-align: right;
+        }
+
+        .value-label {
+            font-size: 0.75em;
+            color: var(--text-muted);
+        }
+
+        .value-number {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .check-icon.pass {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+        }
+
+        .check-icon.fail {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--error);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid var(--border);
+            border-top: 4px solid var(--accent-primary);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--error);
+            color: var(--error);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+
+        .luminaire-item {
+            background: var(--bg-tertiary);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .json-viewer {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .json-viewer pre {
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .metadata-item {
+            background: var(--bg-tertiary);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .metadata-label {
+            font-size: 0.85em;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .metadata-value {
+            font-size: 1.1em;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .data-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Lighting Compliance Checker</h1>
+            <p>Upload a PDF report to check compliance against lighting standards</p>
+        </div>
+
+        <div class="upload-section" id="uploadSection">
+            <input type="file" id="fileInput" class="file-input" accept=".pdf">
+            <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                📄 Choose PDF File
+            </button>
+            <p style="margin-top: 15px; color: var(--text-secondary);">
+                or drag and drop your PDF file here
+            </p>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Processing your report...</p>
+        </div>
+
+        <div id="errorContainer"></div>
+
+        <div id="resultsContainer" style="display: none;">
+            <!-- Summary Statistics -->
+            <div class="summary-stats" id="summaryStats"></div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('overview')">📊 Overview</button>
+                <button class="tab" onclick="showTab('parameters')">🔧 Parameters</button>
+                <button class="tab" onclick="showTab('compliance')">✅ Compliance</button>
+                <button class="tab" onclick="showTab('rooms')">🏢 Rooms</button>
+                <button class="tab" onclick="showTab('luminaires')">💡 Luminaires</button>
+                <button class="tab" onclick="showTab('scenes')">🎬 Scenes</button>
+                <button class="tab" onclick="showTab('raw')">📋 Raw Data</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div id="overview" class="tab-content active">
+                <div class="card">
+                    <h2 class="card-title">Report Overview</h2>
+                    <div id="overviewContent"></div>
+                </div>
+            </div>
+
+            <div id="parameters" class="tab-content">
+                <div class="card">
+                    <h2 class="card-title">Extracted Parameters</h2>
+                    <div id="parametersContent"></div>
+                </div>
+            </div>
+
+            <div id="compliance" class="tab-content">
+                <div class="card">
+                    <h2 class="card-title">Compliance Results</h2>
+                    <div id="complianceContent"></div>
+                </div>
+            </div>
+
+            <div id="rooms" class="tab-content">
+                <div class="card">
+                    <h2 class="card-title">Room Details</h2>
+                    <div id="roomsContent"></div>
+                </div>
+            </div>
+
+            <div id="luminaires" class="tab-content">
+                <div class="card">
+                    <h2 class="card-title">Luminaire Information</h2>
+                    <div id="luminairesContent"></div>
+                </div>
+            </div>
+
+            <div id="scenes" class="tab-content">
+                <div class="card">
+                    <h2 class="card-title">Scene Information</h2>
+                    <div id="scenesContent"></div>
+                </div>
+            </div>
+
+            <div id="raw" class="tab-content">
+                <div class="card">
+                    <h2 class="card-title">Raw JSON Data</h2>
+                    <div class="json-viewer">
+                        <pre id="rawContent"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000';
+        let currentData = null;
+
+        // File input handler
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            if (e.target.files.length > 0) {
+                uploadFile(e.target.files[0]);
+            }
+        });
+
+        // Drag and drop handlers
+        const uploadSection = document.getElementById('uploadSection');
+        uploadSection.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadSection.classList.add('dragover');
+        });
+
+        uploadSection.addEventListener('dragleave', () => {
+            uploadSection.classList.remove('dragover');
+        });
+
+        uploadSection.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadSection.classList.remove('dragover');
+            if (e.dataTransfer.files.length > 0) {
+                uploadFile(e.dataTransfer.files[0]);
+            }
+        });
+
+        async function uploadFile(file) {
+            if (!file.name.toLowerCase().endsWith('.pdf')) {
+                showError('Please upload a PDF file');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            document.getElementById('loading').classList.add('active');
+            document.getElementById('errorContainer').innerHTML = '';
+            document.getElementById('resultsContainer').style.display = 'none';
+
+            try {
+                const response = await fetch(`${API_BASE}/check-compliance-detailed`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.detail || 'Failed to process file');
+                }
+
+                const data = await response.json();
+                currentData = data;
+                displayResults(data);
+            } catch (error) {
+                showError(`Error: ${error.message}`);
+            } finally {
+                document.getElementById('loading').classList.remove('active');
+            }
+        }
+
+        function showError(message) {
+            document.getElementById('errorContainer').innerHTML = 
+                `<div class="error-message">${message}</div>`;
+        }
+
+        function displayResults(data) {
+            document.getElementById('resultsContainer').style.display = 'block';
+            
+            // Display summary stats
+            displaySummaryStats(data);
+            
+            // Display overview
+            displayOverview(data);
+            
+            // Display parameters
+            displayParameters(data);
+            
+            // Display compliance
+            displayCompliance(data);
+            
+            // Display rooms
+            displayRooms(data);
+            
+            // Display luminaires
+            displayLuminaires(data);
+            
+            // Display scenes
+            displayScenes(data);
+            
+            // Display raw data
+            document.getElementById('rawContent').textContent = JSON.stringify(data, null, 2);
+        }
+
+        function displaySummaryStats(data) {
+            const compliance = data.compliance_result;
+            const summary = compliance.summary || {};
+            const overall = compliance.overall_compliance || 'UNKNOWN';
+            
+            const statsHtml = `
+                <div class="stat-card">
+                    <div class="stat-label">Overall Status</div>
+                    <div class="stat-value ${overall === 'PASS' ? 'status-pass' : overall === 'FAIL' ? 'status-fail' : 'status-unknown'}">
+                        ${overall}
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Total Rooms</div>
+                    <div class="stat-value" style="color: var(--text-primary);">${summary.total_rooms || 0}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Passed</div>
+                    <div class="stat-value" style="color: var(--success);">${summary.passed || 0}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Failed</div>
+                    <div class="stat-value" style="color: var(--error);">${summary.failed || 0}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Pass Rate</div>
+                    <div class="stat-value" style="color: var(--accent-primary);">${(summary.pass_rate || 0).toFixed(1)}%</div>
+                </div>
+            `;
+            
+            document.getElementById('summaryStats').innerHTML = statsHtml;
+        }
+
+        function displayOverview(data) {
+            const report = data.extracted_report_data || {};
+            const metadata = report.metadata || {};
+            const lighting = report.lighting_setup || {};
+            
+            const overviewHtml = `
+                <div class="metadata-grid">
+                    <div class="metadata-item">
+                        <div class="metadata-label">Company</div>
+                        <div class="metadata-value">${metadata.company_name || 'N/A'}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Project</div>
+                        <div class="metadata-value">${metadata.project_name || 'N/A'}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Engineer</div>
+                        <div class="metadata-value">${metadata.engineer || 'N/A'}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Email</div>
+                        <div class="metadata-value">${metadata.email || 'N/A'}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Average Lux</div>
+                        <div class="metadata-value">${lighting.average_lux || 'N/A'}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Uniformity</div>
+                        <div class="metadata-value">${lighting.uniformity || 'N/A'}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Total Rooms</div>
+                        <div class="metadata-value">${(report.rooms || []).length}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Total Scenes</div>
+                        <div class="metadata-value">${(report.scenes || []).length}</div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('overviewContent').innerHTML = overviewHtml;
+        }
+
+        function displayParameters(data) {
+            const lighting = data.extracted_report_data?.lighting_setup || {};
+            
+            const paramsHtml = `
+                <div class="data-grid">
+                    ${Object.entries(lighting).map(([key, value]) => `
+                        <div class="data-item">
+                            <div class="data-label">${key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</div>
+                            <div class="data-value">${value !== null && value !== undefined ? value : 'N/A'}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            document.getElementById('parametersContent').innerHTML = paramsHtml;
+        }
+
+        function displayCompliance(data) {
+            const checks = data.compliance_result?.checks || [];
+            
+            if (checks.length === 0) {
+                document.getElementById('complianceContent').innerHTML = '<p>No compliance checks available</p>';
+                return;
+            }
+            
+            const complianceHtml = checks.map(check => {
+                const statusClass = check.status === 'PASS' ? 'pass' : check.status === 'FAIL' ? 'fail' : '';
+                const checksHtml = Object.entries(check.checks || {}).map(([key, checkData]) => {
+                    const isCompliant = checkData.compliant;
+                    return `
+                        <div class="check-item">
+                            <div class="check-label">${key.toUpperCase()}</div>
+                            <div class="check-value">
+                                <div class="value-item">
+                                    <div class="value-label">Required</div>
+                                    <div class="value-number">${checkData.required || 'N/A'}</div>
+                                </div>
+                                <div class="value-item">
+                                    <div class="value-label">Actual</div>
+                                    <div class="value-number">${checkData.actual !== null && checkData.actual !== undefined ? checkData.actual : 'N/A'}</div>
+                                </div>
+                                <div class="value-item">
+                                    <div class="value-label">Margin</div>
+                                    <div class="value-number">${checkData.margin !== null && checkData.margin !== undefined ? checkData.margin.toFixed(2) : 'N/A'}</div>
+                                </div>
+                                <div class="check-icon ${isCompliant ? 'pass' : 'fail'}">
+                                    ${isCompliant ? '✓' : '✗'}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+                
+                return `
+                    <div class="compliance-room ${statusClass}">
+                        <div class="room-header">
+                            <div class="room-name">${check.room || 'Unknown Room'}</div>
+                            <span class="status-indicator status-${statusClass}">${check.status}</span>
+                        </div>
+                        ${check.standard ? `
+                            <div style="margin-bottom: 15px; color: var(--text-secondary);">
+                                <strong>Standard:</strong> ${check.standard.ref_no || ''} - ${check.standard.task_or_activity || ''}
+                            </div>
+                        ` : ''}
+                        ${check.utilisation_profile ? `
+                            <div style="margin-bottom: 15px; color: var(--text-secondary);">
+                                <strong>Profile:</strong> ${check.utilisation_profile}
+                            </div>
+                        ` : ''}
+                        ${checksHtml}
+                    </div>
+                `;
+            }).join('');
+            
+            document.getElementById('complianceContent').innerHTML = complianceHtml;
+        }
+
+        function displayRooms(data) {
+            const rooms = data.extracted_report_data?.rooms || [];
+            
+            if (rooms.length === 0) {
+                document.getElementById('roomsContent').innerHTML = '<p>No room data available</p>';
+                return;
+            }
+            
+            const roomsHtml = rooms.map(room => `
+                <div class="luminaire-item">
+                    <h3 style="margin-bottom: 10px; color: var(--text-primary);">${room.name || 'Unknown Room'}</h3>
+                    <div class="data-grid">
+                        ${Object.entries(room).filter(([key]) => key !== 'layout' && key !== 'name').map(([key, value]) => `
+                            <div class="data-item">
+                                <div class="data-label">${key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</div>
+                                <div class="data-value">${typeof value === 'object' ? JSON.stringify(value) : (value !== null && value !== undefined ? value : 'N/A')}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+            
+            document.getElementById('roomsContent').innerHTML = roomsHtml;
+        }
+
+        function displayLuminaires(data) {
+            const luminaires = data.extracted_report_data?.luminaires || [];
+            
+            if (luminaires.length === 0) {
+                document.getElementById('luminairesContent').innerHTML = '<p>No luminaire data available</p>';
+                return;
+            }
+            
+            const luminairesHtml = luminaires.map((luminaire, index) => `
+                <div class="luminaire-item">
+                    <h3 style="margin-bottom: 10px; color: var(--text-primary);">Luminaire ${index + 1}</h3>
+                    <div class="data-grid">
+                        ${Object.entries(luminaire).map(([key, value]) => `
+                            <div class="data-item">
+                                <div class="data-label">${key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</div>
+                                <div class="data-value">${value !== null && value !== undefined ? value : 'N/A'}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+            
+            document.getElementById('luminairesContent').innerHTML = luminairesHtml;
+        }
+
+        function displayScenes(data) {
+            const scenes = data.extracted_report_data?.scenes || [];
+            
+            if (scenes.length === 0) {
+                document.getElementById('scenesContent').innerHTML = '<p>No scene data available</p>';
+                return;
+            }
+            
+            const scenesHtml = scenes.map((scene, index) => `
+                <div class="luminaire-item">
+                    <h3 style="margin-bottom: 10px; color: var(--text-primary);">Scene ${index + 1}: ${scene.scene_name || 'Unknown'}</h3>
+                    <div class="data-grid">
+                        ${Object.entries(scene).map(([key, value]) => `
+                            <div class="data-item">
+                                <div class="data-label">${key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</div>
+                                <div class="data-value">${value !== null && value !== undefined ? value : 'N/A'}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+            
+            document.getElementById('scenesContent').innerHTML = scenesHtml;
+        }
+
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+

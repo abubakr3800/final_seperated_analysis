@@ -1,0 +1,267 @@
+Delta Factory
+Description
+Lighting Study with High bay 150W , panel 60x60 48W and downlight Technical Engineer
+10,15 ,22,24W
+Eng. Noura Anwar
+Short Circuit Company
+Yousef Ammer-Cairo Mall - El-
+Haram - Giza
+T 01094839174
+1
+Delta Factory
+Luminaire list
+Φtotal Ptotal Luminous efficacy
+158160 lm 1167.0 W 135.5 lm/W
+pcs. Manufacturer Article No. Article name P Φ Luminous efficacy
+6 Philips BY698P LED265CW G2 WB 150.0 W 21750 lm 145.0 lm/W
+2 Philips RC133V LED36S/840 OC WIA W62L62 48.0 W 5280 lm 110.0 lm/W
+4 Philips RS340B 1 xLED19S/ROSE VWB 10.0 W 1000 lm 100.0 lm/W
+1 Philips RS340B 1 xLED19S/ROSE VWB 15.0 W 1500 lm 100.0 lm/W
+2 Philips RS340B 1 xLED19S/ROSE VWB 22.0 W 2200 lm 100.0 lm/W
+3 Philips RS340B 1 xLED19S/ROSE VWB 24.0 W 2400 lm 100.0 lm/W
+2
+Delta Factory
+Building 1 · Storey 1 · Room 2
+Luminaire layout plan
+3
+Delta Factory
+Building 1 · Storey 1 · Room 2
+Luminaire layout plan
+Manufacturer Philips P 150.0 W
+Article name BY698P LED265CW ΦLuminaire 21750 lm
+G2 WB
+Fitting 1x LED
+3 x Philips BY698P LED265CW G2 WB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 4.000 m / 2.338 m /
+5.500 m 3.900 m 7.412 m 5.500 m 1
+X-direction 2 pcs., Centre - 8.228 m 4.981 m 5.500 m 2
+centre, Distances not
+equal 4.000 m 2.338 m 5.500 m 3
+Y-direction 2 pcs., Centre -
+centre, Distances not
+equal
+Arrangement A1
+4
+Delta Factory
+Building 1 · Storey 1 · Room 2 (Light scene 1)
+Calculation objects
+5
+Delta Factory
+Building 1 · Storey 1 · Room 2 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Workshop 397 lx 197 lx 597 lx 0.50 0.33 CG2
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+6
+Delta Factory
+Building 1 · Storey 1 · Room 2 (Light scene 1)
+Calculation of Workshop
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Workshop 397 lx 197 lx 597 lx 0.50 0.33 CG2
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+7
+Delta Factory
+Building 1 · Storey 1 · Room 3
+Luminaire layout plan
+8
+Delta Factory
+Building 1 · Storey 1 · Room 3
+Luminaire layout plan
+Manufacturer Philips P 150.0 W
+Article name BY698P LED265CW ΦLuminaire 21750 lm
+G2 WB
+Fitting 1x LED
+3 x Philips BY698P LED265CW G2 WB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 3.750 m / 2.438 m /
+5.500 m 3.750 m 7.412 m 5.500 m 1
+X-direction 2 pcs., Centre - 7.828 m 4.950 m 5.500 m 2
+centre, Distances not
+equal 3.750 m 2.438 m 5.500 m 3
+Y-direction 2 pcs., Centre -
+centre, Distances not
+equal
+Arrangement A1
+9
+Delta Factory
+Building 1 · Storey 1 · Room 3 (Light scene 1)
+Calculation objects
+10
+Delta Factory
+Building 1 · Storey 1 · Room 3 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Manufacture 357 lx 181 lx 569 lx 0.51 0.32 CG1
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+11
+Delta Factory
+Building 1 · Storey 1 · Room 3 (Light scene 1)
+Calculation of Manufacture
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Manufacture 357 lx 181 lx 569 lx 0.51 0.32 CG1
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+12
+Delta Factory
+Building 1 · Storey 1 · Room 4
+Luminaire layout plan
+13
+Delta Factory
+Building 1 · Storey 1 · Room 4
+Luminaire layout plan
+Manufacturer Philips P 24.0 W
+Article name RS340B 1 ΦLuminaire 2400 lm
+xLED19S/ROSE VWB
+Fitting 1x
+Individual luminaires
+X Y Mounting Luminaire
+height
+1.424 m 2.433 m 3.000 m 1
+4.029 m 1.515 m 3.000 m 2
+1.474 m 0.805 m 3.000 m 3
+14
+Delta Factory
+Building 1 · Storey 1 · Room 4 (Light scene 1)
+Calculation objects
+15
+Delta Factory
+Building 1 · Storey 1 · Room 4 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Workshop Manager 318 lx 200 lx 489 lx 0.63 0.41 CG3
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+16
+Delta Factory
+Building 1 · Storey 1 · Room 4 (Light scene 1)
+Calculation of Workshop Manager
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation of Workshop Manager 318 lx 200 lx 489 lx 0.63 0.41 CG3
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+17
+Delta Factory
+Building 1 · Storey 1 · Room 5
+Luminaire layout plan
+18
+Delta Factory
+Building 1 · Storey 1 · Room 5
+Luminaire layout plan
+Manufacturer Philips P 48.0 W
+Article name RC133V LED36S/840 ΦLuminaire 5280 lm
+OC WIA W62L62
+Fitting 1x
+2 x Philips RC133V LED36S/840 OC WIA W62L62
+Type Line arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 1.187 m / 1.500 m /
+3.000 m 1.187 m 1.500 m 3.000 m 1
+X-direction 2 pcs., Centre - 3.562 m 1.500 m 3.000 m 2
+centre, 2.375 m
+Arrangement A1
+19
+Delta Factory
+Building 1 · Storey 1 · Room 5 (Light scene 1)
+Calculation objects
+20
+Delta Factory
+Building 1 · Storey 1 · Room 5 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation Of QA & QC Lab 314 lx 224 lx 418 lx 0.71 0.54 CG4
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+21
+Delta Factory
+Building 1 · Storey 1 · Room 5 (Light scene 1)
+Calculation Of QA & QC Lab
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation Of QA & QC Lab 314 lx 224 lx 418 lx 0.71 0.54 CG4
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+22
+Delta Factory
+Building 1 · Storey 1 · Room 6
+Luminaire layout plan
+23
+Delta Factory
+Building 1 · Storey 1 · Room 6
+Luminaire layout plan
+Manufacturer Philips P 10.0 W
+Article name RS340B 1 ΦLuminaire 1000 lm
+xLED19S/ROSE VWB
+Fitting 1x
+Individual luminaires
+X Y Mounting Luminaire
+height
+0.714 m 3.355 m 3.000 m 1
+2.134 m 3.320 m 3.000 m 2
+3.819 m 1.361 m 3.000 m 5
+3.748 m 0.399 m 3.000 m 7
+24
+Delta Factory
+Building 1 · Storey 1 · Room 6
+Luminaire layout plan
+Manufacturer Philips P 15.0 W
+Article name RS340B 1 ΦLuminaire 1500 lm
+xLED19S/ROSE VWB
+Fitting 1x
+Individual luminaires
+X Y Mounting Luminaire
+height
+3.869 m 2.750 m 3.000 m 3
+25
+Delta Factory
+Building 1 · Storey 1 · Room 6
+Luminaire layout plan
+Manufacturer Philips P 22.0 W
+Article name RS340B 1 ΦLuminaire 2200 lm
+xLED19S/ROSE VWB
+Fitting 1x
+Individual luminaires
+X Y Mounting Luminaire
+height
+1.619 m 2.300 m 3.000 m 4
+1.624 m 0.905 m 3.000 m 6
+26
+Delta Factory
+Building 1 · Storey 1 · Room 6 (Light scene 1)
+Calculation objects
+27
+Delta Factory
+Building 1 · Storey 1 · Room 6 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation Of Changing Rooms 246 lx 133 lx 461 lx 0.54 0.29 CG5
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+28
+Delta Factory
+Building 1 · Storey 1 · Room 6 (Light scene 1)
+Calculation Of Changing Rooms
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation Of Changing Rooms 246 lx 133 lx 461 lx 0.54 0.29 CG5
+Perpendicular illuminance
+Height: 0.000 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+29

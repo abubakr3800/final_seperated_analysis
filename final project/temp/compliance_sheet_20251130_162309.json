@@ -1,0 +1,415 @@
+{
+  "generated_at": "2025-11-30T16:23:09.271884",
+  "report_metadata": {
+    "company_name": "Short Circuit Company",
+    "project_name": "The lighting fiixture is linear with 7w Technical Engineer",
+    "engineer": "Eng. Salma Mostafa",
+    "email": null,
+    "report_title": "ICO_corridor_Report_20251130_162308_4f8a48b6.pdf"
+  },
+  "lighting_setup": {
+    "power_w": 7.0,
+    "luminous_flux_lm": 700.0,
+    "fitting": 1.0,
+    "average_lux": 114.0,
+    "min_lux": 71.4,
+    "max_lux": 121.0,
+    "uniformity": 0.63,
+    "g1": 0.59,
+    "index": "CG1"
+  },
+  "compliance_summary": {
+    "overall_compliance": "PASS",
+    "total_rooms": 2,
+    "passed": 2,
+    "failed": 0,
+    "no_standard_found": 0,
+    "pass_rate": 100.0
+  },
+  "room_compliance_details": [
+    {
+      "room": "building 1 · storey 1 · room 1",
+      "utilisation_profile": "",
+      "standard": {
+        "ref_no": "6.1.1",
+        "category": "Traffic zones inside buildings",
+        "task_or_activity": "Corridors and circulation areas"
+      },
+      "checks": {
+        "lux": {
+          "required": 100.0,
+          "actual": 114.0,
+          "compliant": true,
+          "margin": 14.0
+        },
+        "uniformity": {
+          "required": 0.4,
+          "actual": 0.63,
+          "compliant": true,
+          "margin": 0.22999999999999998
+        },
+        "ra": {
+          "required": 40.0,
+          "actual": 114.0,
+          "compliant": true,
+          "margin": 74.0,
+          "found": true,
+          "source": "average_lux",
+          "note": "Found as average_lux"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "room": "room 1",
+      "utilisation_profile": "",
+      "standard": {
+        "ref_no": "6.1.1",
+        "category": "Traffic zones inside buildings",
+        "task_or_activity": "Corridors and circulation areas"
+      },
+      "checks": {
+        "lux": {
+          "required": 100.0,
+          "actual": 114.0,
+          "compliant": true,
+          "margin": 14.0
+        },
+        "uniformity": {
+          "required": 0.4,
+          "actual": 0.63,
+          "compliant": true,
+          "margin": 0.22999999999999998
+        },
+        "ra": {
+          "required": 40.0,
+          "actual": 114.0,
+          "compliant": true,
+          "margin": 74.0,
+          "found": true,
+          "source": "average_lux",
+          "note": "Found as average_lux"
+        }
+      },
+      "status": "PASS"
+    }
+  ],
+  "full_report_data": {
+    "metadata": {
+      "company_name": "Short Circuit Company",
+      "project_name": "The lighting fiixture is linear with 7w Technical Engineer",
+      "engineer": "Eng. Salma Mostafa",
+      "email": null,
+      "report_title": "ICO_corridor_Report_20251130_162308_4f8a48b6.pdf"
+    },
+    "lighting_setup": {
+      "power_w": 7.0,
+      "luminous_flux_lm": 700.0,
+      "fitting": 1.0,
+      "average_lux": 114.0,
+      "min_lux": 71.4,
+      "max_lux": 121.0,
+      "uniformity": 0.63,
+      "g1": 0.59,
+      "index": "CG1"
+    },
+    "luminaires": [],
+    "rooms": [
+      {
+        "name": "building 1 · storey 1 · room 1",
+        "arrangement": "X",
+        "layout": {
+          "A1": [
+            {
+              "X": 24.265,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 24.265,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 22.794,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 1.471,
+              "Y": 21.324,
+              "Z": 1.0
+            },
+            {
+              "X": 19.853,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 18.382,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 16.912,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 15.441,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 13.971,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 12.5,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 11.029,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 9.559,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 8.088,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 6.618,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 5.147,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 3.676,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 2.206,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 0.735,
+              "Y": 1.0,
+              "Z": 2.4
+            }
+          ]
+        }
+      },
+      {
+        "name": "room 1",
+        "arrangement": "X",
+        "layout": {
+          "A1": [
+            {
+              "X": 24.265,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 24.265,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 22.794,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 1.471,
+              "Y": 21.324,
+              "Z": 1.0
+            },
+            {
+              "X": 19.853,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 18.382,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 16.912,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 15.441,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 13.971,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 12.5,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 11.029,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 9.559,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 8.088,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 6.618,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 5.147,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 3.676,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 2.206,
+              "Y": 1.0,
+              "Z": 2.4
+            },
+            {
+              "X": 0.735,
+              "Y": 1.0,
+              "Z": 2.4
+            }
+          ]
+        }
+      }
+    ],
+    "scenes": [
+      {
+        "scene_name": "Scene",
+        "average_lux": 114.0,
+        "min_lux": 71.4,
+        "max_lux": 121.0,
+        "uniformity": 0.63,
+        "g1": 0.59,
+        "index": "CG1"
+      },
+      {
+        "scene_name": "Scene",
+        "average_lux": 114.0,
+        "min_lux": 71.4,
+        "max_lux": 121.0,
+        "uniformity": 0.63,
+        "g1": 0.59,
+        "index": "CG1"
+      }
+    ]
+  },
+  "full_compliance_result": {
+    "overall_compliance": "PASS",
+    "checks": [
+      {
+        "room": "building 1 · storey 1 · room 1",
+        "utilisation_profile": "",
+        "standard": {
+          "ref_no": "6.1.1",
+          "category": "Traffic zones inside buildings",
+          "task_or_activity": "Corridors and circulation areas"
+        },
+        "checks": {
+          "lux": {
+            "required": 100.0,
+            "actual": 114.0,
+            "compliant": true,
+            "margin": 14.0
+          },
+          "uniformity": {
+            "required": 0.4,
+            "actual": 0.63,
+            "compliant": true,
+            "margin": 0.22999999999999998
+          },
+          "ra": {
+            "required": 40.0,
+            "actual": 114.0,
+            "compliant": true,
+            "margin": 74.0,
+            "found": true,
+            "source": "average_lux",
+            "note": "Found as average_lux"
+          }
+        },
+        "status": "PASS"
+      },
+      {
+        "room": "room 1",
+        "utilisation_profile": "",
+        "standard": {
+          "ref_no": "6.1.1",
+          "category": "Traffic zones inside buildings",
+          "task_or_activity": "Corridors and circulation areas"
+        },
+        "checks": {
+          "lux": {
+            "required": 100.0,
+            "actual": 114.0,
+            "compliant": true,
+            "margin": 14.0
+          },
+          "uniformity": {
+            "required": 0.4,
+            "actual": 0.63,
+            "compliant": true,
+            "margin": 0.22999999999999998
+          },
+          "ra": {
+            "required": 40.0,
+            "actual": 114.0,
+            "compliant": true,
+            "margin": 74.0,
+            "found": true,
+            "source": "average_lux",
+            "note": "Found as average_lux"
+          }
+        },
+        "status": "PASS"
+      }
+    ],
+    "summary": {
+      "total_rooms": 2,
+      "passed": 2,
+      "failed": 0,
+      "no_standard_found": 0,
+      "pass_rate": 100.0
+    },
+    "timestamp": "2025-11-30T16:23:09.268942"
+  }
+}

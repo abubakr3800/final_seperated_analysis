@@ -1,0 +1,246 @@
+Al amal factory
+Description
+lighting study for storage 28x highbay 150w on height 11.5m Technical office
+with average lux 213 and uniformity 0.57
+Eng. Salma Mostafa
+lighting study for Production 72x highbay 200w on height 11.5m with
+Short circuit
+average lux 412 and uniformity 0.53
+T 01040359990
+salma@shortcircuitcompany.co
+m
+1
+Al amal factory
+Images
+storage
+calculation of the storage
+Production
+2
+Al amal factory
+Images
+calculation of the production
+3
+Al amal factory
+Luminaire list
+Φtotal Ptotal Luminous efficacy
+2697000 lm 18600.0 W 145.0 lm/W
+pcs. Manufacturer Article No. Article name P Φ Luminous efficacy
+72 Philips BY698P LED265CW G2 WB 200.0 W 29000 lm 145.0 lm/W
+28 Philips BY698P LED265CW G2 WB 150.0 W 21750 lm 145.0 lm/W
+4
+Al amal factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+5
+Al amal factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+Manufacturer Philips P 150.0 W
+Article name BY698P LED265CW ΦLuminaire 21750 lm
+G2 WB
+Fitting 1x LED
+14 x Philips BY698P LED265CW G2 WB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 22.249 m / 11.897 m
+/ 11.500 m 22.477 m 52.968 m 11.500 m 1
+X-direction 2 pcs., Centre - 31.477 m 52.918 m 11.500 m 3
+centre, 9.000 m
+22.432 m 44.754 m 11.500 m 5
+Y-direction 7 pcs., Centre -
+centre, 8.214 m 31.432 m 44.704 m 11.500 m 7
+Arrangement A1 22.386 m 36.540 m 11.500 m 9
+31.386 m 36.490 m 11.500 m 11
+22.340 m 28.325 m 11.500 m 13
+31.340 m 28.275 m 11.500 m 15
+22.295 m 20.111 m 11.500 m 17
+31.295 m 20.061 m 11.500 m 19
+22.249 m 11.897 m 11.500 m 21
+31.249 m 11.847 m 11.500 m 23
+22.203 m 3.683 m 11.500 m 25
+6
+Al amal factory
+Building 1 · Storey 1 · Room 1
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+31.203 m 3.633 m 11.500 m 27
+14 x Philips BY698P LED265CW G2 WB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 4.749 m / 11.897 m /
+11.500 m 4.977 m 52.968 m 11.500 m 2
+X-direction 2 pcs., Centre - 13.977 m 52.918 m 11.500 m 4
+centre, 9.000 m
+4.932 m 44.754 m 11.500 m 6
+Y-direction 7 pcs., Centre -
+centre, 8.214 m 13.932 m 44.704 m 11.500 m 8
+Arrangement A2 4.886 m 36.540 m 11.500 m 10
+13.886 m 36.490 m 11.500 m 12
+4.840 m 28.325 m 11.500 m 14
+13.840 m 28.275 m 11.500 m 16
+4.795 m 20.111 m 11.500 m 18
+13.795 m 20.061 m 11.500 m 20
+4.749 m 11.897 m 11.500 m 22
+13.749 m 11.847 m 11.500 m 24
+4.703 m 3.683 m 11.500 m 26
+13.703 m 3.633 m 11.500 m 28
+7
+Al amal factory
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+Calculation objects
+8
+Al amal factory
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 1 213 lx 121 lx 266 lx 0.57 0.45 CG1
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+9
+Al amal factory
+Building 1 · Storey 1 · Room 1 (Light scene 1)
+Calculation surface 1
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 1 213 lx 121 lx 266 lx 0.57 0.45 CG1
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+10
+Al amal factory
+Building 2 · Storey 1 · Room 2
+Luminaire layout plan
+11
+Al amal factory
+Building 2 · Storey 1 · Room 2
+Luminaire layout plan
+Manufacturer Philips P 200.0 W
+Article name BY698P LED265CW ΦLuminaire 29000 lm
+G2 WB
+Fitting 1x LED
+36 x Philips BY698P LED265CW G2 WB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 23.333 m / 4.000 m /
+11.500 m 23.333 m 92.000 m 11.500 m 1
+X-direction 3 pcs., Centre - 30.000 m 92.000 m 11.500 m 3
+centre, 6.667 m
+36.667 m 92.000 m 11.500 m 5
+Y-direction 12 pcs., Centre -
+centre, 8.000 m 23.333 m 84.000 m 11.500 m 7
+Arrangement A1 30.000 m 84.000 m 11.500 m 9
+36.667 m 84.000 m 11.500 m 11
+23.333 m 76.000 m 11.500 m 13
+30.000 m 76.000 m 11.500 m 15
+36.667 m 76.000 m 11.500 m 17
+23.333 m 68.000 m 11.500 m 19
+30.000 m 68.000 m 11.500 m 21
+36.667 m 68.000 m 11.500 m 23
+23.333 m 60.000 m 11.500 m 25
+12
+Al amal factory
+Building 2 · Storey 1 · Room 2
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+30.000 m 60.000 m 11.500 m 27
+36.667 m 60.000 m 11.500 m 29
+23.333 m 52.000 m 11.500 m 31
+30.000 m 52.000 m 11.500 m 33
+36.667 m 52.000 m 11.500 m 35
+23.333 m 44.000 m 11.500 m 37
+30.000 m 44.000 m 11.500 m 39
+36.667 m 44.000 m 11.500 m 41
+23.333 m 36.000 m 11.500 m 43
+30.000 m 36.000 m 11.500 m 45
+36.667 m 36.000 m 11.500 m 47
+23.333 m 28.000 m 11.500 m 49
+30.000 m 28.000 m 11.500 m 51
+36.667 m 28.000 m 11.500 m 53
+23.333 m 20.000 m 11.500 m 55
+30.000 m 20.000 m 11.500 m 57
+36.667 m 20.000 m 11.500 m 59
+23.333 m 12.000 m 11.500 m 61
+30.000 m 12.000 m 11.500 m 63
+36.667 m 12.000 m 11.500 m 65
+23.333 m 4.000 m 11.500 m 67
+30.000 m 4.000 m 11.500 m 69
+36.667 m 4.000 m 11.500 m 71
+13
+Al amal factory
+Building 2 · Storey 1 · Room 2
+Luminaire layout plan
+36 x Philips BY698P LED265CW G2 WB
+Type Field Arrangement X Y Mounting Luminaire
+height
+1st luminaire (X/Y/Z) 3.333 m / 4.000 m /
+11.500 m 3.333 m 92.000 m 11.500 m 2
+X-direction 3 pcs., Centre - 10.000 m 92.000 m 11.500 m 4
+centre, 6.667 m
+16.667 m 92.000 m 11.500 m 6
+Y-direction 12 pcs., Centre -
+centre, 8.000 m 3.333 m 84.000 m 11.500 m 8
+Arrangement A2 10.000 m 84.000 m 11.500 m 10
+16.667 m 84.000 m 11.500 m 12
+3.333 m 76.000 m 11.500 m 14
+10.000 m 76.000 m 11.500 m 16
+16.667 m 76.000 m 11.500 m 18
+3.333 m 68.000 m 11.500 m 20
+10.000 m 68.000 m 11.500 m 22
+16.667 m 68.000 m 11.500 m 24
+3.333 m 60.000 m 11.500 m 26
+10.000 m 60.000 m 11.500 m 28
+16.667 m 60.000 m 11.500 m 30
+3.333 m 52.000 m 11.500 m 32
+10.000 m 52.000 m 11.500 m 34
+16.667 m 52.000 m 11.500 m 36
+3.333 m 44.000 m 11.500 m 38
+10.000 m 44.000 m 11.500 m 40
+16.667 m 44.000 m 11.500 m 42
+3.333 m 36.000 m 11.500 m 44
+14
+Al amal factory
+Building 2 · Storey 1 · Room 2
+Luminaire layout plan
+X Y Mounting Luminaire
+height
+10.000 m 36.000 m 11.500 m 46
+16.667 m 36.000 m 11.500 m 48
+3.333 m 28.000 m 11.500 m 50
+10.000 m 28.000 m 11.500 m 52
+16.667 m 28.000 m 11.500 m 54
+3.333 m 20.000 m 11.500 m 56
+10.000 m 20.000 m 11.500 m 58
+16.667 m 20.000 m 11.500 m 60
+3.333 m 12.000 m 11.500 m 62
+10.000 m 12.000 m 11.500 m 64
+16.667 m 12.000 m 11.500 m 66
+3.333 m 4.000 m 11.500 m 68
+10.000 m 4.000 m 11.500 m 70
+16.667 m 4.000 m 11.500 m 72
+15
+Al amal factory
+Building 2 · Storey 1 · Room 2 (Light scene 1)
+Calculation objects
+16
+Al amal factory
+Building 2 · Storey 1 · Room 2 (Light scene 1)
+Calculation objects
+Calculation surfaces
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 2 412 lx 217 lx 482 lx 0.53 0.45 CG2
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+17
+Al amal factory
+Building 2 · Storey 1 · Room 2 (Light scene 1)
+Calculation surface 2
+Properties Ē Emin Emax Uo (g1) g2 Index
+Calculation surface 2 412 lx 217 lx 482 lx 0.53 0.45 CG2
+Perpendicular illuminance
+Height: 0.100 m
+Utilisation profile: DIALux presetting (5.26.2 Standard (office))
+18

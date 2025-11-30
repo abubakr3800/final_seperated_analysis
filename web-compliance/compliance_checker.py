@@ -51,15 +51,12 @@ class ComplianceChecker:
     def _load_parameter_mapping(self) -> Dict:
         """Load parameter mapping from aliases.json file"""
         try:
-            # Exact path: E:\AI_projects\final_comparator\report_export\extractors\aliases.json
-            # Try multiple path resolution methods
-            
-            # Method 1: Relative path from this file
+            # Method 1: Relative path from this file (web-compliance folder)
             current_file = Path(__file__).resolve()
-            # From: final project/src/compliance_checker.py
+            # From: web-compliance/compliance_checker.py
             # To: report_export/extractors/aliases.json
-            # Go: final project/src -> final project -> final_comparator -> report_export/extractors/aliases.json
-            project_root = current_file.parent.parent.parent  # final_comparator root
+            # Go: web-compliance -> final_comparator -> report_export/extractors/aliases.json
+            project_root = current_file.parent.parent  # final_comparator root
             aliases_file = project_root / "report_export" / "extractors" / "aliases.json"
             
             # Method 2: Try absolute path
@@ -95,17 +92,9 @@ class ComplianceChecker:
                     print(f"✓ Loaded aliases from {aliases_file}")
                     return aliases
             else:
-                # Fallback to local parameter_mapping.json if aliases.json not found
-                mapping_file = Path(__file__).parent / "parameter_mapping.json"
-                if mapping_file.exists():
-                    with open(mapping_file, 'r', encoding='utf-8') as f:
-                        print(f"⚠️ Using local parameter_mapping.json (aliases.json not found)")
-                        print(f"   Tried: {aliases_file}")
-                        return json.load(f)
-                else:
-                    print(f"⚠️ No alias file found, using empty mapping")
-                    print(f"   Tried: {aliases_file}")
-                    return {"places": {}, "parameters": {}}
+                print(f"⚠️ No alias file found, using empty mapping")
+                print(f"   Tried: {aliases_file}")
+                return {"places": {}, "parameters": {}}
         except Exception as e:
             print(f"Error loading parameter mapping: {e}")
             import traceback
@@ -535,3 +524,4 @@ class ComplianceChecker:
             'compliance_result': compliance_result,
             'timestamp': datetime.now().isoformat()
         }
+

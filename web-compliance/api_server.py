@@ -17,7 +17,7 @@ import json
 from datetime import datetime
 import uvicorn
 
-# Add the src directory to the path
+# Add the current directory to the path
 sys.path.append(os.path.dirname(__file__))
 
 from compliance_checker import ComplianceChecker
@@ -26,7 +26,7 @@ from compliance_checker import ComplianceChecker
 app = FastAPI(
     title="Lighting Compliance Checker API",
     description="API for checking lighting compliance against standards",
-    version="1.0.0"
+    version="2.0.0"
 )
 
 # Add CORS middleware
@@ -38,13 +38,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Configuration
-STANDARDS_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "standard_export", "output", "standards_filtered.json")
+# Configuration - adjust paths relative to web-compliance folder
+BASE_DIR = Path(__file__).parent.parent
+STANDARDS_PATH = BASE_DIR / "standard_export" / "output" / "standards_filtered.json"
 REPORT_API_URL = "http://localhost:5000"  # report_export API URL
 
 # Initialize compliance checker
 try:
-    compliance_checker = ComplianceChecker(STANDARDS_PATH, REPORT_API_URL)
+    compliance_checker = ComplianceChecker(str(STANDARDS_PATH), REPORT_API_URL)
     print(f"✅ Compliance checker initialized successfully")
     print(f"📁 Standards loaded from: {STANDARDS_PATH}")
     print(f"🔗 Report API URL: {REPORT_API_URL}")
@@ -57,17 +58,18 @@ async def root():
     """API root endpoint with documentation"""
     return {
         "message": "Lighting Compliance Checker API",
-        "version": "1.0.0",
+        "version": "2.0.0",
         "status": "running",
         "endpoints": {
             "POST /check-compliance": "Upload PDF report and get compliance results",
+            "POST /check-compliance-detailed": "Upload PDF and get detailed compliance results with all parameters",
             "GET /health": "Check API health status",
             "GET /standards-info": "Get information about loaded standards",
             "GET /": "API documentation (this endpoint)"
         },
         "usage": {
-            "upload": "POST /check-compliance with 'file' field containing PDF",
-            "response": "Returns compliance check results with PASS/FAIL status"
+            "upload": "POST /check-compliance-detailed with 'file' field containing PDF",
+            "response": "Returns compliance check results with PASS/FAIL status and all extracted parameters"
         },
         "timestamp": datetime.now().isoformat()
     }
@@ -155,7 +157,17 @@ async def check_compliance_detailed(file: UploadFile = File(...)):
     """
     Upload a PDF report and get detailed compliance checking results
     
-    This endpoint provides more detailed information including the raw extracted data
+    This endpoint provides more detailed information including:
+    - All extracted parameters from the report
+    - Complete compliance check results
+    - Room-by-room analysis
+    - Full report metadata
+    
+    Args:
+        file: PDF file containing lighting report
+        
+    Returns:
+        Detailed compliance check results with all extracted data
     """
     if not compliance_checker:
         raise HTTPException(status_code=500, detail="Compliance checker not initialized")
@@ -180,7 +192,7 @@ async def check_compliance_detailed(file: UploadFile = File(...)):
             # Check compliance
             compliance_result = compliance_checker.check_compliance(report_data)
             
-            # Prepare detailed response
+            # Prepare detailed response with all data
             result = {
                 'file_info': {
                     'filename': file.filename,
@@ -255,14 +267,14 @@ async def proxy_report_health():
         }, status_code=500)
 
 if __name__ == "__main__":
-    print("🚀 Starting Lighting Compliance Checker API...")
+    print("🚀 Starting Lighting Compliance Checker API (Web-Compliance)...")
     print("=" * 60)
     print("📋 API Endpoints:")
     print("  GET  /                    - API documentation")
     print("  GET  /health              - Health check")
     print("  GET  /standards-info      - Standards information")
     print("  POST /check-compliance    - Upload PDF and get compliance results")
-    print("  POST /check-compliance-detailed - Detailed compliance results")
+    print("  POST /check-compliance-detailed - Detailed compliance results with all parameters")
     print("  GET  /test-connection     - Test report API connection")
     print("=" * 60)
     print("🌐 Server will start on http://localhost:8000")
@@ -270,3 +282,4 @@ if __name__ == "__main__":
     print("=" * 60)
     
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
